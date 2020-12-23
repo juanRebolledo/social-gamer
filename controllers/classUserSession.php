@@ -24,7 +24,7 @@
             return $this->strUser;
         }
 
-        public function getSession(){
+        public function getSessionData(){
             $arrSession = array('User' => $this->strUser);
             return $arrSession;
         }
