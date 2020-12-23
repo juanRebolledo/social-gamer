@@ -24,13 +24,13 @@
             return $this->strUser;
         }
 
+        public function getSession(){
+            $arrSession = array('User' => $this->strUser);
+            return $arrSession;
+        }
+        
         public function setSession(){
             $_SESSION["user"] = $this->strUser;
-        }
-
-        public function getSession(){
-            $arrSession = array('User' => $_SESSION["user"]);
-            return $arrSession;
         }
 
     }//end class UserSession
