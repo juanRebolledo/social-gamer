@@ -1,6 +1,6 @@
 <?php 
   $DS = DIRECTORY_SEPARATOR;
-  $_SESSION['SITE_ROOT'] = $DS;
+  $_SESSION['SITE_ROOT'] = $DS.'gamer-social'; // esto puede quedar unicamente como 'DS'
   $_SESSION['CONTROLLER_PATH'] = $_SESSION['SITE_ROOT'].'controllers'.$DS;
   $_SESSION['MODEL_PATH'] = $_SESSION['SITE_ROOT'].'models'.$DS;
   $_SESSION['VIEW_PATH'] = $_SESSION['SITE_ROOT'].'views'.$DS;
