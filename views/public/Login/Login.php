@@ -12,9 +12,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
     
-    <script src="scripts/estrellas.js"></script>
-    <link rel="stylesheet" href="estilos/estilos.css">
-    <link rel="stylesheet" href="estilos/estrellas.css">
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/stars.css">
     <title>Bienvenido: Inicia sesion</title>
 </head>
 <body>
