@@ -7,6 +7,13 @@ body, html{
     background-image: linear-gradient(0deg, #2e0748 0%, #121212 100%);
 }
 
+.container-title h1 {
+    font-family: utopia-std-headline, serif;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: normal;
+}
+
 .container-login {
     align-items: center;
     display: flex;
@@ -18,6 +25,7 @@ body, html{
 .login-body .button {
     background: #6c63ff;
     color: #fff;
+    font-weight: 500;
     transition: all 0.3s;
 }
 .login-body .button:hover {
@@ -41,6 +49,7 @@ body, html{
     height: 80%;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto';
     justify-content: center;
 }
 

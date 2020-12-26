@@ -16,8 +16,8 @@
         <div class="container-login">
             <div class="login-box">
                 <div class="login-body">
-                    <div class="title">
-                        <h2 class="subtitle has-text-centered has-text-weight-bold is-4">Social gamer</h2>
+                    <div class="container-title">
+                        <h1 class="has-text-centered">Gamer social</h1>
                     </div>
 
                     <form action="acciones/validar.php" method="post">
