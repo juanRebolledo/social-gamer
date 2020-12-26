@@ -1,79 +1,94 @@
 body, html{
-    height: 100%;
+    height: 100vh;
 }
 
-.fondo-pie{
-    position: absolute;
-    bottom: 25px;
-    width: 100%;
-}
-
-.hero.bg.sky{
+.bg.sky{
     background-color: #2e0748;
     background-image: linear-gradient(0deg, #2e0748 0%, #121212 100%);
 }
-.piso{
-    height: 25px;
-    width: 100%;
-    background: black;
+
+.container-login {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
 }
 
-
-
-
+.login-body .button {
+    background: #6c63ff;
+    color: #fff;
+    transition: all 0.3s;
+}
+.login-body .button:hover {
+    box-shadow: 0 0 0.25rem 0 #6c63ff;
+}
 
 .login-box{
-    margin: auto;
-    height: 60vh;
-    width: 80%;
     background: #ffffff;
     border-radius: 10px;
+    height: 420px;
+    width: 360px;
     z-index: 1;
 }
 
 .login-body{
     padding: 2em 1.5em;
-    
+    height: 100%;
 }
 
-.form-group{
-    margin-bottom: 1em;
-    transition: all 0.3s;
+.login-body form {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-}
-.form-label{
-    font-size: 1em;
-    color: #444053;
-    display: inline-block;
-    opacity: 1;
-    transform: translateY(-1.5em);
-    transform-origin: 0 0;
-    transition: all 0.3s;
-}
-.form-control{
-    box-shadow:none;
-    border-radius: 0px;
-    border-color: grey;
-    border-style: none none solid none;
+.form-group {
+    height: 40px;
+    margin-bottom: 30px;
+    position: relative;
     width: 100%;
-    transition: all 0.5s;
-    padding:10px;
-    
-    
+}
+.form-group, .form-group input, .form-group .form-label {
+    transition: all 0.3s;
+}
+.form-group input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgb(206, 212, 218) 0px 0px 0.25rem 0px;
+    height: 100%;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.form-group input:focus {
+    box-shadow: #6c63ff 0px 0px 0.25rem 0px;
+
+}
+ .form-label{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 16px;
+    color: #444053;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    font-size: 0.8em;
+    left: 0px;
+    top: -25px;
 }
 .form-control::placeholder{
     color:transparent;
 }
-.form-control:focus{
-    background-color: rgba(0,0,0,0.1);
-    box-shadow:none;
-    outline: none;
-    border-color: #6c63ff;
-}
-.form-control:focus + .form-label,
-.form-control:not(:placeholder-shown) + .form-label{
-    transform: translateY(-3.5em) scale(0.8);
-}
-.form-group:focus-within{
-    transform:scale(1.05,1.05);
+
+@media (max-width: 568px) {
+    .login-box {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
 }

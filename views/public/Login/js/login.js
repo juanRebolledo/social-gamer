@@ -1,7 +1,7 @@
 $(document).ready(function(){
     for (i=0 ;  i<100 ;i++){
         const positionLeft = Math.random()*$(document).width();
-        const positionTop = Math.random()*($(document).height())/2;
+        const positionTop = Math.random()*($(document).height()) / 1.5;
         const opacity = Math.random();
         const parpadeo = Math.random();
         let objStar;
@@ -11,6 +11,6 @@ $(document).ready(function(){
             objStar = `<div class='star animationTwo' style='left: ${positionLeft}px; top:${positionTop}px; opacity:${opacity}'> </div>`;
         else if(parpadeo < 0.9)
             objStar = `<div class='star animationThree' style='left: ${positionLeft}px; top:${positionTop}px; opacity:${opacity}'> </div>`;
-        $(".hero-body").append(objStar);
+        $(".bg").append(objStar);
     }
 })
