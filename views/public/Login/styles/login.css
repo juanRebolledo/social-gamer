@@ -65,9 +65,13 @@ body, html{
 
 .form-group input:focus {
     box-shadow: #6c63ff 0px 0px 0.25rem 0px;
-
 }
- .form-label{
+
+.form-group input:focus + .form-label {
+    color: #6c63ff;
+}
+
+.form-label{
     position: absolute;
     top: 8px;
     left: 10px;
