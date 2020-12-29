@@ -1,0 +1,118 @@
+.button{
+    border-color:#6c63ff ;
+}
+
+.container-register p a:hover{
+    color: red;
+}
+
+.nombre{
+    display: flex; 
+}
+
+.container-title h1{
+    font-size: 30px;
+}
+.container-login {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+}
+.container-login, button {
+    color: #fff;
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login-body .button {
+    background: #6c63ff;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.login-body .button:hover {
+    box-shadow: 0 0 0.25rem 0 #6c63ff;
+    border-color:#6c63ff ;
+}
+
+.login-box{
+    background: #2C2C2C;
+    border-radius: 10px;
+    height: 420px;
+    width: 360px;
+    z-index: 1;
+}
+
+.login-body{
+    padding: 2em 1.5em;
+    height: 100%;
+}
+
+.login-body form {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group {
+    height: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+.form-group, .form-group input, .form-group .form-label {
+    transition: all 0.3s;
+}
+.form-group input {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #464646;
+    height: 100%;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+.form-group input{
+    background-color: #464646;
+    color: #fff;
+}
+.form-group input:focus {
+    background-color: #464646;
+    border-color: #6c63ff;
+}
+
+.form-label{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    font-size: 0.8em;
+    left: 0px;
+    top: -25px;
+}
+.form-control::placeholder{
+    color:transparent;
+}
+.register-box{
+    background: #2C2C2C;
+    border-radius: 10px;
+    height: 520px;
+    width: 460px;
+    z-index: 1;
+}
+@media (max-width: 568px) {
+    .login-box {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+}

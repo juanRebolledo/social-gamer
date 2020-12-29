@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  background-color: #121212;
+  height: 100vh;
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  border: 0px none #ffffff;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #464646;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #6c63ff;
+}
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border: 20px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #2e2e2e;
+}
+::-webkit-scrollbar-track:active {
+  background: #2c2c2c;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
