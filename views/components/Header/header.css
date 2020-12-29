@@ -68,6 +68,7 @@ header nav .item-header-container .item-tooltip {
 header nav .item-header-container svg:hover + .item-tooltip {
   background: #6c63ff;
   border-radius: 5px;
+  color: #fff;
   display: flex;
   font-size: 15px;
   height: 25px;
