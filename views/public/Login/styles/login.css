@@ -1,20 +1,15 @@
-body, html{
-    height: 100vh;
-}
-a:hover{
-    color: red;
-}
-
-.bg.sky{
-    background-color: #121212;
-}
-.nombre{
-    display: flex;
-    
-}
 .button{
     border-color:#6c63ff ;
 }
+
+.container-register p a:hover{
+    color: red;
+}
+
+.nombre{
+    display: flex; 
+}
+
 .container-title h1{
     font-size: 30px;
 }
@@ -31,7 +26,6 @@ a:hover{
     font-weight: 500;
     font-style: normal;
 }
-
 
 .login-body .button {
     background: #6c63ff;
