@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include_once("$_SESSION[COMPONENTS_PATH]"."head.php") ?>
+    <?php require_once("$_SESSION[COMPONENTS_PATH]"."head.php") ?>
     <link rel="stylesheet" href="<?php echo "$_SESSION[VIEW_PUBLIC_PATH]". "Login\styles/login.css" ?>">
     <link rel="stylesheet" href="<?php echo "$_SESSION[VIEW_PUBLIC_PATH]". "Login\styles/stars.css" ?>">
     <title>Inicia sesion</title>
