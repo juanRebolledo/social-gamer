@@ -16,12 +16,11 @@
     <section class="bg sky">
         <?php
             if(isset($_GET["register"]))
-                require("$_SESSION[VIEW_PATH]". "components\\register.php");
+                require("$_SESSION[COMPONENTS_PATH]". "register.php");
             else
-                require("$_SESSION[VIEW_PATH]". "components\login.php");
+                require("$_SESSION[COMPONENTS_PATH]". "login.php");
         ?>
     </section>
-
     <script src="<?php echo "$_SESSION[VIEW_PUBLIC_PATH]". "Login\js/animationStars.js" ?>"></script> 
 </body>
 </html>
