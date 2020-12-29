@@ -1,19 +1,23 @@
 body, html{
     height: 100vh;
 }
+a:hover{
+    color: red;
+}
 
 .bg.sky{
-    background-color: #2e0748;
-    background-image: linear-gradient(0deg, #2e0748 0%, #121212 100%);
+    background-color: #121212;
 }
-
-.container-title h1 {
-    font-family: utopia-std-headline, serif;
+.nombre{
+    display: flex;
+    
+}
+.button{
+    border-color:#6c63ff ;
+}
+.container-title h1{
     font-size: 30px;
-    font-weight: bolder;
-    font-style: normal;
 }
-
 .container-login {
     align-items: center;
     display: flex;
@@ -21,6 +25,13 @@ body, html{
     height: 100%;
     width: 100vw;
 }
+.container-login, button {
+    color: #fff;
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-style: normal;
+}
+
 
 .login-body .button {
     background: #6c63ff;
@@ -30,10 +41,11 @@ body, html{
 }
 .login-body .button:hover {
     box-shadow: 0 0 0.25rem 0 #6c63ff;
+    border-color:#6c63ff ;
 }
 
 .login-box{
-    background: #ffffff;
+    background: #2C2C2C;
     border-radius: 10px;
     height: 420px;
     width: 360px;
@@ -49,7 +61,6 @@ body, html{
     height: 80%;
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto';
     justify-content: center;
 }
 
@@ -63,21 +74,21 @@ body, html{
     transition: all 0.3s;
 }
 .form-group input {
-    border: none;
+    border-style: solid;
     border-radius: 5px;
-    box-shadow: rgb(206, 212, 218) 0px 0px 0.25rem 0px;
+    border-color: #464646;
     height: 100%;
     outline: none;
     padding-left: 10px;
     width: 100%;
 }
-
-.form-group input:focus {
-    box-shadow: #6c63ff 0px 0px 0.25rem 0px;
+.form-group input{
+    background-color: #464646;
+    color: #fff;
 }
-
-.form-group input:focus + .form-label {
-    color: #6c63ff;
+.form-group input:focus {
+    background-color: #464646;
+    border-color: #6c63ff;
 }
 
 .form-label{
@@ -85,7 +96,7 @@ body, html{
     top: 8px;
     left: 10px;
     font-size: 16px;
-    color: #444053;
+    color: #fff;
 }
 
 .form-control:focus + .form-label,
@@ -97,7 +108,13 @@ body, html{
 .form-control::placeholder{
     color:transparent;
 }
-
+.register-box{
+    background: #2C2C2C;
+    border-radius: 10px;
+    height: 520px;
+    width: 460px;
+    z-index: 1;
+}
 @media (max-width: 568px) {
     .login-box {
         border-radius: 0;
