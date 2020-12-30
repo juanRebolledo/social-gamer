@@ -6,6 +6,9 @@
 </head>
 <body>
   <?php require_once("$_SESSION[COMPONENTS_PATH]"."Header/header.php"); ?>
-  <h1>Home</h1>
+  <?php 
+    // TODO: Aqui se extraen los Posts y se consumen en el componente 'PostsScrolling'
+    require_once("$_SESSION[COMPONENTS_PATH]"."PostsScrolling/PostsScrolling.php"); 
+  ?>
 </body>
 </html>
