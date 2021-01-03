@@ -1,7 +1,14 @@
 .posts {
-  height: 600px;
+  height: 580px;
   padding-right: 15px;
+  margin-bottom: 70px;
   width: 100%;
+}
+
+.posts .title-post {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 900;
 }
 
 .posts .container-posts {
@@ -35,7 +42,7 @@
 }
 
 .posts .container-posts .b {
-  height: 380px;
+  height: 350px;
   width: 430px;
 }
 

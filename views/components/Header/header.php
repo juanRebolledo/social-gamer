@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo "$_SESSION[COMPONENTS_PATH]"."Header/header.css" ?>">
+<link rel="stylesheet" href="<?php echo "$_SESSION[COMPONENTS_PATH]"."Header/header.css?v=". rand() ?>">
 <header>
   <div class="app-logo"><h1>Logo App</h1></div>
   <div class="container-search">
