@@ -1,9 +1,12 @@
 header {
   align-items: center;
+  background: #121212;
   display: flex;
   font-family: 'Roboto Mono';
   justify-content: space-around;
   height: 70px;
+  position: sticky;
+  top: 0;
 }
 
 header .container-search {
