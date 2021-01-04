@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?php echo "$_SESSION[COMPONENTS_PATH]"."Header/header.css?v=". rand() ?>">
 <header>
-  <div class="app-logo"><h1>Logo App</h1></div>
+  <a href="<?php echo ($_SESSION['SITE_ROOT'] . "?home");?>" id="home-page" class="app-logo"><h1>Logo App</h1></a>
   <div class="container-search">
     <div class="form-group">
       <input type="text" placeholder="Busqueda">
@@ -9,13 +9,17 @@
   </div>
   <nav>
     <div class="item-header-container plus">
-      <?php require_once("$_SESSION[ASSETS_PATH]/img/create_post.svg"); ?>
+      <a href="<?php echo ($_SESSION['SITE_ROOT'] . "?create");?>">
+        <?php require_once("$_SESSION[ASSETS_PATH]/img/create_post.svg"); ?>
+      </a>
       <div class="item-tooltip">
         <p>Crear</p>
       </div>
     </div>
     <div class="item-header-container">
-      <?php require_once("$_SESSION[ASSETS_PATH]/img/send_message.svg"); ?>
+      <a href="<?php echo ($_SESSION['SITE_ROOT'] . "?chat");?>">
+        <?php require_once("$_SESSION[ASSETS_PATH]/img/send_message.svg"); ?>
+      </a>
       <div class="item-tooltip">
         <p>Mensajes</p>
       </div>

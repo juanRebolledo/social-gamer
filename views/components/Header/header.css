@@ -55,7 +55,7 @@ header nav .item-header-container {
   width: 20px;
 }
 
-header nav .item-header-container svg {
+header nav .item-header-container a svg {
   fill: #fff;
   cursor: pointer;
   height: 100%;
@@ -68,7 +68,7 @@ header nav .item-header-container .item-tooltip {
   display: none;
 }
 
-header nav .item-header-container svg:hover + .item-tooltip {
+header nav .item-header-container a:hover + .item-tooltip {
   background: #6c63ff;
   border-radius: 5px;
   color: #fff;
@@ -80,9 +80,9 @@ header nav .item-header-container svg:hover + .item-tooltip {
   width: 85px;
 }
 .item-header-container .item-tooltip p { margin: auto; }
-header nav .item-header-container svg:hover { fill: #6c63ff; }
-header nav .plus svg { stroke: #fff; }
-header nav .plus svg:hover { stroke: #6c63ff; }
+header nav .item-header-container a svg:hover { fill: #6c63ff; }
+header nav .plus a svg { stroke: #fff; }
+header nav .plus a svg:hover { stroke: #6c63ff; }
 
 @keyframes increseSize {
   from {
