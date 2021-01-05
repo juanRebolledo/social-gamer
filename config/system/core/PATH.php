@@ -1,0 +1,13 @@
+<?php 
+  $DS = DIRECTORY_SEPARATOR;
+  $GLOBALS['SITE_ROOT'] = ""; // esto puede quedar unicamente como 'DS'
+  $GLOBALS['ASSETS_PATH'] = $GLOBALS['SITE_ROOT'].'assets'.$DS;
+  $GLOBALS['VIEW_PATH'] = $GLOBALS['SITE_ROOT'].'views'.$DS;
+  $GLOBALS['CONTROLLER_PATH'] = $GLOBALS['SITE_ROOT'].'controllers'.$DS;
+  $GLOBALS['MODEL_PATH'] = $GLOBALS['SITE_ROOT'].'models'.$DS;
+  $GLOBALS['STYLES_PATH'] = $GLOBALS['SITE_ROOT'].'styles'.$DS;
+  $GLOBALS['COMPONENTS_PATH'] = $GLOBALS['VIEW_PATH'].'components'.$DS;
+  $GLOBALS['IMAGES_PATH'] = $GLOBALS['ASSETS_PATH'].'img'.$DS;
+  $GLOBALS['VIEW_PRIVATE_PATH'] = $GLOBALS['VIEW_PATH'].'private'.$DS;
+  $GLOBALS['VIEW_PUBLIC_PATH'] = $GLOBALS['VIEW_PATH'].'public'.$DS;
+?>
