@@ -1,0 +1,107 @@
+header {
+  align-items: center;
+  background: #121212;
+  display: flex;
+  font-family: 'Roboto Mono';
+  justify-content: space-around;
+  height: 70px;
+  position: sticky;
+  top: 0;
+}
+
+header .container-search {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+header .container-search .form-group {
+  margin-bottom: 0;
+  width: 360px;
+}
+
+header .container-search .form-group input {
+  font-size: 1em;
+  border-radius: 5px 0px 0px 5px;
+  font-family: 'Roboto';
+}
+
+header .container-search button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: #fff;
+  height: 40px;
+  outline: none;
+  width: 55px;
+}
+
+header nav, header.app-logo {
+  width: 20%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 100px;
+}
+
+header nav .item-header-container {
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+header nav .item-header-container a svg {
+  fill: #fff;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+header nav .item-header-container .item-tooltip {
+  animation-duration: 0.3s;
+  animation-name: increseSize;
+  display: none;
+}
+
+header nav .item-header-container a:hover + .item-tooltip {
+  background: #6c63ff;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  height: 25px;
+  position: absolute;
+  left: -30px;
+  width: 85px;
+}
+.item-header-container .item-tooltip p { margin: auto; }
+header nav .item-header-container a svg:hover { fill: #6c63ff; }
+header nav .plus a svg { stroke: #fff; }
+header nav .plus a svg:hover { stroke: #6c63ff; }
+
+@keyframes increseSize {
+  from {
+    display: none;
+    width: 10px;
+  }
+  to {
+    width: 85px;
+  }
+}
+
+@media (max-width: 560px) {
+  header .app-logo{
+    display: none;
+  }
+  header .container-search{ 
+    width: 90%;
+  }
+  header nav {
+    display: none;
+  }
+}
