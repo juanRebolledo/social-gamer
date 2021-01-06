@@ -5,11 +5,11 @@
                 <h1 class="has-text-centered">Gamer social</h1>
             </div>
 
-            <form action="" method="post">
+            <form action='<?php echo "{$PATH->CONTROLLERS}RegisterUser.php"; ?>' method="post">
                 
                 <div class="nombre">
                     <div class="form-group mr-1">
-                        <input autocomplete="off" class="form-control" type="text" placeholder="Nombre" name="name" required>
+                        <input autocomplete="off" class="form-control" type="text" placeholder="Nombre" name="firstname" required>
                         <label class="form-label">Nombre</label>
                     </div>
                     <div class="form-group ml-1">
@@ -39,7 +39,7 @@
             </form>
 
             <div class="container-register pt-5">
-                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="<?php echo ("{$SITE_ROOT}index.php");?>">Inicia sesion</a></p>
+                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="<?php echo ("{$PATH->SITE_ROOT}index.php");?>">Inicia sesion</a></p>
             </div>
 
         </div>
