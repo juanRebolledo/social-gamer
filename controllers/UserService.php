@@ -1,5 +1,5 @@
 <?php
-    namespace Controllers;
+namespace Controllers;
 
     class UserService{
         private $userMapper;
@@ -13,12 +13,12 @@
 
         }
 
-        public function handlerUserRegister(string $name, string $username, string $password, string $email){
+        public function handlerUserRegister(string $name, string $username, string $password, string $email):bool{
             if($this->userMapper->registerUser($name, $username, $password, $email)){
-                header("Location:" . "http://" . $_SERVER['HTTP_HOST'] . $_SESSION['VIEW_PRIVATE_PATH']. "/Home/Home.php");
+                return true;
             }
             else{
-                header("Location: " . $_SERVER['DOCUMENT_ROOT']);
+                return false;
             }
         }
         
