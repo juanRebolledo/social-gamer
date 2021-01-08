@@ -10,7 +10,7 @@ spl_autoload_register( function ($className) {
     }
     $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 
-    require $fileName;
+    require_once $fileName;
 });
 
 require_once('Routes.php');
