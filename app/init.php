@@ -1,10 +1,12 @@
 <?php
 spl_autoload_register(function($className){
-    if(file_exists('core/'.$className.'.php')){
-        require_once 'core/'.$className.'.php';
+    $urlCore = $_SERVER["DOCUMENT_ROOT"]."/app/core/".$className.".php";
+    $urlController = $_SERVER["DOCUMENT_ROOT"]."/app/controllers/".$className.".php";
+    if(file_exists($urlCore)){
+        require_once $urlCore;
     }  
-    else if(file_exists('./controllers/'.$className.'.php')){
-        require_once './controllers/'.$className.'.php';
+    else if(file_exists($urlController)){
+        require_once $urlController;
     }
 });
 
