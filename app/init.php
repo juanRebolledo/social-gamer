@@ -1,15 +1,17 @@
 <?php
 spl_autoload_register(function($className){
-    $urlCore = $_SERVER["DOCUMENT_ROOT"]."/app/core/".$className.".php";
-    $urlController = $_SERVER["DOCUMENT_ROOT"]."/app/controllers/".$className.".php";
-    if(file_exists($urlCore)){
-        require_once $urlCore;
-    }  
-    else if(file_exists($urlController)){
-        require_once $urlController;
+    $sources = array(
+        $_SERVER["DOCUMENT_ROOT"]."/app/core/".$className.".php",
+        $_SERVER["DOCUMENT_ROOT"]."/app/controllers/".$className.".php"
+    );
+
+    foreach($sources as $source){
+        if(file_exists($source)){
+            require_once $source;
+        }
     }
 });
-
+    
 require_once('Routes.php');
 
 
