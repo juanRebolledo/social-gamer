@@ -17,12 +17,12 @@ $PATH = new PATH();
 
 require_once("{$PATH->VIEW_PUBLIC}Login\Login.php");*/
 
-Route::set('about-us', function(){
-    echo "about us";
-    //AboutUs::CreateView();
+core\Route::set('about-us', function(){
+    echo "Echo dentro de set Route";
+    controllers\AboutUs::CreateView();
 });
 
-Route::set('contact-us', function(){
+core\Route::set('contact-us', function(){
     echo "home";
     //ContactUs::CreateView();
 });
