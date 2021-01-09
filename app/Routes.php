@@ -20,9 +20,7 @@ require_once("{$PATH->VIEW_PUBLIC}Login\Login.php");*/
 Route::set('login', function(){
     Home::CreateView("Login");
 });
-/*
-Route::set('contact-us', function(){
-    ContactUs::CreateView();
-});
 
-*/
+Route::set('register', function(){
+    Home::CreateView("Register");
+});

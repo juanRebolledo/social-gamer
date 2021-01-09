@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="container-register pt-5">
-                    <p class="has-text-centered">¿Aún sin cuenta? <a href="<?php echo ("{$PATH->SITE_ROOT}index.php?register");?>">Registrate</a></p>
+                    <p class="has-text-centered">¿Aún sin cuenta? <a href="register">Registrate</a></p>
                 </div>
             </form>
         </div>

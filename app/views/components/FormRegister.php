@@ -39,7 +39,7 @@
             </form>
 
             <div class="container-register pt-5">
-                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="<?php echo ("{$PATH->SITE_ROOT}index.php");?>">Inicia sesion</a></p>
+                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="login">Inicia sesion</a></p>
             </div>
 
         </div>

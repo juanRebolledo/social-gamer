@@ -15,7 +15,7 @@
     public function __construct(){
       $this->DS = DIRECTORY_SEPARATOR;
 
-      $this->SITE_ROOT = "{$_SERVER['DOCUMENT_ROOT']}{$this->DS}";
+      $this->SITE_ROOT = "";
         $this->APP = "{$this->SITE_ROOT}app{$this->DS}";
           $this->CONTROLLERS = "{$this->APP}controllers{$this->DS}";
           $this->CORE = "{$this->APP}core{$this->DS}";
