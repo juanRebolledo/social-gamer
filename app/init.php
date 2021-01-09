@@ -11,8 +11,9 @@ spl_autoload_register(function($className){
         }
     }
 });
-    
+  
 require_once('Routes.php');
+
 
 
 
