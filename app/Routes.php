@@ -12,18 +12,15 @@ use Config\System\Core\AutoLoader;
 use Config\System\Core\PATH;
 
 AutoLoader::loadEverything();
-$PATH = new PATH();
+
 
 
 require_once("{$PATH->VIEW_PUBLIC}Login\Login.php");*/
 
-Route::set('about-us', function(){
-    echo "Echo dentro de set Route";
-    AboutUs::CreateView();
+Route::set('login', function(){
+    Home::CreateView("Login");
 });
 
-Route::set('contact-us', function(){
-    echo "home";
-    //ContactUs::CreateView();
+Route::set('register', function(){
+    Home::CreateView("Register");
 });
-

@@ -2,8 +2,8 @@
 
 class Controller{
 
-    public function model($model){
-        require_once "../app/models/" . $model . ".php";
+    public static function CreateView($viewName){
+        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/{$viewName}/{$viewName}.php");
     }
     
 }
