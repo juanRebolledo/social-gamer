@@ -30,5 +30,5 @@
       </form>
     </div>
   </div>
-  <script src="<?php echo "$_SESSION[VIEW_PRIVATE_PATH]" . "Post/js/onChangeFile.js" ?>"></script>
+  <script src="<?php echo "{$PATH->JS}/onChangeFile.js" ?>"></script>
 </div>
