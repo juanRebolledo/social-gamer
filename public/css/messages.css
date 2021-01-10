@@ -1,0 +1,133 @@
+.app .app-messages {
+  display: flex;
+  height: 100%;
+}
+
+.app-messages .online-friends {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* overflow-y: auto; */
+  width: 110px;
+}
+
+.online-friends .c-online-friend {
+  background: #444444;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  position: relative;
+  width: 48px;
+}
+
+.c-online-friend a .img-user {
+  height: 100%;
+}
+
+.online-friends .tooltip a:hover + .item-tooltip {
+  bottom: 10px;
+  left: 60px;
+}
+
+.app-messages .container-messages {
+  background: var(--b-secondary);
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  position: relative;
+  width: calc(100% - 70px);
+}
+
+.container-messages .messages-header {
+  background: var(--c-purple);
+  color: var(--c-white);
+  height: 70px;
+  padding-top: 5px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.messages-header .username p {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.container-messages .messages {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 140px);
+  overflow: auto;
+  padding: 10px 50px 0 50px;
+  width: 100%;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.app .app-messages, 
+.c-online-friend a .img-user, 
+.container-messages,  
+.messages .msg {
+  width: 100%;
+}
+
+.msgL, .msgR {
+  display: flex;
+}
+
+.messages .msgL {
+  justify-content: flex-start;
+}
+
+.messages span {
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 15px;
+}
+
+.messages .msgL span {
+  background: var(--b-third);
+  border-radius: 0px 8px 8px 8px;
+  color: var(--c-white);
+}
+
+.messages .msgR {
+  justify-content: flex-end;
+}
+
+.messages .msgR span {
+  background: var(--c-purple);
+  border-radius: 8px 0px 8px 8px;
+  color: var(--c-white);
+}
+
+.container-messages .c-send-message {
+  bottom: 10px;
+  display: flex;
+  height: 50px;
+  position: absolute;
+  width: 90%;
+}
+
+.c-send-message .form-group {
+  width: calc(100% - 49px);
+}
+
+.c-send-message .form-group input {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.c-send-message .btn-send-message {
+  background: var(--c-purple);
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  height: 40px;
+  width: 49px;
+}
+
+.btn-send-message svg {
+  fill: var(--c-white);
+  width: 23px;
+}

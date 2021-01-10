@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 @import url('colors.css');
+@import url('spinner.css');
 
 * {
   margin: 0;
@@ -87,6 +88,36 @@ img {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.tooltip .item-tooltip {
+  animation-duration: 0.3s;
+  animation-name: increseSize;
+  display: none;
+}
+
+.tooltip a:hover + .item-tooltip {
+  background: var(--c-purple);
+  border-radius: 5px;
+  color: var(--c-white);
+  display: flex;
+  font-size: 15px;
+  height: 25px;
+  position: absolute;
+  left: -30px;
+  width: 85px;
+  z-index: 999;
+}
+.tooltip .item-tooltip p { margin: auto; }
+
+@keyframes increseSize {
+  from {
+    display: none;
+    width: 10px;
+  }
+  to {
+    width: 85px;
+  }
 }
 
 ::-webkit-scrollbar {

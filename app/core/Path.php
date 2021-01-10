@@ -6,7 +6,8 @@
       public $APP;
         public $CONTROLLERS;
         public $CORE;
-        public $MODEL;
+        public $MODELS;
+          public $FIREBASE;
         public $VIEWS;
           public $COMPONENTS;
             public $FORMS;
@@ -26,7 +27,8 @@
         $this->APP = "{$this->SITE_ROOT}app{$this->DS}";
           $this->CONTROLLERS = "{$this->APP}controllers{$this->DS}";
           $this->CORE = "{$this->APP}core{$this->DS}";
-          $this->MODELS = "{$this->APP}model{$this->DS}";
+          $this->MODELS = "{$this->APP}models{$this->DS}";
+            $this->FIREBASE = "{$this->MODELS}firebase{$this->DS}";
           $this->VIEWS = "{$this->APP}views{$this->DS}";
             $this->COMPONENTS = "{$this->VIEWS}components{$this->DS}";
               $this->FORMS = "{$this->COMPONENTS}forms{$this->DS}";
