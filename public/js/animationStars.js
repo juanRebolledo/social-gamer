@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    for (let i=0 ;  i<200 ;i++){
-        const positionLeft = Math.random()*$(document).width();
-        const positionTop = Math.random()*($(document).height());
+    for (let i=0 ;  i<150 ;i++){
+        const positionLeft = Math.random()*$(document).width() / 1.02;
+        const positionTop = Math.random()*($(document).height()) / 1.02;
         const opacity = Math.random();
         const parpadeo = Math.random();
         let objStar;

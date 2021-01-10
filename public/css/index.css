@@ -1,10 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('colors.css');
+@import url('spinner.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  background-color: #121212;
+  background-color: var(--b-primary);
+}
+
+button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: var(--c-white);
+  height: 40px;
+  outline: none;
+}
+
+img {
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.app {
   height: 100vh;
+  overflow-y: auto;
   width: 100vw;
+}
+
+.form-group {
+  height: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+.form-group, .form-group input, .form-group .form-label {
+  transition: all 0.3s;
+}
+
+.form-group textarea {
+  padding-top: 15px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--b-third);
+  height: 100%;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
+}
+.form-group input, .form-group textarea, .form-group select{
+  background-color: var(--b-third);
+  color: var(--c-white);
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  background-color: var(--b-third);
+  border-color: var(--c-purple);
+}
+
+.form-label{
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 16px;
+  color: var(--c-white);
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  font-size: 0.8em;
+  left: 0px;
+  top: -25px;
+}
+.form-control::placeholder{
+  color:transparent;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip .item-tooltip {
+  animation-duration: 0.3s;
+  animation-name: increseSize;
+  display: none;
+}
+
+.tooltip a:hover + .item-tooltip {
+  background: var(--c-purple);
+  border-radius: 5px;
+  color: var(--c-white);
+  display: flex;
+  font-size: 15px;
+  height: 25px;
+  position: absolute;
+  left: -30px;
+  width: 85px;
+  z-index: 999;
+}
+.tooltip .item-tooltip p { margin: auto; }
+
+@keyframes increseSize {
+  from {
+    display: none;
+    width: 10px;
+  }
+  to {
+    width: 85px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -21,22 +134,35 @@ body {
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #464646;
+  background: var(--b-third);
 }
 ::-webkit-scrollbar-thumb:active {
-  background: #6c63ff;
+  background: var(--c-white);
 }
 ::-webkit-scrollbar-track {
-  background: #2c2c2c;
-  border: 20px none #ffffff;
+  background: var(--b-secondary);
+  border: 20px none var(--c-white);
   border-radius: 0px;
 }
 ::-webkit-scrollbar-track:hover {
   background: #2e2e2e;
 }
 ::-webkit-scrollbar-track:active {
-  background: #2c2c2c;
+  background: var(--b-secondary);
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--c-white);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--c-white);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--c-white);
 }

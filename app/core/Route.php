@@ -1,5 +1,4 @@
 <?php
-
 class Route{
 
     // protected $controller = "home";

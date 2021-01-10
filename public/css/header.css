@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background: #121212;
+  background: var(--b-primary);
   display: flex;
   font-family: 'Roboto Mono';
   justify-content: space-around;
@@ -28,12 +28,6 @@ header .container-search .form-group input {
 }
 
 header .container-search button {
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  color: #fff;
-  height: 40px;
-  outline: none;
   width: 55px;
 }
 
@@ -56,43 +50,15 @@ header nav .item-header-container {
 }
 
 header nav .item-header-container a svg {
-  fill: #fff;
+  fill: var(--c-white);
   cursor: pointer;
   height: 100%;
   width: 100%;
 }
 
-header nav .item-header-container .item-tooltip {
-  animation-duration: 0.3s;
-  animation-name: increseSize;
-  display: none;
-}
-
-header nav .item-header-container a:hover + .item-tooltip {
-  background: #6c63ff;
-  border-radius: 5px;
-  color: #fff;
-  display: flex;
-  font-size: 15px;
-  height: 25px;
-  position: absolute;
-  left: -30px;
-  width: 85px;
-}
-.item-header-container .item-tooltip p { margin: auto; }
-header nav .item-header-container a svg:hover { fill: #6c63ff; }
-header nav .plus a svg { stroke: #fff; }
-header nav .plus a svg:hover { stroke: #6c63ff; }
-
-@keyframes increseSize {
-  from {
-    display: none;
-    width: 10px;
-  }
-  to {
-    width: 85px;
-  }
-}
+header nav .item-header-container a svg:hover { fill: var(--c-purple); }
+header nav .plus a svg { stroke: var(--c-white); }
+header nav .plus a svg:hover { stroke: var(--c-purple); }
 
 @media (max-width: 560px) {
   header .app-logo{
