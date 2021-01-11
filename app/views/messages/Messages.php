@@ -3,9 +3,10 @@
 <head>
     <?php
         $PATH = new PATH(); 
-        require_once("{$PATH->HEAD}head.php") 
+        require_once("{$PATH->HEAD}head.php");
+        require_once("{$PATH->HEAD}firebaseHead.php"); 
     ?>
-<link rel="stylesheet" href="<?php echo "{$PATH->CSS}messages.css"?>">
+    <link rel="stylesheet" href="<?php echo "{$PATH->CSS}messages.css"?>">
     <title>Gamer Social | Messages</title>
 </head>
 <body>

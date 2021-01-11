@@ -4,6 +4,7 @@
   <?php
     $PATH = new PATH(); 
     require_once("{$PATH->HEAD}head.php");
+    require_once("{$PATH->HEAD}firebaseHead.php");
     ?>
   <link rel="stylesheet" href="<?php echo "{$PATH->CSS}createPost.css"?>">
   <title>Gamer Social | Crear</title>
@@ -24,7 +25,7 @@
                   <option value="adventure">Aventura</option>
                   <option value="rpg">RPG</option>
                 </select>
-                <button type="button">Guardar</button>
+                <button id="save_post" type="button">Guardar</button>
               </div>
             </div>
             <div class="container-form-inputs">
@@ -44,7 +45,9 @@
           </form>
         </div>
       </div>
+      <script src="<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
       <script src="<?php echo "{$PATH->JS}/createPost/onChangeFile.js" ?>"></script>
+      <script src="<?php echo "{$PATH->JS}/createPost/uploadImage.js" ?>"></script>
     </div>
   </div>
 </body>

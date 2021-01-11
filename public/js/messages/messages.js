@@ -30,7 +30,7 @@ function sendMessage() {
   if (msgToSend.length > 0) {
     const date = new Date();
     const data = { user: 'Emiliano', text: msgToSend, date: date.toISOString() };
-    addElementToFirebase(refer, data);
+    addElementToFirebase(data);
     clearTargetMessage();
   } else {
     alert('Ingresa un texto krnal');
