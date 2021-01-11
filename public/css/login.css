@@ -1,0 +1,84 @@
+.button{
+    border-color: var(--c-purple) ;
+}
+
+.container-register p a:hover{
+    color: var(--c-red);
+}
+
+.nombre{
+    display: flex; 
+}
+
+.container-title h1{
+    font-size: 30px;
+}
+.container-login {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+}
+.container-login, button {
+    color: var(--c-white);
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login-body .button {
+    background: var(--c-purple);
+    color: var(--c-white);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.login-body .button:hover {
+    box-shadow: 0 0 0.25rem 0 var(--c-purple);
+    border-color: var(--c-purple) ;
+}
+
+.login-box{
+    background: var(--b-secondary);
+    border-radius: 10px;
+    height: 420px;
+    width: 360px;
+    z-index: 1;
+}
+
+.login-body{
+    padding: 2em 1.5em;
+    height: 100%;
+}
+
+.login-body form {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-box{
+    background: var(--b-secondary);
+    border-radius: 10px;
+    height: 520px;
+    width: 460px;
+    z-index: 1;
+}
+@media (max-width: 568px) {
+    .login-box {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .register-box {
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .star {
+        display: none;
+    }
+}
