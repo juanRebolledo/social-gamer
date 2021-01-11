@@ -1,9 +1,9 @@
 .button{
-    border-color:#6c63ff ;
+    border-color: var(--c-purple) ;
 }
 
 .container-register p a:hover{
-    color: red;
+    color: var(--c-red);
 }
 
 .nombre{
@@ -21,25 +21,25 @@
     width: 100vw;
 }
 .container-login, button {
-    color: #fff;
+    color: var(--c-white);
     font-family: 'Roboto Mono';
     font-weight: 500;
     font-style: normal;
 }
 
 .login-body .button {
-    background: #6c63ff;
-    color: #fff;
+    background: var(--c-purple);
+    color: var(--c-white);
     font-weight: 500;
     transition: all 0.3s;
 }
 .login-body .button:hover {
-    box-shadow: 0 0 0.25rem 0 #6c63ff;
-    border-color:#6c63ff ;
+    box-shadow: 0 0 0.25rem 0 var(--c-purple);
+    border-color: var(--c-purple) ;
 }
 
 .login-box{
-    background: #2C2C2C;
+    background: var(--b-secondary);
     border-radius: 10px;
     height: 420px;
     width: 360px;
@@ -59,7 +59,7 @@
 }
 
 .register-box{
-    background: #2C2C2C;
+    background: var(--b-secondary);
     border-radius: 10px;
     height: 520px;
     width: 460px;
