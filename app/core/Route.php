@@ -1,9 +1,9 @@
 <?php
 class Route{
 
-    // protected $controller = "home";
-    // protected $method = "index";
-    // protected $params = [];
+    protected $controller = "home";
+    protected $method = "index";
+    protected $params = [];
 
     // public function __construct(){
     //     $url = $this->parseUrl();
