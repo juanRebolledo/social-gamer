@@ -30,10 +30,10 @@ class Route{
     //     call_user_func_array([$this->controller, $this->method], $this->params);
     // }
 
-    // public function parseUrl(){
-    //     if(isset($_GET["url"]))
-    //         return $url = explode("/", filter_var(rtrim($_GET["url"], "/"), FILTER_SANITIZE_URL));
-    // }
+    public function parseUrl(){
+        if(isset($_GET["url"]))
+            return $url = explode("/", filter_var(rtrim($_GET["url"], "/"), FILTER_SANITIZE_URL));
+    }
     public static $validRoutes = array();
 
     public static function set($route, $function){
