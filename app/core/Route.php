@@ -5,6 +5,7 @@ class Route{
     protected $method = "index";
     protected $params = [];
 
+
     // public function __construct(){
     //     $url = $this->parseUrl();
 
@@ -30,20 +31,29 @@ class Route{
     //     call_user_func_array([$this->controller, $this->method], $this->params);
     // }
 
-    public function parseUrl(){
-        if(isset($_GET["url"]))
-            return $url = explode("/", filter_var(rtrim($_GET["url"], "/"), FILTER_SANITIZE_URL));
-    }
-    public static $validRoutes = array();
+    // public static function parseUrl(){
+    //     /*if(isset($_GET["url"]))
+    //         return $url = explode("/", filter_var(rtrim($_GET["url"], "/"), FILTER_SANITIZE_URL));*/
+    //     return strtolower($_GET['url']);
+    // }
+   // public static $validRoutes = array();
 
     public static function set($route, $function){
-
-        self::$validRoutes[] = $route;
+        //self::$validRoutes[] = $route;
+        
         
         if(isset($_GET['url'])){
-            if($_GET['url'] == $route){
+            
+            if(strtolower($_GET['url']) == $route){
+                echo $route;
                 $function->__invoke();
             }
+        }else{
+            $route = "welcome";
+            $function = function(){
+                Home::CreateView("Welcome");
+            };
+            $function->__invoke();
         }
         
     }
