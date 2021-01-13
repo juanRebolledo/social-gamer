@@ -15,6 +15,7 @@
             public $HEAD;
             public $HEADER;
             public $POSTS;
+            public $LANDING;
       public $PUBLIC;
         public $ASSETS;
           public $IMG;
@@ -36,6 +37,7 @@
               $this->HEAD = "{$this->COMPONENTS}head{$this->DS}";
               $this->HEADER = "{$this->COMPONENTS}header{$this->DS}";
               $this->POSTS = "{$this->COMPONENTS}posts{$this->DS}";
+              $this->LANDING = "{$this->COMPONENTS}landing{$this->DS}";
         $this->PUBLIC = "{$this->SITE_ROOT}public{$this->DS}";
           $this->ASSETS = "{$this->PUBLIC}assets{$this->DS}";
             $this->IMG = "{$this->ASSETS}img{$this->DS}";
