@@ -23,7 +23,7 @@
   justify-content: space-evenly;
   position: absolute;
   opacity: 1;
-  transition: opacity 1s; 
+  transition: opacity 0.8s;
   width: 100%;
 }
 
