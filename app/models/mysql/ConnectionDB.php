@@ -1,7 +1,7 @@
 <?php
-    namespace Controllers;
-    use PDO; // <- This because we are using autoload with namespaces
-    class connectionDB{
+    //namespace Controllers;
+    //use PDO; // <- This because we are using autoload with namespaces
+    class ConnectionDB{
         private $host = "localhost";
         private $user = "root";
         private $password = "";
