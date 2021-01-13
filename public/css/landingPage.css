@@ -13,19 +13,32 @@
 
 .landing-body .c-s-landing .banner-landing {
   height: 70%;
+  position: relative;
   width: 90%;
 }
 
 .landing-body .c-s-landing .banner-landing .slider {
-  align-items: flex-start;
-  height: calc(100% - 20px);
+  display: flex;
+  height: calc(100% - 60px);
   justify-content: space-evenly;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s; 
   width: 100%;
 }
 
+.landing-body .c-s-landing .banner-landing .slider.fade {
+  opacity: 0;
+}
+
 .slider .s-img {
+  border-radius: 5px;
   margin-top: 1em;
   width: 50%;
+}
+
+.slider .s-img img { 
+  box-shadow: 0 0 1.25rem 0 #000;
 }
 
 .slider .s-info {
@@ -50,9 +63,11 @@
 }
 
 .landing-body .c-s-landing .banner-landing .c-dots {
+  bottom: 0;
   height: 20px;
   justify-content: space-evenly;
-  margin: 15px auto;
+  left: calc(50% - 50px);
+  position: absolute;
   width: 100px;
 }
 
@@ -95,4 +110,31 @@
 .slider .s-info .register:hover {
   background: var(--c-purple);
   color: var(--c-white);
+}
+
+@media (max-width: 568px) {
+  .landing-body .c-s-landing .banner-landing {
+    height: 100%;
+    width: 100%;
+  }
+  .landing-body .c-s-landing .banner-landing .slider {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .slider .s-info {
+    width: 75%;
+  }
+
+  .slider .s-info h1 {
+    font-size: 2em;
+  }
+
+  .slider .s-info h2 {
+    font-size: 1em;
+  }
+
+  .slider .s-img {
+    width: 90%;
+  }
 }

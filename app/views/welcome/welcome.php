@@ -21,24 +21,32 @@
     
     <section class="c-s-landing flex-center">
       <div class="banner-landing">
-        <div class="slider flex-center">
-          <div class="s-img">
-            <img src="<?php echo str_replace('\\', '/' ,$PATH->IMG) . "landing-banner1.png" ?>" alt="La mejor comunidad gamer del mundo! Gamer social">
-          </div>
-          <div class="s-info">
-            <h1>Unete a la mejor comunidad gamer</h1>
-            <h2>Gamer social te permite conocer temas acerca del mundo del gaiming.</h2>
-            <a class="btn register" href="/register">Unete aqui!</a>
-          </div>
-        </div>
-        <div class="slider flex-center">
-          <div class="s-img"></div>
-          <div class="s-info"></div>
-        </div>
-        <div class="slider flex-center">
-          <div class="s-img"></div>
-          <div class="s-info"></div>
-        </div>
+        <?php 
+          $src = str_replace('\\', '/' ,$PATH->IMG) . "landing-banner1.png";
+          $alt = "La mejor comunidad gamer del mundo! Gamer social";
+          $title = "Unete a la mejor comunidad gamer";
+          $subtitle = "Gamer social te permite conocer temas acerca del mundo del gaiming.";
+          $registerText = "Unete aqui!";
+          require("{$PATH->LANDING}slider.php");
+        ?>
+        
+        <?php 
+          $src = str_replace('\\', '/' ,$PATH->IMG) . "landing-banner2.png";
+          $alt = "Gamer Social crear post";
+          $title = "Crea contenido para el mundo";
+          $subtitle = "Habla sobre tus videojuegos favoritos";
+          $registerText = "Registrate!";
+          require("{$PATH->LANDING}slider.php");
+        ?>
+
+        <?php 
+          $src = str_replace('\\', '/' ,$PATH->IMG) . "landing-banner3.png";
+          $alt = "HomePage Gamer social";
+          $title = "Explora todos los posts";
+          $subtitle = "Registrate y comienza a leer!";
+          $registerText = "Unete!";
+          require("{$PATH->LANDING}slider.php");
+        ?>
 
         <div class="c-dots flex-center">
           <span class="dot" onclick="setSlider(1)"></span>
