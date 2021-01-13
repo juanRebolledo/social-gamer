@@ -1,6 +1,7 @@
 <?php
 
   class PATH{
+    public $HOST;
     public $DS;
     public $SITE_ROOT;
       public $APP;
@@ -21,8 +22,8 @@
         public $JS;
 
     public function __construct(){
+      $this->HOST = $_SERVER["HTTP_HOST"];
       $this->DS = DIRECTORY_SEPARATOR;
-
       $this->SITE_ROOT = "";
         $this->APP = "{$this->SITE_ROOT}app{$this->DS}";
           $this->CONTROLLERS = "{$this->APP}controllers{$this->DS}";
