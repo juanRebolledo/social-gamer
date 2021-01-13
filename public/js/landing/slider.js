@@ -22,6 +22,6 @@ function showSlider(n) {
     setTimeout(() => {
       slider[currentSlide-1].classList.remove('fade');  
       slider[currentSlide-1].style.zIndex = 1;
-  }, 1000)
+  }, 800)
   dots[currentSlide-1].className += " active";
 }
