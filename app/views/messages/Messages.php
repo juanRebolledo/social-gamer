@@ -6,7 +6,7 @@
         require_once("{$PATH->HEAD}head.php");
         require_once("{$PATH->HEAD}firebaseHead.php"); 
     ?>
-    <link rel="stylesheet" href="<?php echo "{$PATH->CSS}messages.css"?>">
+    <link rel="stylesheet" href="<?php echo("/{$PATH->CSS}messages.css"); ?>">
     <title>Gamer Social | Messages</title>
 </head>
 <body>
@@ -58,8 +58,8 @@
         </div>
     </div>
 
-    <script src="<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
-    <script src="<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "firebase.js" ?>"></script>
-    <script src="<?php echo str_replace('\\', '/' ,$PATH->JS) . "messages/messages.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "firebase.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "messages/messages.js" ?>"></script>
 </body>
 </html>

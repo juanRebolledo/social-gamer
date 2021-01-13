@@ -3,9 +3,9 @@
 <head>
 <?php
         $PATH = new PATH(); 
-        require_once("{$PATH->HEAD}head.php") 
+        require_once("{$PATH->HEAD}head.php");
     ?>
-    <link rel="stylesheet" href="<?php echo "{$PATH->CSS}E404.css" ?>">
+    <link rel="stylesheet" href="<?php echo "/{$PATH->CSS}E404.css" ?>">
     <title>Oh no! ¿Dónde estamos?</title>
 </head>
 <body>
