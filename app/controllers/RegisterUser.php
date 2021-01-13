@@ -1,10 +1,7 @@
 <?php
-    require_once("../config/system/core/autoload.php");
-    use Config\System\Core\AutoLoader;
-    use Config\System\Core\PATH;
-    use Controllers\UserService;
-   
-    AutoLoader::loadEverything();
+    require_once("../core/Autoload.php");
+    Autoload("C");
+
     $PATH = new PATH();
     $objUser = new UserService();
     
@@ -29,7 +26,7 @@
     
     
     if($newUser == true)
-        header("Location: ./../{$PATH->SITE_ROOT}index.php?sepudo");
+        header("Location: ../../home");
     else
-        header("Location: ./../{$PATH->SITE_ROOT}index.php?nosepudo");
+        header("Location: ../../nosepudo");
 ?>

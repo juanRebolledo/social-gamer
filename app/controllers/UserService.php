@@ -1,5 +1,4 @@
 <?php
-namespace Controllers;
 
     class UserService{
         private $userMapper;

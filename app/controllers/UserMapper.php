@@ -1,6 +1,5 @@
 <?php
-    namespace Controllers;
-
+   
     class UserMapper{
         private $pdoConnection;
 
