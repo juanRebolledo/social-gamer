@@ -102,10 +102,9 @@ img {
   color: var(--c-white);
   display: flex;
   font-size: 15px;
-  height: 25px;
   position: absolute;
   left: -30px;
-  width: 85px;
+  padding: 5px 10px;
   z-index: 999;
 }
 .tooltip .item-tooltip p { margin: auto; }
@@ -113,10 +112,10 @@ img {
 @keyframes increseSize {
   from {
     display: none;
-    width: 10px;
+    padding: 5px 0;
   }
   to {
-    width: 85px;
+    padding: 5px 10px;
   }
 }
 

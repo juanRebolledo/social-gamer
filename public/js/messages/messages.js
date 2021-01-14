@@ -7,17 +7,21 @@ targetMessagesContainer.innerHTML = '<div class="lds-dual-ring"></div>'
 let data = [];
 
 ref.on('value', (snapshot) => {
-  data = Object.values(snapshot.val());
-  
-  targetMessagesContainer.innerHTML = "";
-  data.forEach(function(msg) {
-    if (msg.user == 'Emiliano') {
-      targetMessagesContainer.innerHTML += `<div class="msg msgR"><span>${msg.text}</span></div>`;
-      return;
-    }
-    targetMessagesContainer.innerHTML += `<div class="msg msgL"><span>${msg.text}</span></div>`;
-  });
-  targetMessagesContainer.scrollTop = targetMessagesContainer.scrollHeight;
+  if (snapshot.val()) {
+    data = Object.values(snapshot.val());
+    
+    targetMessagesContainer.innerHTML = "";
+    data.forEach(function(msg) {
+      if (msg.user == localStorage.getItem('currentUser')) {
+        targetMessagesContainer.innerHTML += `<div class="msg msgR"><span>${msg.text}</span></div>`;
+        return;
+      }
+      targetMessagesContainer.innerHTML += `<div class="msg msgL"><span>${msg.text}</span></div>`;
+    });
+    targetMessagesContainer.scrollTop = targetMessagesContainer.scrollHeight;
+  } else {
+    targetMessagesContainer.innerHTML = `<div>No hay mensajes aún</div>`
+  }
 });
 
 function clearTargetMessage() {
@@ -29,7 +33,7 @@ function sendMessage() {
   
   if (msgToSend.length > 0) {
     const date = new Date();
-    const data = { user: 'Emiliano', text: msgToSend, date: date.toISOString() };
+    const data = { user: localStorage.getItem('currentUser'), text: msgToSend, date: date.toISOString() };
     addElementToFirebase(data);
     clearTargetMessage();
   } else {

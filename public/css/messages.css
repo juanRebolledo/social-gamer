@@ -22,6 +22,8 @@
 }
 
 .c-online-friend a .img-user {
+  border: 1px solid var(--c-purple);
+  border-radius: 100%;
   height: 100%;
 }
 
