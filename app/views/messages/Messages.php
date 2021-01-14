@@ -14,15 +14,12 @@
         <div class="app-messages">
             <div class="online-friends">
                 <?php
-                    $sentenceSQL = "SELECT * FROM `chat` WHERE idUser1 = '$currentUser' OR idUser2 = '$currentUser'";
-                    $data = $connection->prepare($sentenceSQL);
-                    $data->execute();
+                    $chatRooms = $this->handlerGetChatRoomsFrom($currentUser);
 
-                    while($chatRoom = $data->fetch(PDO::FETCH_ASSOC)) {
-                        $addressee = $chatRoom["idUser1"]; 
-                        if ($addressee == $currentUser) $addressee = $chatRoom["idUser2"];
-
-                        require("{$PATH->COMPONENTS}messages/onlineFriends.php");
+                    while($chatRoom = $chatRooms->fetch(PDO::FETCH_ASSOC)) {
+                      $addressee = $this->handlerGetAddresseeUser($currentUser, $chatRoom['idUser1'], $chatRoom['idUser2']);
+                      
+                      require("{$PATH->COMPONENTS}messages/onlineFriends.php");
                     }
                 ?>
             </div>
@@ -31,21 +28,8 @@
                     <span>Mensajes con</span>
                     <div class="username">
                         <?php 
-                            $sentenceSQL = "SELECT idUser1, idUser2 FROM `chat` WHERE idChat = '$idChat'";
-                            $idUserStmt = $connection->prepare($sentenceSQL);
-                            $idUserStmt->execute();
-                            while($username = $idUserStmt->fetch(PDO::FETCH_ASSOC)) {
-                                $userAdressee = $username["idUser1"]; 
-                                if ($userAdressee == $currentUser) $userAdressee = $username["idUser2"];
-
-                                $sentenceSQL = "SELECT username FROM `user` WHERE iduser = '$userAdressee'";
-                                $nameUserStmt = $connection->prepare($sentenceSQL);
-                                $nameUserStmt->execute();
-                                $nameUserFromID = $nameUserStmt->fetchColumn();
-
-                                echo "<p>$nameUserFromID</p>";
-                                break;
-                            }
+                            $username = $this->handlerGetNameFromAdressee($currentUser, $idChat);
+                            echo "<p>$username</p>";
                         ?>
                     </div>
                 </div>
