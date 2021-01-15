@@ -89,6 +89,9 @@ img {
   display: flex;
   justify-content: center;
 }
+.tooltip {
+  position: relative;
+}
 
 .tooltip .item-tooltip {
   animation-duration: 0.3s;
