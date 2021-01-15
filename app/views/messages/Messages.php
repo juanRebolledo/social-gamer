@@ -13,36 +13,24 @@
     <div class="app">
         <div class="app-messages">
             <div class="online-friends">
-                <div class="c-online-friend tooltip">
-                    <a href="messages/asdahnasdhasd">
-                        <div class="img-user"></div>
-                    </a>
-                    <div class="item-tooltip">
-                        <p>User 1</p>
-                    </div>
-                </div>
-                <div class="c-online-friend tooltip">
-                    <a href="messages/asdahnasdhasd">
-                        <div class="img-user"></div>
-                    </a>
-                    <div class="item-tooltip">
-                        <p>User 1</p>
-                    </div>
-                </div>
-                <div class="c-online-friend tooltip">
-                    <a href="messages/asdahnasdhasd">
-                        <div class="img-user"></div>
-                    </a>
-                    <div class="item-tooltip">
-                        <p>User 1</p>
-                    </div>
-                </div>
+                <?php
+                    $chatRooms = $this->handlerGetChatRoomsFrom($currentUser);
+
+                    while($chatRoom = $chatRooms->fetch(PDO::FETCH_ASSOC)) {
+                      $addressee = $this->handlerGetAddresseeUser($currentUser, $chatRoom['idUser1'], $chatRoom['idUser2']);
+                      
+                      require("{$PATH->COMPONENTS}messages/onlineFriends.php");
+                    }
+                ?>
             </div>
             <div class="container-messages flex-center">
                 <div class="messages-header">
                     <span>Mensajes con</span>
                     <div class="username">
-                        <p>Juan Rebolledo</p>
+                        <?php 
+                            $username = $this->handlerGetNameFromAdressee($currentUser, $idChat);
+                            echo "<p>$username</p>";
+                        ?>
                     </div>
                 </div>
                 <div class="messages" id="messages"></div>
@@ -57,7 +45,8 @@
             </div>
         </div>
     </div>
-
+    
+    <script>localStorage.setItem("currentUser", "<?php echo $currentUser ?>")</script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "firebase.js" ?>"></script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "messages/messages.js" ?>"></script>

@@ -1,5 +1,6 @@
 const database = firebase.database();
-const refer = `chat/messages/ashdasASDasasbd`;
+const chatRoom = location.href.split('/t/')[1];
+const refer = `chat/messages/${chatRoom}`;
 const ref = database.ref(refer);
 
 function addElementToFirebase(data) {

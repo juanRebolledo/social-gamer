@@ -5,7 +5,7 @@
         private $host = "localhost";
         private $user = "root";
         private $password = "";
-        private $dbname = "red_social";
+        private $dbname = "socialgamer";
         private $dsn;
         private $pdoConnection;
 
