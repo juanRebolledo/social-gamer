@@ -74,6 +74,19 @@ img {
   color: var(--c-white);
 }
 
+.form-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.group-file img { 
+  border: 1px solid var(--c-purple);
+  display: none;
+  cursor: pointer;
+  top: 2px;
+  left: 1px;
+  position: absolute;
+}
+
 .form-control:focus + .form-label,
 .form-control:not(:placeholder-shown) + .form-label {
   font-size: 0.8em;
@@ -90,6 +103,7 @@ img {
   justify-content: center;
 }
 .tooltip {
+  font-family: 'Roboto Mono';
   position: relative;
 }
 

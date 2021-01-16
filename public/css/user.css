@@ -21,6 +21,7 @@
   height: 100%;
   justify-content: flex-start;
   max-width: 300px;
+  overflow: auto;
   width: 80%;
 }
 
@@ -75,4 +76,80 @@
   font-size: 1em;
   font-family: 'Roboto Mono';
   font-weight: 500;
+}
+
+.container-form {
+  background: var(--b-secondary);
+  border-radius: 8px;
+  height: 500px;
+  max-width: 900px;
+  overflow: auto;
+  width: 85%;
+}
+
+.container-form form {
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90%;
+}
+
+.container-form form .group-file {
+  height: 90%;
+  width: 55%;
+  margin: 0;
+}
+
+.container-form form .container-data-inputs {
+  flex-direction: column;
+  height: 90%;
+  justify-content: flex-start;
+  overflow: auto;
+  width: 40%;
+}
+
+form .container-data-inputs button {
+  background: var(--c-purple);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  width: 90%;
+}
+
+form .container-data-inputs .form-group {
+  width: 90%;
+}
+
+@media (max-width: 650px) {
+  .c-u-profile {
+    flex-wrap: wrap;
+  }
+  .c-u-profile .u-p-about, 
+  .c-u-profile .u-p-posts {
+    width: 100%;
+  }
+
+  .c-u-profile .u-p-about .u-p-a-info, 
+  .c-u-profile .u-p-about .u-p-a-social {
+    height: 65%;
+  }
+
+  .c-u-profile .u-p-about .u-p-a-info .profile-photo {
+    height: 270px;
+    width: 220px;
+  }
+
+  .container-form form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container-form form .group-file {
+    margin: 10px 0;
+    width: 90%;
+  }
+
+  .container-form form .container-data-inputs {
+    width: 100%;
+  }
 }

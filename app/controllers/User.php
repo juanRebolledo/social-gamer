@@ -3,20 +3,29 @@
     class User extends Controller{
         private $actionsSql;
         public function u($idUser) {
-            $this->actionsSql = new ActionsSql();
-            $data = $this->handlerGetUser($idUser);
-            $userInformation = $data->fetch(PDO::FETCH_ASSOC);
+          $this->actionsSql = new ActionsSql();
+          $data = $this->handlerGetUser($idUser);
+          $userInformation = $data->fetch(PDO::FETCH_ASSOC);
 
-            if ($userInformation) {
-              $socialNetworks = ["Facebook", "Twitter", "Twitch"];
-              require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/User.php");
-            }
-            else
-            header("location: /usernotfound");
+          if ($userInformation) {
+            $socialNetworks = ["Facebook", "Twitter", "Twitch"];
+            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/User.php");
           }
+          else
+          header("location: /usernotfound");
+        }
           
-          public function edit($idUser) {
-          require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/UpdateUser.php");
+        public function edit($idUser) {
+          $this->actionsSql = new ActionsSql();
+          $data = $this->handlerGetUser($idUser);
+          $userInformation = $data->fetch(PDO::FETCH_ASSOC);
+
+          if ($userInformation) {
+            $socialNetworks = ["Facebook", "Twitter", "Twitch"];
+            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/UpdateUser.php");
+          }
+          else
+          header("location: /usernotfound");
         }
 
         public function handlerGetUser(string $idUser) {
