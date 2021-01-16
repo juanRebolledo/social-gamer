@@ -26,7 +26,6 @@
               <h2><?php echo $userInformation['username'] ?></h2>
             </div>
           </div>
-
           <div class="u-p-a-social flex-center">
             <?php 
               $network = "/user/edit/$idUser";
@@ -34,17 +33,11 @@
               $tooltip = 'Editar';
               require("{$PATH->PROFILE}social.php");
               
-              $data = $this->handlerGetSocialNetworks($userInformation['idsocialnetwork']);
-              $networks = $data->fetch(PDO::FETCH_ASSOC);
-              
-              $count = 0;
-              foreach($networks as $network) {
-                if ($count == 3) continue;
-                $svg = $socialNetworks[$count];
-                $tooltip = $socialNetworks[$count];
+              foreach($socialNetworks as $socialnetwork) {
+                $network = $userInformation[strtolower($socialnetwork)];
+                $svg = $socialnetwork;
+                $tooltip = $socialnetwork;
                 require("{$PATH->PROFILE}social.php");
-                
-                $count++;
               }
             ?>
           </div>
