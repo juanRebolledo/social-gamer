@@ -14,7 +14,7 @@
       
     </div>
     <div class="container-data-inputs flex-center">
-      <button id="update_user" type="button">Actualizar</button>
+      <button id="btn_uploadImage" type="button">Actualizar</button>
       <div class="form-group">
           <input autocomplete="off" class="form-control" type="text" placeholder="Nombre" name="nameuser" required value="<?php echo "$userInformation[nameuser]"?>">
           <label class="form-label">Nombre</label>
@@ -48,6 +48,6 @@
     <input hidden type='text' id='url_image_to_mysql' name='url_image_to_mysql'></input>
     <input hidden type='text' id='iduser' name='iduser' value="<?php echo $userInformation['iduser'] ?>"></input>
     <input hidden type='text' id='idsocialnetwork' name='idsocialnetwork' value="<?php echo $userInformation['idsocialnetwork'] ?>"></input>
-    <button id="set_update_user" hidden></button>
+    <button id="activateAction" hidden></button>
   </form>
 </div>

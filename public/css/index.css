@@ -46,6 +46,7 @@ img {
 
 .form-group textarea {
   padding-top: 15px;
+  resize: none;
 }
 
 .form-group input, .form-group textarea, .form-group select {
