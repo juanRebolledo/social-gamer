@@ -19,6 +19,6 @@
     </div>
 
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
-    <script src="<?php echo "/{$PATH->JS}/uploadImage/onChangeFile.js" ?>"></script>
-    <script src="<?php echo "/{$PATH->JS}/uploadImage/uploadImage.js" ?>"></script></body>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "uploadImage/onChangeFile.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "uploadImage/uploadImage.js" ?>"></script></body>
 </html>

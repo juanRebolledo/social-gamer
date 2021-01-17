@@ -121,15 +121,6 @@ form .container-data-inputs .form-group {
   width: 90%;
 }
 
-.loading {
-  background: rgba(0, 0, 0, 0.2);
-  display: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-}
-
 @media (max-width: 650px) {
   .c-u-profile {
     flex-wrap: wrap;

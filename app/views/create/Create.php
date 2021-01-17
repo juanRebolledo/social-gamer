@@ -13,9 +13,9 @@
   <div class="app">
     <?php require_once("{$PATH->HEADER}header.php"); ?>
     <?php require_once("{$PATH->FORMS}FormCreate.php"); ?>
-    <script src="<?php echo str_replace('\\', '/', $PATH->FIREBASE) . "config.js" ?>"></script>
-    <script src="<?php echo "{$PATH->JS}/createPost/onChangeFile.js" ?>"></script>
-    <script src="<?php echo "{$PATH->JS}/createPost/uploadImage.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "uploadImage/onChangeFile.js" ?>"></script>
+    <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "uploadImage/uploadImage.js" ?>"></script></body>
   </div>
 </body>
 </html>

@@ -34,7 +34,6 @@ btnUploadImage.addEventListener('click', function() {
     }, function() {
       task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
         //TODO: downloadURL is the url of an image uploaded. We must pass it to database
-        targetFileSelector.value = null;
         loading.style.display = "none";
 
         document.getElementById('url_image_to_mysql').value = downloadURL;

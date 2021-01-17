@@ -1,7 +1,8 @@
 <div class="create flex-center">
     <div class="container-create-post flex-center">
+        <div class="loading flex-center" id="loading"></div>
         <div class="container-create-form">
-            <form action='<?php echo "{$PATH->CONTROLLERS}CreatePost.php"; ?>' method="POST">
+            <form action='<?php echo "/{$PATH->CONTROLLERS}CreatePost.php"; ?>' method="POST">
                 <div class="container-save flex-center">
                     <div class="form-group select">
                         <select class="form-control" name="category" id="category" required>
@@ -11,7 +12,7 @@
                             <option value="adventure">Aventura</option>
                             <option value="rpg">RPG</option>
                         </select>
-                        <button id="save_post" type="button">Guardar</button>
+                        <button id="btn_uploadImage" type="button">Guardar</button>
                     </div>
                 </div>
                 <div class="container-form-inputs">
@@ -29,7 +30,7 @@
                     </div>
                 </div>
                 <input hidden type='text' id='url_image_to_mysql' name='url_image_to_mysql'></input>
-                <button id="set_save_post" hidden></button>
+                <button id="activateAction" hidden></button>
             </form>
         </div>
     </div>

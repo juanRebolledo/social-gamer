@@ -7,6 +7,7 @@
   border-radius: 8px;
   height: 500px;
   max-width: 900px;
+  position: relative;
   width: 85%;
 }
 
