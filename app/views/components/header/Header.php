@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}header.css"?>">
 <header>
   <a href="/home" id="home-page" class="app-logo"><h1>Logo App</h1></a>
-  <div class="container-search">
+  <div class="i-btn flex-center">
     <div class="form-group">
       <input type="text" placeholder="Busqueda">
     </div>

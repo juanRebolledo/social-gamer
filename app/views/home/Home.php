@@ -13,7 +13,7 @@
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
             $posts = 0;
-            $limit = 8;
+            $limit = 1;
             require_once("{$PATH->POSTS}/PostsScrolling.php"); 
             $posts = 0;
             $limit = 3;

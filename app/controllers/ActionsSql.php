@@ -26,6 +26,16 @@
             return false;
         }
 
+        public function deleteItem($condition, $table) {
+            $sql = "DELETE FROM `$table` WHERE $condition";
+            try {
+                $this->connection->exec($sql);
+                return true;
+            } catch(PDOException $e) {
+                return false;
+            }
+        }
+
         public function handlerSelectColumn(string $column, $condition, $table, string $valueToSearch) {
             $sql = "SELECT `$column` FROM `$table` WHERE $condition = '$valueToSearch'";
             
@@ -34,20 +44,16 @@
             return $data->fetchColumn();
         }
 
-        public function handlerInsertPost($idpost,$iduser,$titlepost,$description,$URLimage,$idcategory,$categoryType):bool{
+        public function handlerInsertPost($idpost, $iduser, $titlepost, $description, $URLimage, $category):bool{
             try{
-                $sqlp = "INSERT INTO post(idpost,iduser,titlepost,description,image) VALUES ('$idpost','$iduser','$titlepost','$description','$URLimage')";
+                $sqlp = "INSERT INTO `post`(`idpost`, `iduser`, `titlepost`, `description`, `postimage`, `category`) VALUES ('$idpost', '$iduser', '$titlepost', '$description', '$URLimage', '$category')";
 
                 $data = $this->connection->prepare($sqlp);
                 $data->execute();
-
-                $sqlc = "INSERT INTO $categoryType(idcategory,idpost) VALUES ('$idcategory','$idpost')";
-
-                $data2 = $this->connection->prepare($sqlc);
-                $data2->execute();
                 
                 return true;
             }catch(PDOException $e){
+                var_dump($e);
                 return false;
             }
         }

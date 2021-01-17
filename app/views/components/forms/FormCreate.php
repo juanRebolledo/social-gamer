@@ -6,11 +6,11 @@
                 <div class="container-save flex-center">
                     <div class="form-group select">
                         <select class="form-control" name="category" id="category" required>
-                            <option value="sport">Deportes</option>
-                            <option value="fps">FPS</option>
-                            <option value="moba">MOBA</option>
-                            <option value="adventure">Aventura</option>
-                            <option value="rpg">RPG</option>
+                            <option value="Deportes">Deportes</option>
+                            <option value="FPS">FPS</option>
+                            <option value="MOBA">MOBA</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="RPG">RPG</option>
                         </select>
                         <button id="btn_uploadImage" type="button">Guardar</button>
                     </div>
