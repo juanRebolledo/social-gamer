@@ -1,6 +1,6 @@
 <?php
 
-    class ActionsSql extends Controller {
+    class ActionsSql{
         private $connection;
 
         public function __construct(){   
