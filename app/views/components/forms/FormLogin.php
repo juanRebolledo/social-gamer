@@ -5,14 +5,14 @@
                 <h1 class="has-text-centered">Gamer social</h1>
             </div>
 
-            <form action="" method="post">
+            <form action='<?php echo "/{$PATH->CONTROLLERS}SesionStart.php"; ?>' method="post">
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" type="text" placeholder="Usuario" name="usuario" required>
+                    <input autocomplete="off" class="form-control" type="text" placeholder="Usuario" name="username" id="username" required>
                     <label class="form-label">Usuario</label>
                 </div>
 
                 <div class="form-group">
-                    <input autocomplete="off" class="form-control" type="password" placeholder="Constraseña" name="usuario" required>
+                    <input autocomplete="off" class="form-control" type="password" placeholder="Constraseña" name="password" id="password" required>
                     <label class="form-label">Constraseña</label>
                 </div>
 

@@ -57,4 +57,25 @@
                 return false;
             }
         }
+
+        public function handlerSesionStart($username,$pass){
+            try{
+                session_start();
+                $sql = "SELECT iduser, username, password FROM `user` WHERE username='$username' AND password='$pass'";
+                $data = $this->handlerSelectData($sql);
+                $res = $data->fetchAll();
+                
+                foreach ($res as $iduser){
+                   $_SESSION['iduser']=$iduser->iduser;
+                   return true;
+                }
+                
+               return false;
+                
+            }catch(PDOException $e){
+                echo 'no listo' . $e;
+                return false;
+            }
+        }
+
     }//end class ActionsSql

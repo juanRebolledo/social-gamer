@@ -3,12 +3,12 @@
     Autoload("C");
 
     $actionSql = new ActionsSql();
-
+    session_start();
     $description = $_POST['information_post'];
     $titlepost = $_POST['title_post'];
     $category = $_POST['category'];
     $URLimage = $_POST['url_image_to_mysql'];
-    $iduser = "juanasdabassd";
+    $iduser = $_SESSION['iduser'];
     $idpost = uniqid('p_');
 
     
