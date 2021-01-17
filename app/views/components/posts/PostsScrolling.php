@@ -5,29 +5,27 @@
   <div class="container-posts">
     <?php 
        $count = 1;
-       while($posts != $limit) {
-         if ($count === 1) {
-           echo "<div class='post b'></div>";
-           $count++;
-         } else if ($count === 2) {
-           echo "<div class='post-s'><div class='post s'></div>";
-           $count++;
-         } else if($count === 3) {
-           echo "<div class='post s'></div></div>";
-           $posts++;
-           $count++;
-         } else if ($count === 4) {
-           echo "<div class='post-s'><div class='post s'></div>";
-           $count++;
-         } else if($count === 5) {
-           echo "<div class='post s'></div></div>";
-           $count++;
-         } else if ($count === 6) {
-           echo "<div class='post b'></div>";
-           $count = 1;
-           $posts++;
-         } 
-       }
+       foreach ($postOfUser->fetchAll() as $post) {
+        if ($count === 1) {
+          echo "<a href='/post/p/{$post->idpost}' class='post b'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          $count++;
+        } else if ($count === 2) {
+          echo "<div class='post-s'><a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          $count++;
+        } else if($count === 3) {
+          echo "<a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a></div>";
+          $count++;
+        } else if ($count === 4) {
+          echo "<div class='post-s'><a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          $count++;
+        } else if($count === 5) {
+          echo "<a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a></div>";
+          $count++;
+        } else if ($count === 6) {
+          echo "<a href='/post/p/{$post->idpost}' class='post b'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          $count = 1;
+        } 
+      }
     ?>
   </div>
 </div>

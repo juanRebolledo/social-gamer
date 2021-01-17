@@ -16,6 +16,17 @@
   width: calc(100% - 400px);
 }
 
+.c-u-profile .u-p-posts h1 {
+  color: var(--c-white);
+  font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  text-align: center;
+}
+
+.c-u-profile .u-p-posts .posts {
+  margin-bottom: 0;
+}
+
 .c-u-profile .u-p-about .u-p-a-info {
   flex-direction: column;
   height: 100%;
