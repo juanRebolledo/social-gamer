@@ -23,4 +23,23 @@
             
             return $data->fetchColumn();
         }
+
+        public function handlerInsertPost($idpost,$iduser,$titlepost,$description,$URLimage,$idcategory,$categoryType):bool{
+            try{
+                $sqlp = "INSERT INTO post(idpost,iduser,titlepost,description,image) VALUES ('$idpost','$iduser','$titlepost','$description','$URLimage')";
+
+                $data = $this->connection->prepare($sqlp);
+                $data->execute();
+
+                $sqlc = "INSERT INTO $categoryType(idcategory,idpost) VALUES ('$idcategory','$idpost')";
+
+                $data2 = $this->connection->prepare($sqlc);
+                $data2->execute();
+                echo 'listo';
+                return true;
+            }catch(PDOException $e){
+                echo 'no listo' . $e;
+                return false;
+            }
+        }
     }//end class ActionsSql

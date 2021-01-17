@@ -15,11 +15,11 @@
     <div class="create flex-center">
       <div class="container-create-post flex-center">
         <div class="container-create-form">
-          <form>
+          <form action='<?php echo "{$PATH->CONTROLLERS}CreatePost.php"; ?>' method="POST">
             <div class="container-save flex-center">
               <div class="form-group select">
                 <select class="form-control" name="category" id="category" required>
-                  <option value="sports">Deportes</option>
+                  <option value="sport">Deportes</option>
                   <option value="fps">FPS</option>
                   <option value="moba">MOBA</option>
                   <option value="adventure">Aventura</option>
@@ -34,14 +34,16 @@
                 <img id="image-selected" src="#" alt="your image" />
               </div>
               <div class="form-group">
-                <input autocomplete="off" class="form-control" type="text" placeholder="Titulo" name="title_post" required>
+                <input autocomplete="off" class="form-control" type="text" placeholder="Titulo" name="title_post" id="title_post" required>
                 <label class="form-label">Titulo</label>
               </div>
               <div class="form-group group-textarea">
-                  <textarea autocomplete="off" class="form-control" type="text" placeholder="Text" name="information_post" required></textarea>
+                  <textarea autocomplete="off" class="form-control" type="text" placeholder="Text" name="information_post" id="information_post" required></textarea>
                   <label class="form-label">Acerca del post...</label>
               </div>
             </div>
+            <input hidden type='text' id='url_image_to_mysql' name='url_image_to_mysql'></input>
+            <button id="set_save_post" hidden></button>
           </form>
         </div>
       </div>
