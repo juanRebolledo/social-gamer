@@ -1,5 +1,5 @@
-<?php
+<?php    
 
-    class Create extends Controller{
+class Create extends Controller{
 
-    }//end class Register
+}//end class Register

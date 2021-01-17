@@ -14,5 +14,6 @@ const onChangeFileImage = (input) => {
 
 targetImgFileSelected.addEventListener('click', function() {
   targetImgSelector.value = "";
+  targetImgFileSelected.src = "/NOT"
   targetImgFileSelected.style.display = "none"
 })

@@ -36,8 +36,6 @@ function sendMessage() {
     const data = { user: localStorage.getItem('currentUser'), text: msgToSend, date: date.toISOString() };
     addElementToFirebase(data);
     clearTargetMessage();
-  } else {
-    alert('Ingresa un texto krnal');
   }
 }
 

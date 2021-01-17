@@ -7,6 +7,7 @@
   border-radius: 8px;
   height: 500px;
   max-width: 900px;
+  position: relative;
   width: 85%;
 }
 
@@ -43,15 +44,6 @@
   width: 63%;
 }
 
-.container-create-form .group-file img { 
-  border: 1px solid var(--c-purple);
-  display: none;
-  cursor: pointer;
-  top: 2px;
-  left: 1px;
-  position: absolute;
-}
-
 .container-create-form .form-group {
   width: 35%;
 }
@@ -84,10 +76,6 @@
 .container-create-form .select:not(.is-multiple):not(.is-loading)::after { 
   border-color: var(--c-purple);
   left: 60%;
-}
-
-.form-file::-webkit-file-upload-button {
-  visibility: hidden;
 }
 
 @media (max-width: 768px) {
