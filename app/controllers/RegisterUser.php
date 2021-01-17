@@ -11,12 +11,13 @@
     $password = $_POST["password"];
     $email = $_POST["email"];
     $name = $firstName . " " . $lastName;
-    $iduser = uniqid('u_');
+    $idUser = uniqid('u_');
 
-    $newUser = $objUser->handlerUserRegister($iduser, $name,$user,$password,$email); 
+    $newUser = $objUser->handlerUserRegister($idUser, $name,$user,$password,$email); 
     
     if($newUser)
         header("Location: /home");
     else
-        header("Location: /nosepudo");
+        echo $idUser;
+        //header("Location: /nosepudo");
 ?>
