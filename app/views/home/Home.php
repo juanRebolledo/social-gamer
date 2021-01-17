@@ -1,3 +1,7 @@
+<?php 
+    $post = new Post();
+    $posts = $post->handlerGetAllPosts();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +16,13 @@
     <div class="app">
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
-            $posts = 0;
-            $limit = 1;
-            require_once("{$PATH->POSTS}/PostsScrolling.php"); 
-            $posts = 0;
-            $limit = 3;
-            $title = "Area Gamer 2";
-            require_once("{$PATH->POSTS}/PostsScrolling.php"); 
-        ?>
+            $postOfUser = $posts;
+            if ($postOfUser) {
+              require_once("{$PATH->POSTS}PostsScrolling.php");
+            } else {
+              echo "<h1>Aún nadie publica nada</h1>";
+            }
+          ?>
     </div>
 </body>
 </html>

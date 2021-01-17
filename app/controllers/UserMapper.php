@@ -8,11 +8,11 @@
             $this->pdoConnection = $connection->getConnection();
         }
 
-        public function registerUser(string $name, string $username, string $password, string $email):bool{
+        public function registerUser(string $iduser, string $name, string $username, string $password, string $email):bool{
             try{
-                $sql = 'INSERT INTO users(name,username,password,email) VALUES(:name, :username, :password, :email)';
+                $sql = 'INSERT INTO user (iduser, name, username, password, email) VALUES(:iduser, :name, :username, :password, :email)';
                 $stnt = $this->pdoConnection->prepare($sql);
-                $stnt->execute(["name" => $name, "username" => $username, "password" => $password, "email" => $email]);
+                $stnt->execute(["iduser" -> $iduser, "name" => $name, "username" => $username, "password" => $password, "email" => $email]);
 
                 return true;
             }catch(PDOException $e){
@@ -20,6 +20,5 @@
             }
             
         }
-    }//end class UserMapper
-
+    }
 ?>

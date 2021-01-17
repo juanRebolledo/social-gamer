@@ -10,7 +10,6 @@
     $URLimage = $_POST['url_image_to_mysql'];
     $iduser = $_SESSION['iduser'];
     $idpost = uniqid('p_');
-
     
     $newPost=$actionSql->handlerInsertPost($idpost, $iduser, $titlepost, $description, $URLimage, $category);
     if ($newPost) return header("Location: /post/p/$idpost");

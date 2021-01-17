@@ -24,5 +24,13 @@
         <p>Mensajes</p>
       </div>
     </div>
+    <div class="item-header-container tooltip">
+      <a href="/<?php echo "{$PATH->CONTROLLERS}Logout.php" ?>">
+        <?php require_once("{$PATH->IMG}log-out.svg"); ?>
+      </a>
+      <div class="item-tooltip">
+        <p>Cerrar Sesión</p>
+      </div>
+    </div>
   </nav>
 </header>

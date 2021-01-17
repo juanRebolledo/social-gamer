@@ -2,7 +2,6 @@
     require_once("../core/Autoload.php");
     Autoload("C");
 
-    $PATH = new PATH();
     $user = new User();
     
     $nameuser = $_POST['nameuser'];
@@ -18,3 +17,4 @@
 
     $user->handlerUpdateUser($nameuser, $username, $password, $email, $image, $facebook, $twitter, $twitch, $idUser, $idsocialnetwork);
 ?>
+

@@ -3,6 +3,5 @@
     class Home extends Controller{
         
         
-        
     }
 ?>

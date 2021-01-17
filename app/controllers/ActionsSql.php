@@ -73,7 +73,6 @@
                return false;
                 
             }catch(PDOException $e){
-                echo 'no listo' . $e;
                 return false;
             }
         }
