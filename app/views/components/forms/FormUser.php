@@ -1,4 +1,5 @@
 <div class="container-form flex-center">
+  <div class="loading flex-center" id="loading"></div>
   <form action="/<?php echo "{$PATH->CONTROLLERS}UserActions.php" ?>" class="flex-center" method="post">
     <div class="form-group group-file">
       <?php 
@@ -23,15 +24,15 @@
           <label class="form-label">Usuario</label>
       </div>
       <div class="form-group">
-          <input autocomplete="off" class="form-control" type="text" placeholder="Facebook" name="facebook" required value="<?php echo "$userInformation[facebook]"?>">
+          <input autocomplete="off" class="form-control" type="text" placeholder="Facebook" name="facebook" value="<?php echo "$userInformation[facebook]"?>">
           <label class="form-label">Facebook</label>
       </div>
       <div class="form-group">
-          <input autocomplete="off" class="form-control" type="text" placeholder="Twitter" name="twitter" required value="<?php echo "$userInformation[twitter]"?>">
+          <input autocomplete="off" class="form-control" type="text" placeholder="Twitter" name="twitter" value="<?php echo "$userInformation[twitter]"?>">
           <label class="form-label">Twitter</label>
       </div>
       <div class="form-group">
-          <input autocomplete="off" class="form-control" type="text" placeholder="Twitch" name="twitch" required value="<?php echo "$userInformation[twitch]"?>">
+          <input autocomplete="off" class="form-control" type="text" placeholder="Twitch" name="twitch" value="<?php echo "$userInformation[twitch]"?>">
           <label class="form-label">Twitch</label>
       </div>
       <div class="form-group">
@@ -45,6 +46,8 @@
     </div>
 
     <input hidden type='text' id='url_image_to_mysql' name='url_image_to_mysql'></input>
+    <input hidden type='text' id='iduser' name='iduser' value="<?php echo $userInformation['iduser'] ?>"></input>
+    <input hidden type='text' id='idsocialnetwork' name='idsocialnetwork' value="<?php echo $userInformation['idsocialnetwork'] ?>"></input>
     <button id="set_update_user" hidden></button>
   </form>
 </div>

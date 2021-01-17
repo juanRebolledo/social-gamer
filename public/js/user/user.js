@@ -1,6 +1,7 @@
 const storage = firebase.storage();
 
 const btnSavePost = document.getElementById('update_user');
+const loading = document.getElementById('loading');
 
 btnSavePost.addEventListener('click', function() {
   const targetFileSelector = document.getElementById('image-selector');
@@ -24,13 +25,18 @@ btnSavePost.addEventListener('click', function() {
     task.on('state_changed', function(snapshot) {
       let porcentaje = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       console.log(porcentaje);
+
+      loading.style.display = 'flex';
+      loading.innerHTML = "<div class='lds-dual-ring'></div>";
+
     }, function(error) {
       console.error(error);
     }, function() {
       task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
         //TODO: downloadURL is the url of an image uploaded. We must pass it to database
-        console.log('File available at', downloadURL);
         targetFileSelector.value = null;
+        loading.style.display = "none";
+
         document.getElementById('url_image_to_mysql').value = downloadURL;
         document.getElementById('set_update_user').click();
         return;

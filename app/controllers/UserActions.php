@@ -3,24 +3,18 @@
     Autoload("C");
 
     $PATH = new PATH();
-    $objUser = new UserService();
+    $user = new User();
     
-    $name = $_POST['nameuser'];
+    $nameuser = $_POST['nameuser'];
     $username = $_POST['username'];
     $facebook = $_POST['facebook'];
     $twitter = $_POST['twitter'];
     $twitch = $_POST['twitch'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $url_image_to_mysql = $_POST['url_image_to_mysql'];
+    $image = $_POST['url_image_to_mysql'];
+    $idsocialnetwork = $_POST['idsocialnetwork'];
+    $idUser = $_POST['iduser'];
 
-    echo "Post method <br>";
-    echo "nombre: ". $name . "<br>";
-    echo "username: ". $username . "<br>";
-    echo "facebook: ". $facebook . "<br>";
-    echo "twitter: ". $twitter . "<br>";
-    echo "twitch: ". $twitch . "<br>";
-    echo "email: ". $email . "<br>";
-    echo "password: ". $password . "<br>";
-    echo "url_image_to_mysql: ". $url_image_to_mysql . "<br>";
+    $user->handlerUpdateUser($nameuser, $username, $password, $email, $image, $facebook, $twitter, $twitch, $idUser, $idsocialnetwork);
 ?>

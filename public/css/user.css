@@ -84,6 +84,7 @@
   height: 500px;
   max-width: 900px;
   overflow: auto;
+  position: relative;
   width: 85%;
 }
 
@@ -118,6 +119,15 @@ form .container-data-inputs button {
 
 form .container-data-inputs .form-group {
   width: 90%;
+}
+
+.loading {
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
 @media (max-width: 650px) {
