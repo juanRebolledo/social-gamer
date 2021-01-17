@@ -45,10 +45,9 @@
 
                 $data2 = $this->connection->prepare($sqlc);
                 $data2->execute();
-                echo 'listo';
+                
                 return true;
             }catch(PDOException $e){
-                echo 'no listo' . $e;
                 return false;
             }
         }
