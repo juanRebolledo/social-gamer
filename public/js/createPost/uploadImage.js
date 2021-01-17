@@ -30,7 +30,7 @@ btnSavePost.addEventListener('click', function() {
       task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
         //TODO: downloadURL is the url of an image uploaded. We must pass it to database
         console.log('File available at', downloadURL);
-        targetFileSelector.value = null;
+        //targetFileSelector.value = null;
         document.getElementById('url_image_to_mysql').value = downloadURL;
         document.getElementById('set_save_post').click();
         return;
