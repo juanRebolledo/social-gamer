@@ -8,7 +8,7 @@
     $titlepost = $_POST['title_post'];
     $category = $_POST['category'];
     $URLimage = $_POST['url_image_to_mysql'];
-    $iduser = uniqid('u_');
+    $iduser = "juanasdabassd";
     $idpost = uniqid('p_');
 
     
