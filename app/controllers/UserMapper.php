@@ -1,11 +1,36 @@
 <?php
    
     class UserMapper{
-        private $pdoConnection;
+        public $pdoConnection;
+        public $sessionMapper;
 
         public function __construct(){
-            $connection = new ConnectionDB();
-            $this->pdoConnection = $connection->getConnection();
+            $pdoConnection = new ConnectionDB();
+            $sessionMapper = new SessionMapper();
+            $this->pdoConnection = $pdoConnection->getConnection();
+            $this->sessionMapper = $sessionMapper;
+        }
+
+        public function loginUser(string $username, string $password):bool{
+            try{
+                /*  Executing the query  */
+                $sql = 'SELECT * FROM user WHERE username = :username AND password = :password';
+                $stnt = $this->pdoConnection->prepare($sql);
+                $stnt->execute(["username" => $username, "password" => $password]);
+
+                /*  Any results?  */
+                if ($stnt->rowCount() == 1){
+                    $userResult = $stnt->fetch();
+                    $this->sessionMapper->setSession($userResult->iduser, $userResult->username);
+                    return true;
+                }
+                else
+                    return false;
+                    
+            }catch(PDOException $e){
+                return false;
+            }
+
         }
 
         public function registerUser(string $idUser, string $name, string $username, string $password, string $email):bool{

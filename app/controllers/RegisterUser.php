@@ -18,6 +18,5 @@
     if($newUser)
         header("Location: /home");
     else
-        echo $idUser;
-        //header("Location: /nosepudo");
+        header("Location: /E404");
 ?>

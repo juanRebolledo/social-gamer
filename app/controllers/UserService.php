@@ -1,15 +1,21 @@
 <?php
 
     class UserService{
-        private $userMapper;
+        public $userMapper;
 
         public function __construct(){
-            $mapper = new UserMapper();
-            $this->userMapper = $mapper;
+            $userMapper = new UserMapper();
+
+            $this->userMapper = $userMapper;
         }
         
-        public function handlerUserLogin(){
-
+        public function handlerUserLogin($username,$password){
+            if($this->userMapper->loginUser($username, $password)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
         public function handlerUserRegister(string $idUser, string $name, string $username, string $password, string $email):bool{
