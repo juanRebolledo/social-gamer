@@ -1,12 +1,11 @@
 <?php
 
-    class ActionsSql extends Controller {
+    class ActionsSql{
         private $connection;
 
         public function __construct(){   
-          $ConnectionDB = new ConnectionDB();
-
-          $this->connection = $ConnectionDB->getConnection(); 
+          $connectionDB = new ConnectionDB();
+          $this->connection = $connectionDB->getConnection(); 
         }
 
         public function handlerSelectData(string $sql) {

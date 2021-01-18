@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+    $sessionMapper = new SessionMapper();
+    if(!$sessionMapper->isActiveSession())
+        header("Location: /welcome");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

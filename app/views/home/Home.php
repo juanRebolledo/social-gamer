@@ -1,6 +1,11 @@
 <?php 
     $post = new Post();
     $posts = $post->handlerGetAllPosts();
+    
+    $sessionMapper = new SessionMapper();
+    if(!$sessionMapper->isActiveSession())
+        header("Location: /welcome");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
