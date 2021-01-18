@@ -2,13 +2,34 @@
 
     class Messages extends Controller{
         private $actionsSql;
+
+        public function __construct() {
+            $this->actionsSql = new ActionsSql();
+        }
         
         public function t($idChat) {
             $currentUser = "juanasdabassd";
             
-            $this->actionsSql = new ActionsSql();
 
             require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/messages/Messages.php");
+        }
+
+        public function chatRoom($user1, $user2) {
+            $sql = "SELECT idChat FROM `chat` WHERE idUser1 = '$user1' AND idUser2 = '$user2' OR idUser2 = '$user1' AND idUser1 = '$user2'";
+            
+            $idChat = $this->actionsSql->handlerSelectData($sql)->fetch(PDO::FETCH_ASSOC);
+            if ($idChat) {
+                header("location: /messages/t/$idChat[idChat]");
+            } else {
+                $idchat = uniqid('chat_');
+                $values = "'$idchat', '$user1', '$user2'";
+                $columns = "`idChat`, `idUser1`, `idUser2`";
+
+                if ($this->actionsSql->insertItem($columns, 'chat', $values))
+                    header("location: /messages/t/$idchat");
+                else
+                    header("location: /user/u/$user1");
+            }
         }
 
         public function handlerGetChatRoomsFrom(string $currentUser) {

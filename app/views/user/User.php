@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +29,17 @@
           </div>
           <div class="u-p-a-social flex-center">
             <?php 
-              $network = "/user/edit/$idUser";
-              $svg = "edit";
-              $tooltip = 'Editar';
-              require("{$PATH->PROFILE}social.php");
+              if ($userInformation['iduser'] == $_SESSION['iduser']) {
+                $network = "/user/edit/$idUser";
+                $svg = "edit";
+                $tooltip = 'Editar';
+                require("{$PATH->PROFILE}social.php");
+              } else {
+                $network = "/Messages/chatroom/$userInformation[iduser]/$_SESSION[iduser]";
+                $svg = "send_message";
+                $tooltip = 'Mensaje';
+                require("{$PATH->PROFILE}social.php");
+              }
               
               foreach($socialNetworks as $socialnetwork) {
                 $network = $userInformation[strtolower($socialnetwork)];

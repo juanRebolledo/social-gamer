@@ -18,15 +18,14 @@
         }
           
         public function edit($idUser) {
-          $data = $this->handlerGetUser($idUser);
-          $userInformation = $data->fetch(PDO::FETCH_ASSOC);
+          $userInformation = $this->handlerGetUser($idUser);
 
           if ($userInformation) {
             $socialNetworks = ["Facebook", "Twitter", "Twitch"];
             require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/UpdateUser.php");
           }
           else
-          header("location: /usernotfound");
+            header("location: /usernotfound");
         }
 
         public function handlerGetUser(string $idUser) {

@@ -58,6 +58,7 @@
 }
 
 .u-p-a-social .tooltip a svg {
+  fill: var(--c-white);
   height: 20px;
   width: 20px;
 }

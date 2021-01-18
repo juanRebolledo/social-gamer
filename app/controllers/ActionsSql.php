@@ -16,6 +16,18 @@
             return $data;
         }
 
+        public function insertItem(string $columns, $table, $values) {
+            try {
+                $sql = "INSERT INTO `$table`($columns) VALUES ($values)";
+                $data = $this->connection->prepare($sql);
+                $data->execute();
+                
+                return true;
+            } catch (PDOEXCEPTIO $e) {
+                return false;
+            }
+        }
+
         public function updateItems(string $condition, string $table, string $values) {
             $sql = "UPDATE $table SET $values WHERE $condition";
             $stmt = $this->connection->prepare($sql);
