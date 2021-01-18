@@ -104,6 +104,28 @@ img {
   justify-content: center;
 }
 
+.i-btn {
+  width: 50%;
+}
+
+.i-btn .form-group {
+  margin-bottom: 0;
+  width: 360px;
+}
+
+.i-btn .form-group input {
+  border-radius: 5px 0px 0px 5px;
+  font-family: 'Roboto';
+  font-size: 1em;
+}
+
+.i-btn button {
+  background: #6c63ff; 
+  background-position: center;
+  background-size: 20px;
+  width: 55px;
+}
+
 .loading {
   background: rgba(0, 0, 0, 0.2);
   display: none;

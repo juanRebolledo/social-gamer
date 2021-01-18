@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}header.css"?>">
 <header>
-  <a href="/home" id="home-page" class="app-logo"><h1>Logo App</h1></a>
-  <div class="container-search">
+  <a href="/home" id="home-page" class="app-logo"><img src="/<?php echo "{$PATH->IMG}LOGO.png" ?>" alt=""></a>
+  <div class="i-btn flex-center">
     <div class="form-group">
       <input type="text" placeholder="Busqueda">
     </div>
@@ -22,6 +22,22 @@
       </a>
       <div class="item-tooltip">
         <p>Mensajes</p>
+      </div>
+    </div>
+    <div class="item-header-container tooltip">
+      <a href="/<?php echo "user/u/{$_SESSION['iduser']}" ?>">
+        <?php require_once("{$PATH->IMG}user.svg"); ?>
+      </a>
+      <div class="item-tooltip">
+        <p>Perfil</p>
+      </div>
+    </div>
+    <div class="item-header-container tooltip">
+      <a href="/<?php echo "{$PATH->CONTROLLERS}Logout.php" ?>">
+        <?php require_once("{$PATH->IMG}log-out.svg"); ?>
+      </a>
+      <div class="item-tooltip">
+        <p>Salir</p>
       </div>
     </div>
   </nav>

@@ -1,3 +1,8 @@
+<?php
+    $sessionMapper = new SessionMapper();
+    if($sessionMapper->isActiveSession())
+        header("Location: /home");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

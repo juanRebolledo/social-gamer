@@ -1,3 +1,8 @@
+<?php 
+    $sessionMapper = new SessionMapper();
+    if(!$sessionMapper->isActiveSession())
+        header("Location: /welcome");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +33,17 @@
           </div>
           <div class="u-p-a-social flex-center">
             <?php 
-              $network = "/user/edit/$idUser";
-              $svg = "edit";
-              $tooltip = 'Editar';
-              require("{$PATH->PROFILE}social.php");
+              if ($userInformation['iduser'] == $_SESSION['iduser']) {
+                $network = "/user/edit/$idUser";
+                $svg = "edit";
+                $tooltip = 'Editar';
+                require("{$PATH->PROFILE}social.php");
+              } else {
+                $network = "/Messages/chatroom/$userInformation[iduser]/$_SESSION[iduser]";
+                $svg = "send_message";
+                $tooltip = 'Mensaje';
+                require("{$PATH->PROFILE}social.php");
+              }
               
               foreach($socialNetworks as $socialnetwork) {
                 $network = $userInformation[strtolower($socialnetwork)];
@@ -42,11 +54,8 @@
             ?>
           </div>
         </div>
-        <div class="u-p-posts">
-          <?php 
-            $posts = 0;
-            $limit = 8;
-            require_once("{$PATH->POSTS}PostsScrolling.php") ?>
+        <div class="u-p-posts flex-center">
+          <?php require_once("{$PATH->POSTS}PostsScrolling.php"); ?>
         </div>
       </div>
     </div>

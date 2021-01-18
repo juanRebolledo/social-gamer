@@ -16,6 +16,17 @@
   width: calc(100% - 400px);
 }
 
+.c-u-profile .u-p-posts h1 {
+  color: var(--c-white);
+  font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  text-align: center;
+}
+
+.c-u-profile .u-p-posts .posts {
+  margin-bottom: 0;
+}
+
 .c-u-profile .u-p-about .u-p-a-info {
   flex-direction: column;
   height: 100%;
@@ -47,6 +58,7 @@
 }
 
 .u-p-a-social .tooltip a svg {
+  fill: var(--c-white);
   height: 20px;
   width: 20px;
 }
@@ -125,15 +137,27 @@ form .container-data-inputs .form-group {
   .c-u-profile {
     flex-wrap: wrap;
   }
+
+  .c-u-profile .u-p-about {
+    flex-direction: column;
+  }
+  
+  .c-u-profile .u-p-about .u-p-a-info, 
+  .c-u-profile .u-p-about .u-p-a-social {
+    height: 65%;
+  }
+  .c-u-profile .u-p-about .u-p-a-social {
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
   .c-u-profile .u-p-about, 
   .c-u-profile .u-p-posts {
     width: 100%;
   }
 
-  .c-u-profile .u-p-about .u-p-a-info, 
-  .c-u-profile .u-p-about .u-p-a-social {
-    height: 65%;
-  }
 
   .c-u-profile .u-p-about .u-p-a-info .profile-photo {
     height: 270px;

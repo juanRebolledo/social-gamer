@@ -9,30 +9,12 @@ header {
   top: 0;
 }
 
-header .container-search {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-
-header .container-search .form-group {
-  margin-bottom: 0;
-  width: 360px;
-}
-
-header .container-search .form-group input {
-  font-size: 1em;
-  border-radius: 5px 0px 0px 5px;
-  font-family: 'Roboto';
-}
-
-header .container-search button {
-  width: 55px;
-}
-
 header nav, header.app-logo {
   width: 20%;
+}
+
+.app-logo img {
+  width: 50px;
 }
 
 header nav {
@@ -40,7 +22,7 @@ header nav {
   align-items: center;
   justify-content: space-between;
   height: 40px;
-  width: 100px;
+  width: 120px;
 }
 
 header nav .item-header-container {
@@ -64,10 +46,10 @@ header nav .plus a svg:hover { stroke: var(--c-purple); }
   header .app-logo{
     display: none;
   }
-  header .container-search{ 
-    width: 90%;
+  header .i-btn { 
+    width: 60%;
   }
   header nav {
-    display: none;
+    justify-content: space-evenly;
   }
 }

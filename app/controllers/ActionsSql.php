@@ -1,12 +1,11 @@
 <?php
 
-    class ActionsSql extends Controller {
+    class ActionsSql{
         private $connection;
 
         public function __construct(){   
-          $ConnectionDB = new ConnectionDB();
-
-          $this->connection = $ConnectionDB->getConnection(); 
+          $connectionDB = new ConnectionDB();
+          $this->connection = $connectionDB->getConnection(); 
         }
 
         public function handlerSelectData(string $sql) {
@@ -14,6 +13,18 @@
             $data->execute();
 
             return $data;
+        }
+
+        public function insertItem(string $columns, $table, $values) {
+            try {
+                $sql = "INSERT INTO `$table`($columns) VALUES ($values)";
+                $data = $this->connection->prepare($sql);
+                $data->execute();
+                
+                return true;
+            } catch (PDOEXCEPTIO $e) {
+                return false;
+            }
         }
 
         public function updateItems(string $condition, string $table, string $values) {
@@ -26,6 +37,16 @@
             return false;
         }
 
+        public function deleteItem($condition, $table) {
+            $sql = "DELETE FROM `$table` WHERE $condition";
+            try {
+                $this->connection->exec($sql);
+                return true;
+            } catch(PDOException $e) {
+                return false;
+            }
+        }
+
         public function handlerSelectColumn(string $column, $condition, $table, string $valueToSearch) {
             $sql = "SELECT `$column` FROM `$table` WHERE $condition = '$valueToSearch'";
             
@@ -34,21 +55,37 @@
             return $data->fetchColumn();
         }
 
-        public function handlerInsertPost($idpost,$iduser,$titlepost,$description,$URLimage,$idcategory,$categoryType):bool{
+        public function handlerInsertPost($idpost, $iduser, $titlepost, $description, $URLimage, $category):bool{
             try{
-                $sqlp = "INSERT INTO post(idpost,iduser,titlepost,description,image) VALUES ('$idpost','$iduser','$titlepost','$description','$URLimage')";
+                $sqlp = "INSERT INTO `post`(`idpost`, `iduser`, `titlepost`, `description`, `postimage`, `category`) VALUES ('$idpost', '$iduser', '$titlepost', '$description', '$URLimage', '$category')";
 
                 $data = $this->connection->prepare($sqlp);
                 $data->execute();
-
-                $sqlc = "INSERT INTO $categoryType(idcategory,idpost) VALUES ('$idcategory','$idpost')";
-
-                $data2 = $this->connection->prepare($sqlc);
-                $data2->execute();
                 
                 return true;
+            }catch(PDOException $e){
+                var_dump($e);
+                return false;
+            }
+        }
+
+        public function handlerSesionStart($username,$pass){
+            try{
+                session_start();
+                $sql = "SELECT iduser, username, password FROM `user` WHERE username='$username' AND password='$pass'";
+                $data = $this->handlerSelectData($sql);
+                $res = $data->fetchAll();
+                
+                foreach ($res as $iduser){
+                   $_SESSION['iduser']=$iduser->iduser;
+                   return true;
+                }
+                
+               return false;
+                
             }catch(PDOException $e){
                 return false;
             }
         }
+
     }//end class ActionsSql

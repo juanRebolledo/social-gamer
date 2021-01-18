@@ -1,3 +1,18 @@
+<?php 
+    $post = new Post();
+    $posts = $post->handlerGetAllPosts(" ");
+    $postsSports = $post->handlerGetAllPosts(" WHERE category = 'Deportes'");
+    $postsAdventure = $post->handlerGetAllPosts(" WHERE category = 'Aventura'");
+    $postsRPG = $post->handlerGetAllPosts(" WHERE category = 'RPG'");
+    $postsMOBA = $post->handlerGetAllPosts(" WHERE category = 'MOBA'");
+    $postsFPS = $post->handlerGetAllPosts(" WHERE category = 'FPS'");
+    
+    $sessionMapper = new SessionMapper();
+    
+    if(!$sessionMapper->isActiveSession())
+      header("Location: /welcome");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +27,29 @@
     <div class="app">
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
-            $posts = 0;
-            $limit = 8;
-            require_once("{$PATH->POSTS}/PostsScrolling.php"); 
-            $posts = 0;
-            $limit = 3;
-            $title = "Area Gamer 2";
-            require_once("{$PATH->POSTS}/PostsScrolling.php"); 
-        ?>
+            $postOfUser = $posts;
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsSports;
+            $title = "Deportes";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsAdventure;
+            $title = "Aventura";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsMOBA;
+            $title = "MOBA";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsFPS;
+            $title = "FPS";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsRPG;
+            $title = "RPG";
+            require("{$PATH->POSTS}PostsScrolling.php");
+          ?>
     </div>
 </body>
 </html>

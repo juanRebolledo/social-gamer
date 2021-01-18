@@ -3,6 +3,7 @@
         <div class="login-body">
             <div class="container-title">
                 <h1 class="has-text-centered">Gamer social</h1>
+                <h2 class="has-text-centered">El usuario o la contraseña son invalidos</h2>
             </div>
 
             <form action='<?php echo "/{$PATH->CONTROLLERS}LoginUser.php"; ?>' method="post">
