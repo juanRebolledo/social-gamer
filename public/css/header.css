@@ -13,6 +13,10 @@ header nav, header.app-logo {
   width: 20%;
 }
 
+.app-logo img {
+  width: 50px;
+}
+
 header nav {
   display: flex;
   align-items: center;

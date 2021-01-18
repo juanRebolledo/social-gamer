@@ -31,6 +31,7 @@
 
       if(!$isTherePost)
         echo "<h1>Aún no existen posts</h1>";
+      
     ?>
   </div>
 </div>

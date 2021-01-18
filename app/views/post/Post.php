@@ -53,14 +53,18 @@
 
             </div>
             <div class="c-p-comments">
-              <div class="i-btn flex-center">
+              <form action='<?php echo "/Create/comment/$_SESSION[iduser]/$postData[idpost]"; ?>' method="POST" class="i-btn flex-center">
                 <div class="form-group">
                   <input type="text" placeholder="Deja tu comentario" id="comment" name="comment" required>
                 </div>
-                <button type="button" style="<?php echo "background: #6c63ff url(/". str_replace('\\', '/' ,$PATH->IMG) ."comment.svg) no-repeat;background-position: center;background-size: 20px"?>"></button>
-              </div>
+                <button style="<?php echo "background: #6c63ff url(/". str_replace('\\', '/' ,$PATH->IMG) ."comment.svg) no-repeat;background-position: center;background-size: 20px"?>"></button>
+              </form>
               <div class="comments">
-
+                <?php 
+                  while ($comment = $comments->fetch()) {
+                    require("{$PATH->COMPONENTS}comment/comment.php");
+                  }
+                ?>
               </div>
             </div>
           </div>

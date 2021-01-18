@@ -1,6 +1,11 @@
 <?php 
     $post = new Post();
-    $posts = $post->handlerGetAllPosts();
+    $posts = $post->handlerGetAllPosts(" ");
+    $postsSports = $post->handlerGetAllPosts(" WHERE category = 'Deportes'");
+    $postsAdventure = $post->handlerGetAllPosts(" WHERE category = 'Aventura'");
+    $postsRPG = $post->handlerGetAllPosts(" WHERE category = 'RPG'");
+    $postsMOBA = $post->handlerGetAllPosts(" WHERE category = 'MOBA'");
+    $postsFPS = $post->handlerGetAllPosts(" WHERE category = 'FPS'");
     
     $sessionMapper = new SessionMapper();
     
@@ -23,7 +28,27 @@
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
             $postOfUser = $posts;
-            require_once("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsSports;
+            $title = "Deportes";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsAdventure;
+            $title = "Aventura";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsMOBA;
+            $title = "MOBA";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsFPS;
+            $title = "FPS";
+            require("{$PATH->POSTS}PostsScrolling.php");
+            
+            $postOfUser = $postsRPG;
+            $title = "RPG";
+            require("{$PATH->POSTS}PostsScrolling.php");
           ?>
     </div>
 </body>

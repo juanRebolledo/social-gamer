@@ -7,12 +7,15 @@
     }
         
     public function p($idPost) {              
-      $this->actionsSql = new ActionsSql();
       $data = $this->handlerGetPost($idPost);
       $postData = $data->fetch(PDO::FETCH_ASSOC);
-    
-      if ($postData) require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/Post.php");
-      else header("location: /usernotfound");
+
+      if ($postData) {
+        $comments = $this->handlerGetComments($idPost);
+        
+        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/Post.php");
+      }
+      else header("location: /postnotfound");
     }
 
     public function edit($idPost) {
@@ -49,6 +52,12 @@
       return $this->actionsSql->handlerSelectData($sql);
     }
 
+    public function handlerGetComments(string $idPost) {
+      $sql = "SELECT * FROM `comment` JOIN user ON user.iduser = comment.iduser WHERE idpost = '$idPost'";
+
+      return $this->actionsSql->handlerSelectData($sql);
+    }
+
     public function handlerUpdatePost($idpost, $titlepost, $description, $URLimage, $category) {
       $condition = "idpost = '$idpost'";
       $table = "post";
@@ -58,8 +67,8 @@
       header("location: /post/p/$idpost");
     }
 
-    public function handlerGetAllPosts() {
-      $sql = "SELECT * FROM post";
+    public function handlerGetAllPosts(string $condition) {
+      $sql = "SELECT * FROM post$condition";
 
       return $this->actionsSql->handlerSelectData($sql);
     }
