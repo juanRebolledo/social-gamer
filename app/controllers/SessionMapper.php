@@ -3,16 +3,12 @@
     class SessionMapper{
 
         public function setSession($idUser, $username){
-            $_SESSION["idUser"] = $idUser;
+            $_SESSION["iduser"] = $idUser;
             $_SESSION["username"] = $username;
-            
         }
 
         public function isActiveSession(){
-            if(isset($_SESSION["idUser"]) && isset($_SESSION["username"]))
-                return true;
-            else
-                return false;
+            return isset($_SESSION["iduser"]) && isset($_SESSION["username"]);
         }
 
     }//end class Session

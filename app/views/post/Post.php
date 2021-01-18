@@ -28,7 +28,7 @@
           </div>
           <div class="c-p">
             <?php
-              if ($currentUser == $postData['iduser']) {
+              if ($_SESSION['iduser'] == $postData['iduser']) {
                 echo "<div class='c-p-u-i'>";  
                 $network = "/post/edit/$postData[idpost]";
                 $svg = "Edit";

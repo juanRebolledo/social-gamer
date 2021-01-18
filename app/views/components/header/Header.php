@@ -25,11 +25,19 @@
       </div>
     </div>
     <div class="item-header-container tooltip">
+      <a href="/<?php echo "user/u/{$_SESSION['iduser']}" ?>">
+        <?php require_once("{$PATH->IMG}user.svg"); ?>
+      </a>
+      <div class="item-tooltip">
+        <p>Perfil</p>
+      </div>
+    </div>
+    <div class="item-header-container tooltip">
       <a href="/<?php echo "{$PATH->CONTROLLERS}Logout.php" ?>">
         <?php require_once("{$PATH->IMG}log-out.svg"); ?>
       </a>
       <div class="item-tooltip">
-        <p>Cerrar Sesión</p>
+        <p>Salir</p>
       </div>
     </div>
   </nav>

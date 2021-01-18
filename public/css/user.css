@@ -137,15 +137,27 @@ form .container-data-inputs .form-group {
   .c-u-profile {
     flex-wrap: wrap;
   }
+
+  .c-u-profile .u-p-about {
+    flex-direction: column;
+  }
+  
+  .c-u-profile .u-p-about .u-p-a-info, 
+  .c-u-profile .u-p-about .u-p-a-social {
+    height: 65%;
+  }
+  .c-u-profile .u-p-about .u-p-a-social {
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
   .c-u-profile .u-p-about, 
   .c-u-profile .u-p-posts {
     width: 100%;
   }
 
-  .c-u-profile .u-p-about .u-p-a-info, 
-  .c-u-profile .u-p-about .u-p-a-social {
-    height: 65%;
-  }
 
   .c-u-profile .u-p-about .u-p-a-info .profile-photo {
     height: 270px;

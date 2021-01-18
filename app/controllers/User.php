@@ -29,7 +29,7 @@
         }
 
         public function handlerGetUser(string $idUser) {
-          $sql = "SELECT * FROM user JOIN socialnetworks ON user.idsocialnetwork = socialnetworks.idsocialnetwork AND user.iduser = '$idUser'";
+          $sql = "SELECT * FROM user WHERE iduser = '$idUser'";
             
           $data = $this->actionsSql->handlerSelectData($sql);
           return $data->fetch(PDO::FETCH_ASSOC);

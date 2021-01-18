@@ -6,9 +6,7 @@
       $this->actionsSql = new ActionsSql();
     }
         
-    public function p($idPost) {
-      $currentUser = "juanasdabassd";
-              
+    public function p($idPost) {              
       $this->actionsSql = new ActionsSql();
       $data = $this->handlerGetPost($idPost);
       $postData = $data->fetch(PDO::FETCH_ASSOC);
@@ -18,21 +16,19 @@
     }
 
     public function edit($idPost) {
-      $currentUser = 'juanasdabassd';
       $data = $this->handlerGetPost($idPost);
       $postData = $data->fetch(PDO::FETCH_ASSOC);
 
-      if ($postData && $currentUser == $postData['iduser'])
+      if ($postData && $_SESSION['iduser'] == $postData['iduser'])
         require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/UpdatePost.php");
       else header("location: /home");
     }
 
     public function d($idPost) {
-      $currentUser = 'juanasdabassd';
       $data = $this->handlerDeletePost($idPost);
       $postData = $data->fetch(PDO::FETCH_ASSOC);
 
-      if ($postData && $currentUser == $postData['iduser'])
+      if ($postData && $_SESSION['iduser'] == $postData['iduser'])
         require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/UpdatePost.php");
 
       else header("location: /home");

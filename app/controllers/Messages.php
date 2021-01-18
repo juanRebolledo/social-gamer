@@ -7,10 +7,7 @@
             $this->actionsSql = new ActionsSql();
         }
         
-        public function t($idChat) {
-            $currentUser = "juanasdabassd";
-            
-
+        public function t($idChat) {            
             require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/messages/Messages.php");
         }
 

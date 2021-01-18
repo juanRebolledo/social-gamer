@@ -3,8 +3,9 @@
     $posts = $post->handlerGetAllPosts();
     
     $sessionMapper = new SessionMapper();
+    
     if(!$sessionMapper->isActiveSession())
-        header("Location: /welcome");
+      header("Location: /welcome");
 
 ?>
 <!DOCTYPE html>
@@ -22,11 +23,7 @@
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
             $postOfUser = $posts;
-            if ($postOfUser) {
-              require_once("{$PATH->POSTS}PostsScrolling.php");
-            } else {
-              echo "<h1>Aún nadie publica nada</h1>";
-            }
+            require_once("{$PATH->POSTS}PostsScrolling.php");
           ?>
     </div>
 </body>

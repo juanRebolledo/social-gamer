@@ -55,13 +55,7 @@
           </div>
         </div>
         <div class="u-p-posts flex-center">
-          <?php 
-            if ($postOfUser) {
-              require_once("{$PATH->POSTS}PostsScrolling.php");
-            } else {
-              echo "<h1>El usuario aún no cuenta con posts</h1>";
-            }
-          ?>
+          <?php require_once("{$PATH->POSTS}PostsScrolling.php"); ?>
         </div>
       </div>
     </div>

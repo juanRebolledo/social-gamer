@@ -7,16 +7,17 @@
     
     $firstName = $_POST["firstname"];
     $lastName = $_POST["lastname"];
-    $user = $_POST["user"];
+    $username = $_POST["user"];
     $password = $_POST["password"];
     $email = $_POST["email"];
     $name = $firstName . " " . $lastName;
     $idUser = uniqid('u_');
 
-    $newUser = $objUser->handlerUserRegister($idUser, $name,$user,$password,$email); 
+    $newUser = $objUser->handlerUserRegister($idUser, $name, $username, $password, $email, "NOT", "NOT", "NOT", "NOT"); 
     
-    if($newUser)
-        header("Location: /home");
+    if($newUser) {
+        header("Location: /login");
+    }
     else
         header("Location: /E404");
 ?>

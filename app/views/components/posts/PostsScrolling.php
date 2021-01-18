@@ -5,7 +5,9 @@
   <div class="container-posts">
     <?php 
        $count = 1;
+       $isTherePost = false;
        foreach ($postOfUser->fetchAll() as $post) {
+         $isTherePost = true;
         if ($count === 1) {
           echo "<a href='/post/p/{$post->idpost}' class='post b'><img src='$post->postimage' alt='imagen post gamer social'></a>";
           $count++;
@@ -26,6 +28,9 @@
           $count = 1;
         } 
       }
+
+      if(!$isTherePost)
+        echo "<h1>Aún no existen posts</h1>";
     ?>
   </div>
 </div>

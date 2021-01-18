@@ -18,8 +18,8 @@
             }
         }
 
-        public function handlerUserRegister(string $idUser, string $name, string $username, string $password, string $email):bool{
-            if($this->userMapper->registerUser($idUser, $name, $username, $password, $email)){
+        public function handlerUserRegister(string $idUser, string $nameuser, string $username, string $password, string $email, string $image, string $facebook, string $twitter, string $twitch):bool{
+            if($this->userMapper->registerUser($idUser, $nameuser, $username, $password, $email, $image, $facebook, $twitter, $twitch)){
                 return true;
             }
             else{

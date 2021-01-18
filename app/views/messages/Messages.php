@@ -20,10 +20,10 @@
         <div class="app-messages">
             <div class="online-friends">
                 <?php
-                    $chatRooms = $this->handlerGetChatRoomsFrom($currentUser);
+                    $chatRooms = $this->handlerGetChatRoomsFrom($_SESSION['iduser']);
 
                     while($chatRoom = $chatRooms->fetch(PDO::FETCH_ASSOC)) {
-                      $addressee = $this->handlerGetAddresseeUser($currentUser, $chatRoom['idUser1'], $chatRoom['idUser2']);
+                      $addressee = $this->handlerGetAddresseeUser($_SESSION['iduser'], $chatRoom['idUser1'], $chatRoom['idUser2']);
                       
                       require("{$PATH->COMPONENTS}messages/onlineFriends.php");
                     }
@@ -34,7 +34,7 @@
                     <span>Mensajes con</span>
                     <div class="username">
                         <?php 
-                            $username = $this->handlerGetNameFromAdressee($currentUser, $idChat);
+                            $username = $this->handlerGetNameFromAdressee($_SESSION['iduser'], $idChat);
                             echo "<p>$username</p>";
                         ?>
                     </div>
@@ -52,7 +52,7 @@
         </div>
     </div>
     
-    <script>localStorage.setItem("currentUser", "<?php echo $currentUser ?>")</script>
+    <script>localStorage.setItem("currentUser", "<?php echo $_SESSION['iduser'] ?>")</script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "firebase.js" ?>"></script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "messages/messages.js" ?>"></script>

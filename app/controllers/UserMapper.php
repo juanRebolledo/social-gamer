@@ -24,21 +24,21 @@
                     $this->sessionMapper->setSession($userResult->iduser, $userResult->username);
                     return true;
                 }
-                else
-                    return false;
-                    
+
+                return false;                
             }catch(PDOException $e){
                 return false;
             }
-
+            
         }
-
-        public function registerUser(string $idUser, string $name, string $username, string $password, string $email):bool{
+        
+        public function registerUser(string $idUser, string $nameuser, string $username, string $password, string $email, string $image, string $facebook, string $twitter, string $twitch):bool{
             try{
-                $sql = 'INSERT INTO user (iduser, name, username, password, email) VALUES(:idUser, :name, :username, :password, :email)';
+                $sql = 'INSERT INTO user (iduser, nameuser, username, password, email, image, facebook, twitter, twitch) VALUES(:idUser, :nameuser, :username, :password, :email, :image, :facebook, :twitter, :twitch)';
                 $stnt = $this->pdoConnection->prepare($sql);
-                $stnt->execute(["idUser" => $idUser, "name" => $name, "username" => $username, "password" => $password, "email" => $email]);
-
+                $stnt->execute(["idUser" => $idUser, "nameuser" => $nameuser, "username" => $username, "password" => $password, "email" => $email, "image" => $image, "facebook" => $facebook, "twitter" => $twitter, "twitch" => $twitch,]);
+                $this->sessionMapper->setSession($idUser, $username);
+                
                 return true;
             }catch(PDOException $e){
                 return false;
