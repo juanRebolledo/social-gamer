@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="app flex-center">
-        <div class="c-error-404">
+        <div class="c-error-404 flex-center">
             <div class="c-error-about">
                 <h1>Oh no!</h1>
                 <h2>¡Has encontrado un lugar misterioso!</h2>
