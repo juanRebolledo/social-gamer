@@ -8,7 +8,7 @@
         }
         
         public function t($idChat) {            
-            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/messages/Messages.php");
+            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/messages/messages.php");
         }
 
         public function chatRoom($user1, $user2) {

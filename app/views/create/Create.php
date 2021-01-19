@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <?php
-    $PATH = new PATH(); 
+    $PATH = new Path(); 
     require_once("{$PATH->HEAD}head.php");
     require_once("{$PATH->HEAD}firebaseHead.php");
     ?>
@@ -13,7 +13,7 @@
   <div class="app">
 
     <?php require_once("{$PATH->HEADER}header.php"); ?>
-    <?php require_once("{$PATH->FORMS}FormCreate.php"); ?>
+    <?php require_once("{$PATH->FORMS}formCreate.php"); ?>
 
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->FIREBASE) . "config.js" ?>"></script>
     <script src="/<?php echo str_replace('\\', '/' ,$PATH->JS) . "uploadImage/onChangeFile.js" ?>"></script>

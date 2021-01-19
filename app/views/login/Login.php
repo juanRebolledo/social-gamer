@@ -7,18 +7,17 @@
 <html lang="en">
 <head>
 <?php
-    $PATH = new PATH();
-    require_once("{$PATH->COMPONENTS}UtilsLoginRegister.php"); 
+    $PATH = new Path();
+    require_once("{$PATH->COMPONENTS}utilsLoginRegister.php"); 
 ?>
     <title>Inicia sesion</title>
 </head>
 <body>
     <div class="app">
         <section class="bg sky">
-            <?php require_once("{$PATH->FORMS}FormLogin.php"); ?>
+            <?php require_once("{$PATH->FORMS}formLogin.php"); ?>
         </section>
     </div>
-    <script src="<?php echo "{$PATH->JS}animationStars.js" ?>"></script> 
+    <script src="/<?php echo "{$PATH->JS}animationStars.js" ?>"></script> 
 </body>
 </html>
-

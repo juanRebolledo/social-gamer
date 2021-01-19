@@ -13,9 +13,19 @@
       if ($postData) {
         $comments = $this->handlerGetComments($idPost);
         
-        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/Post.php");
+        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/post.php");
       }
       else header("location: /postnotfound");
+    }
+
+    public function update() {
+      $description = $_POST['information_post'];
+      $titlepost = $_POST['title_post'];
+      $category = $_POST['category'];
+      $URLimage = $_POST['url_image_to_mysql'];
+      $idpost = $_POST['idpost'];
+      
+      $this->handlerUpdatePost($idpost, $titlepost, $description, $URLimage, $category);
     }
 
     public function edit($idPost) {
@@ -23,23 +33,18 @@
       $postData = $data->fetch(PDO::FETCH_ASSOC);
 
       if ($postData && $_SESSION['iduser'] == $postData['iduser'])
-        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/UpdatePost.php");
+        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/updatePost.php");
       else header("location: /home");
     }
 
     public function d($idPost) {
       $data = $this->handlerDeletePost($idPost);
-      $postData = $data->fetch(PDO::FETCH_ASSOC);
-
-      if ($postData && $_SESSION['iduser'] == $postData['iduser'])
-        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/UpdatePost.php");
-
-      else header("location: /home");
     }
 
     public function handlerDeletePost($idPost) {
       $condition = "idpost = '$idPost'";
       $table = "post";
+
       if ($this->actionsSql->deleteItem($condition, $table)) 
         return header('location: /home');
             

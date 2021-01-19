@@ -18,6 +18,7 @@
 }
 
 .u-profile-link a {
+  fill: var(--c-white);
   height: 32px;
   width: 32px;
 }

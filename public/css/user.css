@@ -13,6 +13,7 @@
 }
 
 .c-u-profile .u-p-posts {
+  padding-top: 15px;
   width: calc(100% - 400px);
 }
 
@@ -162,6 +163,11 @@ form .container-data-inputs .form-group {
   .c-u-profile .u-p-about .u-p-a-info .profile-photo {
     height: 270px;
     width: 220px;
+  }
+
+  .container-form {
+    height: 100%;
+    width: 100%;
   }
 
   .container-form form {

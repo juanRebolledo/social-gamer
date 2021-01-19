@@ -133,3 +133,20 @@
   fill: var(--c-white);
   width: 23px;
 }
+
+@media (max-width: 768px) {
+  .app-messages {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-messages .online-friends {
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+  }
+  .app-messages .container-messages {
+    height: calc(100% - 60px);
+    width: 100%;
+  }
+}

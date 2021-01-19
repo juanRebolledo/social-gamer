@@ -2,7 +2,7 @@
   <div class="container-create-post flex-center">
     <div class="loading flex-center" id="loading"></div>
       <div class="container-create-form">
-        <form action='<?php echo "/{$PATH->CONTROLLERS}UpdatePost.php"; ?>' method="POST">
+        <form action='/post/update' method="POST">
           <div class="container-save flex-center">
             <div class="form-group select">
               <select class="form-control" name="category" id="category" required value="<?php echo $postData['category'] ?>">

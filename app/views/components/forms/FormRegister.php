@@ -5,7 +5,7 @@
                 <h1 class="has-text-centered">Gamer social</h1>
             </div>
 
-            <form action='<?php echo "{$PATH->CONTROLLERS}RegisterUser.php"; ?>' method="post">
+            <form action='/register/createUser' method="post">
                 
                 <div class="nombre">
                     <div class="form-group mr-1">
@@ -39,7 +39,7 @@
             </form>
 
             <div class="container-register pt-5">
-                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="login">Inicia sesion</a></p>
+                <p class="has-text-centered">¿Ya tienes una cuenta? <a href="/login">Inicia sesion</a></p>
             </div>
 
         </div>

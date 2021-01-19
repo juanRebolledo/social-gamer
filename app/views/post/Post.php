@@ -1,14 +1,13 @@
 <?php 
     $sessionMapper = new SessionMapper();
     if(!$sessionMapper->isActiveSession())
-        header("Location: /welcome");
-
+        header("Location: /");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-        $PATH = new PATH(); 
+        $PATH = new Path(); 
         require_once("{$PATH->HEAD}head.php") 
     ?>
     <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}post.css"; ?>">
@@ -20,8 +19,14 @@
         <div class="c-u-p flex-center">
           <div class="c-u-i">
             <div class="u-profile-link">
-              <a href="/<?php echo "user/u/$postData[iduser]"; ?>">
-                <img src="<?php echo $postData['image']; ?>" alt="Imagen de perfil de usuario">
+              <a href="/<?php echo "User/u/$postData[iduser]"; ?>">
+                <?php 
+                  if ($postData['image'] != 'NOT') {
+                    echo "<img src='$postData[image]' alt='Imagen de perfil de usuario'>";
+                  } else {
+                    require("{$PATH->IMG}notPhotoUser.svg");
+                  }
+                ?>
               </a>
               <span><?php echo $postData['nameuser'] ?></span>
             </div>
@@ -53,7 +58,7 @@
 
             </div>
             <div class="c-p-comments">
-              <form action='<?php echo "/Create/comment/$_SESSION[iduser]/$postData[idpost]"; ?>' method="POST" class="i-btn flex-center">
+              <form action='<?php echo "/create/comment/$_SESSION[iduser]/$postData[idpost]"; ?>' method="POST" class="i-btn flex-center">
                 <div class="form-group">
                   <input type="text" placeholder="Deja tu comentario" id="comment" name="comment" required>
                 </div>

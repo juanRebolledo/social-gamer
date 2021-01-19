@@ -1,6 +1,6 @@
 <div class="container-form flex-center">
   <div class="loading flex-center" id="loading"></div>
-  <form action="/<?php echo "{$PATH->CONTROLLERS}UserActions.php" ?>" class="flex-center" method="post">
+  <form action="/user/update" class="flex-center" method="post">
     <div class="form-group group-file">
       <?php 
         if ($userInformation['image'] !== 'NOT') {
@@ -47,7 +47,6 @@
 
     <input hidden type='text' id='url_image_to_mysql' name='url_image_to_mysql'></input>
     <input hidden type='text' id='iduser' name='iduser' value="<?php echo $userInformation['iduser'] ?>"></input>
-    <input hidden type='text' id='idsocialnetwork' name='idsocialnetwork' value="<?php echo $userInformation['idsocialnetwork'] ?>"></input>
     <button id="activateAction" hidden></button>
   </form>
 </div>

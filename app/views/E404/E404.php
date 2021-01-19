@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php
-        $PATH = new PATH(); 
+        $PATH = new Path(); 
         require_once("{$PATH->HEAD}head.php");
     ?>
     <link rel="stylesheet" href="<?php echo "/{$PATH->CSS}E404.css" ?>">

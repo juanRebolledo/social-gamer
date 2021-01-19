@@ -1,13 +1,13 @@
 <?php 
     $sessionMapper = new SessionMapper();
     if(!$sessionMapper->isActiveSession())
-        header("Location: /welcome");
+        header("Location: /");
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-        $PATH = new PATH(); 
+        $PATH = new Path(); 
         require_once("{$PATH->HEAD}head.php");
     ?>
     <link rel="stylesheet" href="<?php echo("/{$PATH->CSS}user.css"); ?>">
@@ -39,7 +39,7 @@
                 $tooltip = 'Editar';
                 require("{$PATH->PROFILE}social.php");
               } else {
-                $network = "/Messages/chatroom/$userInformation[iduser]/$_SESSION[iduser]";
+                $network = "/messages/chatroom/$userInformation[iduser]/$_SESSION[iduser]";
                 $svg = "send_message";
                 $tooltip = 'Mensaje';
                 require("{$PATH->PROFILE}social.php");
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="u-p-posts flex-center">
-          <?php require_once("{$PATH->POSTS}PostsScrolling.php"); ?>
+          <?php require_once("{$PATH->POSTS}postsScrolling.php"); ?>
         </div>
       </div>
     </div>

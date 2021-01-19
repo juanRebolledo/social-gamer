@@ -20,7 +20,7 @@ class Create extends Controller{
     return header('Location: /noseguardo');
   }
 
-  public function post() {    
+  public function cpost() {    
     $description = $_POST['information_post'];
     $titlepost = $_POST['title_post'];
     $category = $_POST['category'];

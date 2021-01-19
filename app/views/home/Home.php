@@ -17,7 +17,7 @@
 <html lang="en">
 <head>
     <?php
-        $PATH = new PATH(); 
+        $PATH = new Path(); 
         require_once("{$PATH->HEAD}head.php") 
     ?>
     <link rel="stylesheet" href="<?php echo "{$PATH->CSS}postsScrolling.css" ?>">
@@ -28,27 +28,27 @@
         <?php require_once("{$PATH->HEADER}header.php"); ?>
         <?php 
             $postOfUser = $posts;
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
             
             $postOfUser = $postsSports;
             $title = "Deportes";
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
             
             $postOfUser = $postsAdventure;
             $title = "Aventura";
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
             
             $postOfUser = $postsMOBA;
             $title = "MOBA";
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
             
             $postOfUser = $postsFPS;
             $title = "FPS";
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
             
             $postOfUser = $postsRPG;
             $title = "RPG";
-            require("{$PATH->POSTS}PostsScrolling.php");
+            require("{$PATH->POSTS}postsScrolling.php");
           ?>
     </div>
 </body>

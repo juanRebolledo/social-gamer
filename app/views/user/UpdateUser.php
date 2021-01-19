@@ -1,14 +1,14 @@
 <?php 
     $sessionMapper = new SessionMapper();
     if(!$sessionMapper->isActiveSession())
-        header("Location: /welcome");
+        header("Location: /");
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-        $PATH = new PATH(); 
+        $PATH = new Path(); 
         require_once("{$PATH->HEAD}head.php");
         require_once("{$PATH->HEAD}firebaseHead.php");
     ?>
@@ -20,7 +20,7 @@
     <div class="app">
       <?php require_once("{$PATH->HEADER}header.php"); ?>
       <div class="c-u-profile flex-center">
-        <?php require_once("{$PATH->FORMS}FormUser.php"); ?>
+        <?php require_once("{$PATH->FORMS}formUpdateUser.php"); ?>
       </div>
     </div>
 
