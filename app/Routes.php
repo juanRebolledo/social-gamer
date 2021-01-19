@@ -1,0 +1,2 @@
+<?php
+$Route = new Route();

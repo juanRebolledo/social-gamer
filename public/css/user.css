@@ -1,0 +1,186 @@
+.c-u-profile {
+  height: calc(100% - 70px);
+  width: 100%;
+}
+
+.c-u-profile .u-p-about {
+  padding-top: 15px;
+  width: 400px;
+}
+
+.c-u-profile .u-p-about, .c-u-profile .u-p-posts {
+  height: 580px;
+}
+
+.c-u-profile .u-p-posts {
+  padding-top: 15px;
+  width: calc(100% - 400px);
+}
+
+.c-u-profile .u-p-posts h1 {
+  color: var(--c-white);
+  font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  text-align: center;
+}
+
+.c-u-profile .u-p-posts .posts {
+  margin-bottom: 0;
+}
+
+.c-u-profile .u-p-about .u-p-a-info {
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  max-width: 300px;
+  overflow: auto;
+  width: 80%;
+}
+
+.c-u-profile .u-p-about .u-p-a-social {
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+}
+
+.u-p-about .u-p-a-social .u-p-a-network {
+  background: var(--c-purple);
+  border-radius: 100%;
+  height: 40px;
+  margin-bottom: 16px;
+  width: 40px;
+}
+
+.u-p-a-social .tooltip a:hover + .item-tooltip {
+  bottom: 2px;
+  left: 60px;
+}
+
+.u-p-a-social .tooltip a svg {
+  fill: var(--c-white);
+  height: 20px;
+  width: 20px;
+}
+
+.u-p-about .u-p-a-info .profile-photo {
+  background: var(--b-fourth);
+  border: 2px solid var(--c-white);
+  border-radius: 8px;
+  height: 50%;
+  width: 90%;
+}
+
+.u-p-about .u-p-a-info .profile-name {
+  height: 100px;
+  text-align: center;
+  width: 80%;
+}
+
+.u-p-about .u-p-a-info .profile-name h1, h2 {
+  color: var(--c-white);
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.u-p-about .u-p-a-info .profile-name h2 {
+  font-size: 1em;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+}
+
+.container-form {
+  background: var(--b-secondary);
+  border-radius: 8px;
+  height: 500px;
+  max-width: 900px;
+  overflow: auto;
+  position: relative;
+  width: 85%;
+}
+
+.container-form form {
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90%;
+}
+
+.container-form form .group-file {
+  height: 90%;
+  width: 55%;
+  margin: 0;
+}
+
+.container-form form .container-data-inputs {
+  flex-direction: column;
+  height: 90%;
+  justify-content: flex-start;
+  overflow: auto;
+  width: 40%;
+}
+
+form .container-data-inputs button {
+  background: var(--c-purple);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  width: 90%;
+}
+
+form .container-data-inputs .form-group {
+  width: 90%;
+}
+
+@media (max-width: 650px) {
+  .c-u-profile {
+    flex-wrap: wrap;
+  }
+
+  .c-u-profile .u-p-about {
+    flex-direction: column;
+  }
+  
+  .c-u-profile .u-p-about .u-p-a-info, 
+  .c-u-profile .u-p-about .u-p-a-social {
+    height: 65%;
+  }
+  .c-u-profile .u-p-about .u-p-a-social {
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .c-u-profile .u-p-about, 
+  .c-u-profile .u-p-posts {
+    width: 100%;
+  }
+
+
+  .c-u-profile .u-p-about .u-p-a-info .profile-photo {
+    height: 270px;
+    width: 220px;
+  }
+
+  .container-form {
+    height: 100%;
+    width: 100%;
+  }
+
+  .container-form form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container-form form .group-file {
+    margin: 10px 0;
+    width: 90%;
+  }
+
+  .container-form form .container-data-inputs {
+    width: 100%;
+  }
+}
