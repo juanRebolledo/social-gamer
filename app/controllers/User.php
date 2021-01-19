@@ -12,13 +12,15 @@
 
           if ($userInformation) {
             $socialNetworks = ["Facebook", "Twitter", "Twitch"];
-            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/User.php");
+            require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/user/user.php");
           }
           else header("location: /usernotfound");
         }
 
         public function login() {
-          session_start();
+          if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+          }
 
           $objUser = new UserService();
           
@@ -34,7 +36,9 @@
         }
 
         public function logout() {
-          session_start();
+          if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+          }
           session_unset();
           session_destroy();
 

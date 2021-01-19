@@ -1,2 +1,2 @@
-<?php
-$Route = new Route();
+<?php
+$Route = new Route();
