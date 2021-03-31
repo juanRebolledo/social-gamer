@@ -1,0 +1,24 @@
+.tooltip {
+  font-family: 'Roboto Mono';
+  position: relative;
+}
+
+.tooltip .item-tooltip {
+  animation-duration: 0.3s;
+  animation-name: increseSize;
+  display: none;
+}
+
+.tooltip a:hover + .item-tooltip {
+  background: var(--c-purple);
+  border-radius: 5px;
+  color: var(--c-white);
+  display: flex;
+  font-size: 15px;
+  position: absolute;
+  margin-left: -30px;
+  padding: 5px 10px;
+  z-index: 999;
+}
+
+.tooltip .item-tooltip p { margin: auto; }

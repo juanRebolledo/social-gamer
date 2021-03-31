@@ -1,231 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-@import url('colors.css');
-@import url('spinner.css');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: var(--b-primary);
-}
-
-button, .btn {
-  border: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  color: var(--c-white);
-  height: 40px;
-  outline: none;
-}
-
-img {
-  border-radius: 5px;
-  height: 100%;
-  object-fit: cover;
-}
-
-h1 {
-  color: var(--c-white);
-}
-
-.app {
-  height: 100vh;
-  overflow-y: auto;
-  width: 100vw;
-}
-
-.logo-app {
-    width: 60px;
-}
-
-.form-group {
-  height: 40px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.form-group, .form-group input, .form-group .form-label {
-  transition: all 0.3s;
-}
-
-.form-group textarea {
-  padding-top: 15px;
-  resize: none;
-}
-
-.form-group input, .form-group textarea, .form-group select {
-  border-style: solid;
-  border-radius: 5px;
-  border-color: var(--b-third);
-  height: 100%;
-  outline: none;
-  padding-left: 10px;
-}
-
-.form-group input, .form-group textarea, .form-group select{
-  background-color: var(--b-third);
-  color: var(--c-white);
-}
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-  background-color: var(--b-third);
-  border-color: var(--c-purple);
-}
-
-.form-label{
-  position: absolute;
-  top: 8px;
-  left: 10px;
-  font-size: 16px;
-  color: var(--c-white);
-}
-
-.form-file::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-.group-file img { 
-  border: 1px solid var(--c-purple);
-  display: none;
-  cursor: pointer;
-  top: 2px;
-  left: 1px;
-  position: absolute;
-}
-
-.form-control:focus + .form-label,
-.form-control:not(:placeholder-shown) + .form-label {
-  font-size: 0.8em;
-  left: 0px;
-  top: -25px;
-}
-.form-control::placeholder{
-  color:transparent;
-}
-
-.flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.i-btn {
-  width: 50%;
-}
-
-.i-btn .form-group {
-  margin-bottom: 0;
-  width: 360px;
-}
-
-.i-btn .form-group input {
-  border-radius: 5px 0px 0px 5px;
-  font-family: 'Roboto';
-  font-size: 1em;
-}
-
-.i-btn button {
-  background: #6c63ff; 
-  background-position: center;
-  background-size: 20px;
-  width: 55px;
-}
-
-.loading {
-  background: rgba(0, 0, 0, 0.2);
-  display: none;
-  height: 100%;
-  position: absolute;
-  z-index: 10;
-}
-
-img, .form-group, .loading,
-.form-group input, 
-.form-group select,
-.form-group textarea { 
-  width: 100%;
-}
-
-.tooltip {
-  font-family: 'Roboto Mono';
-  position: relative;
-}
-
-.tooltip .item-tooltip {
-  animation-duration: 0.3s;
-  animation-name: increseSize;
-  display: none;
-}
-
-.tooltip a:hover + .item-tooltip {
-  background: var(--c-purple);
-  border-radius: 5px;
-  color: var(--c-white);
-  display: flex;
-  font-size: 15px;
-  position: absolute;
-  left: -30px;
-  padding: 5px 10px;
-  z-index: 999;
-}
-.tooltip .item-tooltip p { margin: auto; }
-
-@keyframes increseSize {
-  from {
-    display: none;
-    padding: 5px 0;
-  }
-  to {
-    padding: 5px 10px;
-  }
-}
-
-::-webkit-scrollbar {
-  display: none;
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
-}
-::-webkit-scrollbar-thumb {
-  background: #444444;
-  border: 0px none #ffffff;
-  border-radius: 2px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--b-third);
-}
-::-webkit-scrollbar-thumb:active {
-  background: var(--c-white);
-}
-::-webkit-scrollbar-track {
-  background: var(--b-secondary);
-  border: 20px none var(--c-white);
-  border-radius: 0px;
-}
-::-webkit-scrollbar-track:hover {
-  background: #2e2e2e;
-}
-::-webkit-scrollbar-track:active {
-  background: var(--b-secondary);
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--c-white);
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: var(--c-white);
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: var(--c-white);
-}
+@import './colors.css';
+@import './fonts.css';
+@import './form.css';
+@import './spinner.css';
+@import './scrollbar.css';
+@import './tooltip.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--b-primary);
+}
+
+button, .btn {
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  color: var(--c-white);
+  height: 40px;
+  outline: none;
+}
+
+img {
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  color: var(--c-white);
+}
+
+.app {
+  height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+}
+
+.logo-app {
+  width: 60px;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.i-btn {
+  width: 50%;
+}
+
+.i-btn .form-group {
+  margin-bottom: 0;
+  width: 360px;
+}
+
+.i-btn .form-group input {
+  border-radius: 5px 0px 0px 5px;
+  font-family: 'Roboto';
+  font-size: 1em;
+}
+
+.i-btn button {
+  background: #6c63ff; 
+  background-position: center;
+  background-size: 20px;
+  width: 55px;
+}
+
+.loading {
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+img, .form-group, .loading,
+.form-group input, 
+.form-group select,
+.form-group textarea { 
+  width: 100%;
+}
+
+@keyframes increseSize {
+  from {
+    display: none;
+    padding: 5px 0;
+  }
+  to {
+    padding: 5px 10px;
+  }
+}
+
+::placeholder {
+  color: var(--c-white);
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--c-white);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--c-white);
+}

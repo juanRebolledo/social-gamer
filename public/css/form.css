@@ -1,0 +1,65 @@
+.form-group {
+  height: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-group, .form-group input, .form-group .form-label {
+  transition: all 0.3s;
+}
+
+.form-group textarea {
+  padding-top: 15px;
+  resize: none;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--b-third);
+  height: 100%;
+  outline: none;
+  padding-left: 10px;
+}
+
+.form-group input, .form-group textarea, .form-group select{
+  background-color: var(--b-third);
+  color: var(--c-white);
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  background-color: var(--b-third);
+  border-color: var(--c-purple);
+}
+
+.form-label{
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 16px;
+  color: var(--c-white);
+}
+
+.form-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.group-file img { 
+  border: 1px solid var(--c-purple);
+  display: none;
+  cursor: pointer;
+  top: 2px;
+  left: 1px;
+  position: absolute;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  font-size: 0.8em;
+  left: 0px;
+  top: -25px;
+}
+
+.form-control::placeholder{
+  color:transparent;
+}

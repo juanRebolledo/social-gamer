@@ -1,7 +1,5 @@
-<?php
-
-require_once('core/Autoload.php');
-
-Autoload("/");
-
-require_once('Routes.php');
+<?php
+require_once('core/Autoload.php');
+Autoload("/");
+
+require_once('Routes.php');
