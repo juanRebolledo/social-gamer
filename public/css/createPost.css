@@ -1,96 +1,109 @@
-.create {
-  height: calc(100% - 70px);
-}
-
-.container-create-post {
-  background: var(--b-secondary);
-  border-radius: 8px;
-  height: 500px;
-  max-width: 900px;
-  position: relative;
-  width: 85%;
-}
-
-.container-create-form {
-  width: 90%;
-}
-
-.container-create-form, .container-create-form form {
-  height: 100%;
-}
-
-.container-create-form form .container-save {
-  height: 60px;
-}
-
-.container-create-form form .container-form-inputs {
-  align-content: space-between;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 80%;
-}
-
-.container-create-form form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.container-create-form form .group-file {
-  position: relative;
-  height: 90%;
-  width: 63%;
-}
-
-.container-create-form .form-group {
-  width: 35%;
-}
-
-.container-create-form .group-textarea {
-  height: calc(90% - 70px);
-}
-
-.container-create-form .select {
-  display: flex;
-  margin: 0;
-}
-
-.create, 
-.container-create-form .select,
-.container-create-form form .container-save  {
-  width: 100%;
-}
-
-.container-create-form .select button {
-  background: var(--c-purple);
-  width: 35%;
-}
-
-.container-create-form .select .form-control {
-  border-radius: 5px 0 0 5px;
-  width: 65%;
-}
-
-.container-create-form .select:not(.is-multiple):not(.is-loading)::after { 
-  border-color: var(--c-purple);
-  left: 60%;
-}
-
-@media (max-width: 768px) {
-  .container-create-post {
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  .container-create-form form .container-form-inputs {
-    flex-direction: row;
-    justify-content: center;
-    overflow: auto;
-  }
-  .container-create-form form .group-file, .container-create-form .form-group {
-    width: 95%;
-  }
-}
+.create {
+  height: calc(100% - 70px);
+}
+
+.container-create-post {
+  background: var(--b-secondary);
+  border-radius: 8px;
+  height: 500px;
+  max-width: 900px;
+  position: relative;
+  width: 85%;
+}
+
+.container-create-form {
+  width: 90%;
+}
+
+.container-create-form,
+.container-create-form form {
+  height: 100%;
+}
+
+.container-create-form form .container-save {
+  height: 60px;
+}
+
+.container-create-form form .container-form-inputs {
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80%;
+}
+
+.container-create-form form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-create-form form .group-file {
+  position: relative;
+
+  height: 90%;
+
+  width: 63%;
+}
+
+.container-create-form .form-group {
+  width: 35%;
+}
+
+.container-create-form .group-textarea {
+  height: calc(90% - 70px);
+}
+
+.container-create-form .select {
+  display: flex;
+
+  margin: 0;
+}
+
+.create,
+.container-create-form .select,
+.container-create-form form .container-save {
+  width: 100%;
+}
+
+.container-create-form .select button {
+  background: var(--c-purple);
+
+  width: 35%;
+}
+
+.container-create-form .select .form-control {
+  border-radius: 5px 0 0 5px;
+
+  width: 65%;
+}
+
+.container-create-form .select:not(.is-multiple):not(.is-loading)::after {
+  border-color: var(--c-purple);
+
+  left: 60%;
+}
+
+@media (max-width: 768px) {
+  .container-create-post {
+    border-radius: 0;
+
+    height: 100%;
+
+    width: 100%;
+  }
+
+  .container-create-form form .container-form-inputs {
+    flex-direction: row;
+
+    justify-content: center;
+
+    overflow: auto;
+  }
+
+  .container-create-form form .group-file,
+  .container-create-form .form-group {
+    width: 95%;
+  }
+}
