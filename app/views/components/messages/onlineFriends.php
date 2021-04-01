@@ -1,4 +1,4 @@
-<div class="c-online-friend tooltip">
+<div class="c-online-friend tooltip tooltip-fixed">
   <a href="/messages/t/<?php echo $chatRoom['idChat'] ?>">
     <?php
       $image = $this->actionsSql->handlerSelectColumn('image', 'iduser', 'user', $addressee);

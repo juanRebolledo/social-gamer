@@ -1,12 +1,12 @@
-<div class="c-comment">
+<div class="c-comment d-flex justify-content-between">
   <div class="c-cmmt-photo">
     <?php
       if ($comment->image !== 'NOT') {
     ?>
-    <img src="<?php echo $comment->image; ?>" alt="Imagen de perfil de usuario">
+      <img alt="Imagen de perfil de usuario" loading="lazy" src="<?php echo $comment->image; ?>">
     <?php
       } else {
-    ?> <div></div> <?php
+    ?> <img alt="Imagen de usuario no encontrada" loading="lazy" src="<?php echo "/{$PATH->IMG}notPhotoUser.svg"; ?>"> <?php
       }
     ?>
   </div>

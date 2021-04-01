@@ -15,9 +15,6 @@
 }
 
 .container-login {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   height: 100%;
   width: 100vw;
 }
@@ -57,9 +54,6 @@ button {
 
 .login-body form {
   height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .register-box {

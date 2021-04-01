@@ -16,8 +16,8 @@
 </head>
 <body>
   <div class="app">
-    <div class="app-messages">
-      <div class="online-friends">
+    <div class="app-messages d-flex">
+      <div class="align-items-center d-flex flex-column online-friends">
         <?php
           $chatRooms = $this->handlerGetChatRoomsFrom($_SESSION['iduser']);
           while ($chatRoom = $chatRooms->fetch(PDO::FETCH_ASSOC)) {
@@ -27,10 +27,10 @@
         ?>
       </div>
 
-      <div class="container-messages flex-center">
+      <div class="align-items-center container-messages d-flex flex-column justify-content-start">
         <div class="messages-header">
           <span>Mensajes con</span>
-          <div class="username">
+          <div class="d-flex justify-content-between username">
             <?php
               $username = $this->handlerGetNameFromAdressee($_SESSION['iduser'], $idChat);
               echo "<span>$username </span><a href='/home'> Volver al inicio</a>";
@@ -38,8 +38,8 @@
           </div>
         </div>
 
-        <div class="messages" id="messages"></div>
-        <div class="c-send-message">
+        <div class="d-flex flex-column messages" id="messages"></div>
+        <div class="c-send-message d-flex">
           <div class="form-group">
             <input autocomplete="off" type="text" id="message-to-send" placeholder="Escribe un mensaje">
           </div>

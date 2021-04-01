@@ -17,9 +17,7 @@
 }
 
 .landing-body .c-s-landing .banner-landing .slider {
-  display: flex;
   height: calc(100% - 60px);
-  justify-content: space-evenly;
   position: absolute;
   opacity: 1;
   transition: opacity 0.8s;

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}header.css" ?>">
-<header>
+<header class="align-items-center d-flex justify-content-around">
   <a href="/home" id="home-page" class="app-logo"><img src="/<?php echo "{$PATH->IMG}LOGO.png" ?>" alt=""></a>
   <form action="/search" class="i-btn flex-center" method="post">
     <div class="form-group">
@@ -8,8 +8,8 @@
     <button type="submit" style="<?php echo "background: #6c63ff url(/" . str_replace('\\', '/', $PATH->IMG) . "loupe.svg) no-repeat;background-position: center;background-size: 20px" ?>"></button>
   </form>
 
-  <nav>
-    <div class="item-header-container plus tooltip">
+  <nav class="align-items-center d-flex justify-content-between">
+    <div class="item-header-container plus tooltip bottom">
       <a href="/create">
         <?php require_once("{$PATH->IMG}create_post.svg"); ?>
       </a>
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="item-header-container tooltip">
+    <div class="item-header-container tooltip bottom">
       <a href="/messages/t/asdasd">
         <?php require_once("{$PATH->IMG}send_message.svg"); ?>
       </a>
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="item-header-container tooltip">
+    <div class="item-header-container tooltip bottom">
       <a href="/<?php echo "user/u/{$_SESSION['iduser']}" ?>">
         <?php require_once("{$PATH->IMG}user.svg"); ?>
       </a>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="item-header-container tooltip">
+    <div class="item-header-container tooltip bottom">
       <a href="/user/logout">
         <?php require_once("{$PATH->IMG}log-out.svg"); ?>
       </a>

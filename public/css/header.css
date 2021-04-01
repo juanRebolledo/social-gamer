@@ -1,9 +1,6 @@
 header {
-  align-items: center;
   background: var(--b-primary);
-  display: flex;
   font-family: "Roboto Mono";
-  justify-content: space-around;
   height: 70px;
   position: sticky;
   top: 0;
@@ -19,9 +16,6 @@ header.app-logo {
 }
 
 header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 40px;
   width: 120px;
 }

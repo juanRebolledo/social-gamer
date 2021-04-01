@@ -11,9 +11,6 @@
 }
 
 .posts .container-posts {
-  align-content: start;
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   height: 100%;
   overflow-x: auto;

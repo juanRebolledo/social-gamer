@@ -3,9 +3,9 @@
     <div class="loading flex-center" id="loading"></div>
 
     <div class="container-create-form">
-      <form action="/create/cpost" method="POST">
+      <form action="/create/cpost" class="d-flex flex-column justify-content-around" method="POST">
         <div class="container-save flex-center">
-          <div class="form-group select">
+          <div class="d-flex form-group select">
             <select class="form-control" name="category" id="category" required>
               <option value="Deportes">Deportes</option>
               <option value="FPS">FPS</option>
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div class="container-form-inputs">
+        <div class="align-content-between container-form-inputs d-flex flex-column">
           <div class="form-group group-file">
             <input accept="image/gif,image/jpeg" class="form-file" id="image-selector" onchange="onChangeFileImage(this)" type="file" required>
             <img id="image-selected" src="#" alt="your image" />

@@ -1,4 +1,4 @@
-<div class="container-login">
+<div class="container-login flex-center">
   <div class="login-box">
     <div class="login-body">
       <div class="container-title">
@@ -6,7 +6,7 @@
         <?php if (isset($message)) echo "<h2 class='has-text-centered'>$message</h2>" ?>
       </div>
 
-      <form action="/user/login" method="post">
+      <form action="/user/login" class="d-flex flex-column justify-content-center" method="post">
         <div class="form-group">
           <input autocomplete="off" class="form-control" type="text" placeholder="Usuario" name="username" id="username" required>
           <label class="form-label">Usuario</label>

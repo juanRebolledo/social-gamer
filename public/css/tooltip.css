@@ -16,9 +16,34 @@
   display: flex;
   font-size: 15px;
   position: absolute;
-  margin-left: -30px;
   padding: 5px 10px;
   z-index: 999;
 }
 
+.tooltip.bottom a:hover + .item-tooltip {
+  left: calc(-150% + 5px);
+  top: calc(100% + 10px);
+}
+
+.tooltip.left a:hover + .item-tooltip {
+  left: 100%;
+  bottom: calc(50% - 15px);
+}
+
+.tooltip.tooltip-fixed a:hover + .item-tooltip {
+  position: fixed;
+  margin-left: 60px;
+  margin-top: -44px;
+}
+
 .tooltip .item-tooltip p { margin: auto; }
+
+@keyframes increseSize {
+  from {
+    display: none;
+    padding: 5px 0;
+  }
+  to {
+    padding: 5px 10px;
+  }
+}

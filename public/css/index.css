@@ -4,6 +4,7 @@
 @import './spinner.css';
 @import './scrollbar.css';
 @import './tooltip.css';
+@import './flex/flex.css';
 
 * {
   margin: 0;
@@ -43,12 +44,6 @@ h1 {
   width: 60px;
 }
 
-.flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 .i-btn {
   width: 50%;
 }
@@ -84,16 +79,6 @@ img, .form-group, .loading,
 .form-group select,
 .form-group textarea { 
   width: 100%;
-}
-
-@keyframes increseSize {
-  from {
-    display: none;
-    padding: 5px 0;
-  }
-  to {
-    padding: 5px 10px;
-  }
 }
 
 ::placeholder {

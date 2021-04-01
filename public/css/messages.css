@@ -1,13 +1,10 @@
 .app .app-messages {
-  display: flex;
   height: 100%;
 }
 
 .app-messages .online-friends {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  padding: 10px 0;
   width: 110px;
 }
 
@@ -26,16 +23,9 @@
   height: 100%;
 }
 
-.online-friends .tooltip a:hover + .item-tooltip {
-  bottom: 10px;
-  left: 60px;
-}
-
 .app-messages .container-messages {
   background: var(--b-secondary);
-  flex-direction: column;
   height: 100%;
-  justify-content: flex-start;
   position: relative;
   width: calc(100% - 70px);
 }
@@ -50,8 +40,6 @@
 }
 
 .messages-header .username {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
 }
 
@@ -66,8 +54,6 @@
 }
 
 .container-messages .messages {
-  display: flex;
-  flex-direction: column;
   height: calc(100% - 140px);
   overflow: auto;
   padding: 10px 50px 0 50px;
@@ -118,7 +104,6 @@
 
 .container-messages .c-send-message {
   bottom: 10px;
-  display: flex;
   height: 50px;
   position: absolute;
   width: 90%;

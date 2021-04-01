@@ -1,8 +1,7 @@
 <?php
-if ($network !== 'NOT') {
+  if ($network !== 'NOT') {
 ?>
-
-  <div class="u-p-a-network tooltip flex-center">
+  <div class="u-p-a-network tooltip left flex-center">
     <a href="<?php echo $network ?>">
       <?php require("{$PATH->IMG}$svg.svg") ?>
     </a>
@@ -12,5 +11,5 @@ if ($network !== 'NOT') {
     </div>
   </div>
 <?php
-}
+  }
 ?>

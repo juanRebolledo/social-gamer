@@ -16,13 +16,13 @@
 <body>
   <div class="app">
     <?php require_once("{$PATH->HEADER}header.php"); ?>
-    <div class="c-u-p flex-center">
-      <div class="c-u-i">
-        <div class="u-profile-link">
+    <div class="c-u-p flex-center flex-column">
+      <div class="c-u-i justify-content-start">
+        <div class="d-flex flex-column u-profile-link">
           <a href="/<?php echo "user/u/$postData[iduser]"; ?>">
             <?php
               if ($postData['image'] != 'NOT') {
-                echo "<img src='$postData[image]' alt='Imagen de perfil de usuario'>";
+                echo "<img alt='Imagen de perfil de usuario' loading='lazy' src='$postData[image]'>";
               } else {
                 require("{$PATH->IMG}notPhotoUser.svg");
               }
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="c-p">
+      <div class="c-p d-flex justify-content-evenly">
         <?php
           if ($_SESSION['iduser'] == $postData['iduser']) {
             echo "<div class='c-p-u-i'>";
@@ -49,9 +49,9 @@
           }
         ?>
 
-        <div class="c-p-data flex-center">
+        <div class="align-items-center c-p-data d-flex flex-column justify-content-start">
           <div class="c-p-data-img">
-            <img src="<?php echo $postData['postimage'] ?>" alt="Imagen post social gamer">
+            <img alt="Imagen post social gamer" loading="lazy" src="<?php echo $postData['postimage'] ?>">
           </div>
 
           <div class="c-p-data-data">

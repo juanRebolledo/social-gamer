@@ -3,7 +3,7 @@
     echo (isset($title) ? "<p class='title-post'>${title}</p>" : "");
   ?>
 
-  <div class="container-posts">
+  <div class="align-content-start container-posts d-flex flex-column">
     <?php 
       $count = 1;
       $isTherePost = false;

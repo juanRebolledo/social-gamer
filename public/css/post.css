@@ -1,16 +1,12 @@
 .c-u-p {
-  flex-direction: column;
   height: calc(100% - 70px);
 }
 
 .c-u-p .c-u-i {
   height: 49px;
-  justify-content: flex-start;
 }
 
 .c-u-p .c-u-i .u-profile-link {
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   height: 32px;
   margin-left: 10%;
@@ -32,9 +28,7 @@
 }
 
 .c-u-p .c-p {
-  display: flex;
   height: calc(100% - 49px);
-  justify-content: space-evenly;
 }
 
 .c-u-p .c-p .c-p-u-i {
@@ -45,17 +39,11 @@
   width: 24px;
 }
 
-.c-p-u-i .tooltip a:hover + .item-tooltip {
-  bottom: 5px;
-  left: 60px;
-}
-
 .c-u-p .c-p .c-p-data {
   color: var(--c-white);
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: auto;
   max-width: 768px;
+  overflow: auto;
+  padding-bottom: 50px;
   width: 55%;
 }
 
@@ -88,8 +76,6 @@
 }
 
 .c-p-comments .comments .c-comment {
-  display: flex;
-  justify-content: space-between;
   margin-top: 10px;
   width: 100%;
 }
