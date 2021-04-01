@@ -1,6 +1,6 @@
 <div class="align-items-center slider d-flex fade justify-content-evenly">
   <div class="s-img">
-    <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
+    <img loading="lazy" src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
   </div>
 
   <div class="s-info">

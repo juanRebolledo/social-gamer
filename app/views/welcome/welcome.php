@@ -18,7 +18,7 @@
   <div class="app">
     <header class="h-landing">
       <nav class="flex-center">
-        <div class="logo-app"><img src="/<?php echo "{$PATH->IMG}LOGO.png" ?>" alt=""></div>
+        <div class="logo-app"><img loading="lazy" src="/<?php echo "{$PATH->IMG}LOGO.png" ?>" alt=""></div>
         <div class="btn-login">
           <a class="btn" href="/login">Iniciar Sesión</a>
         </div>

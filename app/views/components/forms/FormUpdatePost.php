@@ -19,7 +19,7 @@
         <div class="container-form-inputs">
           <div class="form-group group-file">
             <input accept="image/gif,image/jpeg" class="form-file" id="image-selector" onchange="onChangeFileImage(this)" type="file">
-            <img id="image-selected" src="<?php echo $postData['postimage'] ?>" style="display: block;" alt="your image" />
+            <img id="image-selected" loading="lazy" src="<?php echo $postData['postimage'] ?>" style="display: block;" alt="your image" />
           </div>
 
           <div class="form-group">

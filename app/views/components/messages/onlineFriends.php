@@ -4,7 +4,7 @@
       $image = $this->actionsSql->handlerSelectColumn('image', 'iduser', 'user', $addressee);
       if ($image == 'NOT') echo "<div class='img-user'></div>";
 
-      else echo "<img class='img-user' src='$image'>";
+      else echo "<img loading='lazy' class='img-user' src='$image'>";
     ?>
   </a>
 

@@ -11,23 +11,45 @@
         $isTherePost = true;
           
         if ($count === 1) {
-          echo "<a href='/post/p/{$post->idpost}' class='post b'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          echo "
+            <a href='/post/p/{$post->idpost}' class='post b'>
+              <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+            </a>";
           $count++;
         } else if ($count === 2) {
-          echo "<div class='post-s'><a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          echo "
+            <div class='post-s'>
+              <a href='/post/p/{$post->idpost}' class='post s'>
+                <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+              </a>";
           $count++;
         } else if($count === 3) {
 
-        echo "<a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a></div>";
+        echo "
+            <a href='/post/p/{$post->idpost}' class='post s'>
+              <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+            </a>
+          </div>";
         $count++;
         } else if ($count === 4) {
-          echo "<div class='post-s'><a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          echo "
+            <div class='post-s'>
+              <a href='/post/p/{$post->idpost}' class='post s'>
+                <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+              </a>";
           $count++;
         } else if($count === 5) {
-          echo "<a href='/post/p/{$post->idpost}' class='post s'><img src='$post->postimage' alt='imagen post gamer social'></a></div>";
+          echo "
+              <a href='/post/p/{$post->idpost}' class='post s'>
+                <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+              </a>
+            </div>";
           $count++;
         } else if ($count === 6) {
-          echo "<a href='/post/p/{$post->idpost}' class='post b'><img src='$post->postimage' alt='imagen post gamer social'></a>";
+          echo "
+            <a href='/post/p/{$post->idpost}' class='post b'>
+              <img loading='lazy' src='$post->postimage' alt='imagen post gamer social'>
+            </a>";
           $count = 1;
         } 
       }

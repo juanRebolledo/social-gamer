@@ -20,7 +20,7 @@
         <div class="align-content-between container-form-inputs d-flex flex-column">
           <div class="form-group group-file">
             <input accept="image/gif,image/jpeg" class="form-file" id="image-selector" onchange="onChangeFileImage(this)" type="file" required>
-            <img id="image-selected" src="#" alt="your image" />
+            <img id="image-selected" loading="lazy" src="#" alt="your image" />
           </div>
 
           <div class="form-group">

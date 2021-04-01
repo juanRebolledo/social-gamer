@@ -23,7 +23,7 @@
           <div class="profile-photo">
             <?php
             if ($userInformation['image'] !== 'NOT')
-              echo "<img src='$userInformation[image]' alt='Foto de perfil usuario Gamer social' >"
+              echo "<img loading='lazy' src='$userInformation[image]' alt='Foto de perfil usuario Gamer social' >"
             ?>
           </div>
 
