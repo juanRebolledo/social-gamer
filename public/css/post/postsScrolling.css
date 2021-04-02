@@ -8,6 +8,7 @@
   color: var(--c-white);
   font-size: 2em;
   font-family: 'Roboto-Black';
+  margin-left: 15px;
 }
 
 .posts .container-posts {
