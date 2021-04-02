@@ -13,12 +13,12 @@
       $this->callUrl();
     }
 
-    public function callUrl() {
-      if(class_exists($this->controller)) {
-        $this->controller = new $this->controller;
-        call_user_func_array([$this->controller, $this->method], $this->params);
-      }
-      else call_user_func_array(["E404", "indexView"], ["E404"]);
+    public function callUrl() {    
+      if(!(class_exists($this->controller) && method_exists($this->controller, $this->method)))
+        return call_user_func_array(["E404", "indexView"], ["E404"]);
+      
+      $this->controller = new $this->controller;
+      call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
     public static function getUrl(){
@@ -35,11 +35,10 @@
         unset($this->url[0]);
 
         return $controller;
-      } else {
-        $controller = "welcome";
+      } 
       
-        return $controller;
-      }
+      $controller = "welcome";
+      return $controller;
     }
 
     public function getMethod() {
@@ -48,17 +47,16 @@
         unset($this->url[1]);
 
         return $method;
-      } else {
-        $method = "indexView";
+      } 
 
-        return $method;
-      }
+      $method = "indexView";
+      return $method;
     }
 
     public function getParams() {
-      $params = $this->url ? array_values($this->url) : [$this->controller];
-      
-      return $params;
+      if ($this->url) return array_values($this->url);
+
+      return [$this->controller];
     }
   }
 ?>
