@@ -10,7 +10,7 @@
     $PATH = new Path();
     require_once("{$PATH->HEAD}head.php")
   ?>
-  <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}post.css"; ?>">
+  <link rel="stylesheet" href="/<?php echo "{$PATH->CSS_POST}post.css"; ?>">
   <title><?php echo $postData['titlepost'] ?></title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <?php require_once("{$PATH->HEADER}header.php"); ?>
     <div class="c-u-p flex-center flex-column">
       <div class="c-u-i justify-content-start">
-        <div class="d-flex flex-column u-profile-link">
+        <div class="align-items-center d-flex u-profile-link">
           <a href="/<?php echo "user/u/$postData[iduser]"; ?>">
             <?php
               if ($postData['image'] != 'NOT') {

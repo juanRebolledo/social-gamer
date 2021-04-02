@@ -13,7 +13,7 @@
     $PATH = new Path();
     require_once("{$PATH->HEAD}head.php")
   ?>
-  <link rel="stylesheet" href="<?php echo "{$PATH->CSS}postsScrolling.css" ?>">
+  <link rel="stylesheet" href="<?php echo "{$PATH->CSS_POST}postsScrolling.css" ?>">
   <title>Gamer Social</title>
 </head>
 <body>

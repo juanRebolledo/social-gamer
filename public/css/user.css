@@ -21,7 +21,7 @@
 .c-u-profile .u-p-posts h1 {
   color: var(--c-white);
   font-size: 1.5em;
-  font-family: "Roboto Mono";
+  font-family: "Roboto-Mono";
   text-align: center;
 }
 
@@ -82,15 +82,13 @@
 .u-p-about .u-p-a-info .profile-name h1,
 h2 {
   color: var(--c-white);
-  font-family: "Roboto";
-  font-weight: 900;
+  font-family: "Roboto-Black";
   font-size: 1.5em;
 }
 
 .u-p-about .u-p-a-info .profile-name h2 {
   font-size: 1em;
-  font-family: "Roboto Mono";
-  font-weight: 500;
+  font-family: "Roboto-Mono";
 }
 
 .container-form {

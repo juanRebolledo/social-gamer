@@ -1,10 +1,11 @@
 <div class="create flex-center">
   <div class="container-create-post flex-center">
     <div class="loading flex-center" id="loading"></div>
+    
     <div class="container-create-form">
-      <form action='/post/update' method="POST">
+      <form action='/post/update' class="d-flex flex-column justify-content-around" method="POST">
         <div class="container-save flex-center">
-          <div class="form-group select">
+          <div class="d-flex form-group select">
             <select class="form-control" name="category" id="category" required value="<?php echo $postData['category'] ?>">
               <option value="Deportes">Deportes</option>
               <option value="FPS">FPS</option>
@@ -16,7 +17,7 @@
           </div>
         </div>
 
-        <div class="container-form-inputs">
+        <div class="align-content-between container-form-inputs d-flex flex-column">
           <div class="form-group group-file">
             <input accept="image/gif,image/jpeg" class="form-file" id="image-selector" onchange="onChangeFileImage(this)" type="file">
             <img id="image-selected" loading="lazy" src="<?php echo $postData['postimage'] ?>" style="display: block;" alt="your image" />

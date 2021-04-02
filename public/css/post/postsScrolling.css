@@ -7,7 +7,7 @@
 .posts .title-post {
   color: var(--c-white);
   font-size: 2em;
-  font-weight: 900;
+  font-family: 'Roboto-Black';
 }
 
 .posts .container-posts {

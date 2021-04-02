@@ -1,4 +1,4 @@
-<div class="container-login">
+<div class="container-login flex-center">
   <div class="register-box">
     <div class="login-body">
       <div class="container-title">

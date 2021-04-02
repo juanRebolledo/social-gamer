@@ -11,7 +11,7 @@
     require_once("{$PATH->HEAD}head.php");
     require_once("{$PATH->HEAD}firebaseHead.php");
   ?>
-  <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}createPost.css" ?>">
+  <link rel="stylesheet" href="/<?php echo "{$PATH->CSS_POST}createPost.css" ?>">
   <title>Editar : <?php echo $postData['titlepost'] ?></title>
 </head>
 <body>

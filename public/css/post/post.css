@@ -7,7 +7,6 @@
 }
 
 .c-u-p .c-u-i .u-profile-link {
-  flex-wrap: wrap;
   height: 32px;
   margin-left: 10%;
   width: 180px;
@@ -15,6 +14,7 @@
 
 .u-profile-link a {
   fill: var(--c-white);
+  margin-right: 15px;
   height: 32px;
   width: 32px;
 }
@@ -52,13 +52,12 @@
 }
 
 .c-u-p .c-p-data .c-p-data-data h1 {
+  font-family: "Roboto-Black";
   font-size: 2em;
-  font-weight: bold;
-  font-family: "Roboto";
 }
 
 .c-u-p .c-p-data .c-p-data-data p {
-  font-family: "Roboto Mono";
+  font-family: "Roboto-Mono";
   text-align: justify;
 }
 

@@ -22,15 +22,12 @@
 .container-login,
 button {
   color: var(--c-white);
-  font-family: "Roboto Mono";
-  font-weight: 500;
-  font-style: normal;
+  font-family: "Roboto-Mono-Bold";
 }
 
 .login-body .button {
   background: var(--c-purple);
   color: var(--c-white);
-  font-weight: 500;
   transition: all 0.3s;
 }
 
