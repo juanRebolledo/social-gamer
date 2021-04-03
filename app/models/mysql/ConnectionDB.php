@@ -1,5 +1,5 @@
 <?php
-  class ConnectionDB{
+  class ConnectionDB {
     private $host = "localhost";
     private $user = "root";
     private $password = "";
@@ -7,7 +7,7 @@
     private $dsn;
     private $pdoConnection;
 
-    public function __construct(){
+    public function __construct() {
       try {
         $this->dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbname . ";charset=utf8";
         $this->pdoConnection = new PDO($this->dsn, $this->user, $this->password);
@@ -20,8 +20,12 @@
         }
       }
 
-      public function getConnection(){
+      public function getConnection() {
         return $this->pdoConnection;
+      }
+
+      public function closeConnection() {
+
       }
     }
 ?>
