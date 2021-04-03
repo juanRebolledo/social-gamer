@@ -1,8 +1,8 @@
 <?php
-  class UserService{
+  class UserService {
     public $userMapper;
 
-    public function __construct(){
+    public function __construct() {
       $userMapper = new UserMapper();
 
       $this->userMapper = $userMapper;
@@ -16,11 +16,9 @@
       return false;
     }
 
-    public function handlerUserRegister(string $idUser, string $nameuser, string $username, string $password, string $email, string $image, string $facebook, string $twitter, string $twitch):bool{
-      if($this->userMapper->registerUser($idUser, $nameuser, $username, $password, $email, $image, $facebook, $twitter, $twitch)){
-        return true;
-      } 
-
-      return false;
+    public function handlerUserRegister(string $idUser, string $nameuser, string $username, string $password, string $email, string $image, string $facebook, string $twitter, string $twitch):bool {
+      $wasRegistered = $this->userMapper->registerUser($idUser, $nameuser, $username, $password, $email, $image, $facebook, $twitter, $twitch);
+      
+      return $wasRegistered;
     }      
   }

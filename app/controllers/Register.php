@@ -19,7 +19,8 @@
 
       $newUser = $objUser->handlerUserRegister($idUser, $name, $username, $password, $email, "NOT", "NOT", "NOT", "NOT"); 
             
-      if($newUser) header("Location: /login");
-      else header("Location: /E404");
+      if($newUser) return header("Location: /login");
+      
+      return header("Location: /register");
     }
   }
