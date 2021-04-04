@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/<?php echo "{$PATH->CSS}header.css" ?>">
 <header class="align-items-center d-flex justify-content-around">
-  <a href="/home" id="home-page" class="app-logo"><img src="/<?php echo "{$PATH->IMG}LOGO.png" ?>" loading="lazy" alt=""></a>
+  <a href="/home" id="home-page" class="app-logo"><img src="/<?php echo "{$PATH->IMG}logo/logo.png" ?>" loading="lazy" alt=""></a>
   <form action="/search" class="i-btn flex-center" method="post">
     <div class="form-group">
       <input type="text" placeholder="Busqueda" id="textToSearch" name="textToSearch">
