@@ -29,16 +29,29 @@
     }
 
     public function edit($idPost) {
+      $postData = $this->isTheAuthorOfPost($idPost);
+
+      if ($postData)
+        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/updatePost.php");
+      else 
+        header("location: /home");
+    }
+
+    public function d($idPost) {
+      if ($this->isTheAuthorOfPost($idPost)) {
+        return $this->handlerDeletePost($idPost);
+      }
+      header("location: /home");
+    }
+
+    private function isTheAuthorOfPost($idPost) {
       $data = $this->handlerGetPost($idPost);
       $postData = $data->fetch(PDO::FETCH_ASSOC);
 
       if ($postData && $_SESSION['iduser'] == $postData['iduser'])
-        require_once("{$_SERVER['DOCUMENT_ROOT']}/app/views/post/updatePost.php");
-      else header("location: /home");
-    }
-
-    public function d($idPost) {
-      $data = $this->handlerDeletePost($idPost);
+        return $postData;
+      
+      return false;
     }
 
     public function handlerDeletePost($idPost) {
