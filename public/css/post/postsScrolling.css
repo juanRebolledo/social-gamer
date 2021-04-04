@@ -1,9 +1,3 @@
-.posts {
-  height: 580px;
-  padding-right: 15px;
-  margin-bottom: 70px;
-}
-
 .posts .title-post {
   color: var(--c-white);
   font-size: 2em;
@@ -13,8 +7,7 @@
 
 .posts .container-posts {
   flex-wrap: wrap;
-  height: 100%;
-  overflow-x: auto;
+  width: 100%;
 }
 
 .posts .container-posts::-webkit-scrollbar {
@@ -30,13 +23,11 @@
 }
 
 .posts .container-posts .post-s {
+  align-content: space-between;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 15px;
-}
-
-.posts .container-posts .b {
-  height: 350px;
 }
 
 .posts,
@@ -47,11 +38,23 @@
 
 .posts .container-posts .b,
 .posts .container-posts .post-s {
-  width: 430px;
+  height: 350px;
+  width: calc(50% - 30px);
 }
 
 .posts .container-posts .s {
   margin: 0;
-  height: 150px;
-  width: 197px;
+  height: calc(50% - 10px);
+  width: calc(50% - 10px);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .posts .container-posts .b, 
+  .posts .container-posts .post-s {
+    width: 100% !important;
+  }
 }
