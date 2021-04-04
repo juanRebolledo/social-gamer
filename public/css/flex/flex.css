@@ -1,6 +1,7 @@
 .align-items-center { align-items: center; }
 .align-content-between { align-content: space-between; }
 .align-content-start { align-content: flex-start; }
+.align-content-center { align-content: center; }
 .d-flex { display: flex; }
 .justify-content-around { justify-content: space-around; }
 .justify-content-between { justify-content: space-between; }
