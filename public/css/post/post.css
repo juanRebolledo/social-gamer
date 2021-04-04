@@ -121,7 +121,6 @@
   }
 
   .c-u-p .c-p .c-p-data {
-    height: 400px;
     margin-bottom: 25px;
     width: 100%;
   }
@@ -135,6 +134,7 @@
   }
 
   .c-u-p .c-p .c-p-comments {
+    display: none;
     margin-top: 10px;
     height: 30%;
     width: 100%;
