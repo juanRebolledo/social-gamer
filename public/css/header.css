@@ -47,12 +47,18 @@ header nav .plus a svg:hover {
 }
 
 @media (max-width: 560px) {
-  header .app-logo {
-    display: none;
+  header {
+    justify-content: space-between !important;
+    margin: 0 auto;
+    padding: 0 5%;
   }
 
+  header .app-logo {
+    width: 50px;
+  }
+  
   header .i-btn {
-    width: 60%;
+    display: none;
   }
 
   header nav {
