@@ -86,7 +86,7 @@
     }
 
     public function handlerGetAllPosts(string $condition) {
-      $sql = "SELECT * FROM post$condition";
+      $sql = "SELECT * FROM post$condition ORDER BY date DESC";
 
       return $this->actionsSql->handlerSelectData($sql);
     }

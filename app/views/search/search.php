@@ -1,6 +1,6 @@
 <?php
   $post = new post();
-  $posts = $post->handlerGetAllPosts(" WHERE `titlepost` LIKE '$textToSearch%'");
+  $posts = $post->handlerGetAllPosts(" WHERE `titlepost` LIKE '$textToSearch%' ORDER BY date DESC");
   $sessionMapper = new SessionMapper();
 
   if (!$sessionMapper->isActiveSession())
