@@ -8,7 +8,8 @@
 <head>
   <?php
     $PATH = new Path();
-    require_once("{$PATH->HEAD}head.php")
+    require_once("{$PATH->HEAD}head.php");
+    require_once("{$PATH->HEAD}firebaseHead.php");
   ?>
   <link rel="stylesheet" href="/<?php echo "{$PATH->CSS_POST}post.css"; ?>">
   <title><?php echo $postData['titlepost'] ?></title>
@@ -49,8 +50,8 @@
           ?>
 
           <div class="align-items-center d-flex flex-column justify-content-between post-likes">
-            <div class="heart"></div>
-            <span>10</span>
+            <div class="heart" id="heart"></div>
+            <span id="likes-count">...</span>
           </div>
         </div>
         <div class="align-items-center c-p-data d-flex flex-column justify-content-start">
@@ -95,5 +96,9 @@
       </div>
     </div>
   </div>
+
+  <script src="/<?php echo str_replace('\\', '/', $PATH->FIREBASE) . "config.js" ?>"></script>
+  <script src="/<?php echo str_replace('\\', '/', $PATH->FIREBASE) . "firebase.js" ?>"></script>
+  <script src="/<?php echo str_replace('\\', '/', $PATH->JS) . "likes/likes.js" ?>"></script>
 </body>
 </html>

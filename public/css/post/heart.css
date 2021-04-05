@@ -9,11 +9,11 @@
 .heart:after {
     position: absolute;
     content: "";
-    left: 15px;
+    left: 50%;
     top: 0;
-    width: 15px;
-    height: 25px;
-    background: #fff;
+    width: 50%;
+    height: 100%;
+    background: var(--c-heart);
     -moz-border-radius: 50px 50px 0 0;
     border-radius: 50px 50px 0 0;
     -webkit-transform: rotate(-45deg);
@@ -41,32 +41,27 @@
             transform-origin :100% 100%;
 }
 
+.like {
+  animation: 0.5s heartbeat;
+}
 
-
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
+@keyframes heartbeat {
+  0% {
+    transform: scale( .6 );
   }
-  20%
-  {
+  20% {
     transform: scale( 1 );
   }
-  40%
-  {
-    transform: scale( .75 );
+  40% {
+    transform: scale( .6 );
   }
-  60%
-  {
+  60% {
     transform: scale( 1 );
   }
-  80%
-  {
-    transform: scale( .75 );
+  80% {
+    transform: scale( .6 );
   }
-  100%
-  {
-    transform: scale( .75 );
+  100% {
+    transform: scale( 1 );
   }
 }
