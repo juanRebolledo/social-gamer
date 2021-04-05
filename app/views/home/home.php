@@ -1,5 +1,5 @@
 <?php
-  $post = new post();
+  $post = new Post();
   $posts = $post->handlerGetAllPosts(" ");
   $postsSports = $post->handlerGetAllPosts(" WHERE category = 'Deportes'");
   $postsAdventure = $post->handlerGetAllPosts(" WHERE category = 'Aventura'");
