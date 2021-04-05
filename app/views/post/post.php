@@ -17,38 +17,42 @@
   <div class="app">
     <?php require_once("{$PATH->HEADER}header.php"); ?>
     <div class="c-u-p flex-center flex-column">
-      <div class="c-u-i justify-content-start">
-        <div class="align-items-center d-flex u-profile-link">
-          <a href="/<?php echo "user/u/$postData[iduser]"; ?>">
-            <?php
-              if ($postData['image'] != 'NOT') {
-                echo "<img alt='Imagen de perfil de usuario' loading='lazy' src='$postData[image]'>";
-              } else {
-                require("{$PATH->IMG}notPhotoUser.svg");
-              }
-            ?>
-          </a>
-          <span><?php echo $postData['nameuser'] ?></span>
-        </div>
-      </div>
-
       <div class="c-p d-flex justify-content-evenly">
-        <?php
-          if ($_SESSION['iduser'] == $postData['iduser']) {
-            echo "<div class='c-p-u-i'>";
-            $network = "/post/edit/$postData[idpost]";
-            $svg = "Edit";
-            $tooltip = 'Editar';
-            require("{$PATH->PROFILE}social.php");
+        <div class='c-p-u-i'>
+          <div class='u-profile-link u-p-a-network tooltip left flex-center'>
+            <a href="/<?php echo "user/u/$postData[iduser]"; ?>">
+              <?php
+                if ($postData['image'] != 'NOT') {
+                  echo "<img alt='Imagen de perfil de usuario' loading='lazy' src='$postData[image]'>";
+                } else {
+                  require("{$PATH->IMG}notPhotoUser.svg");
+                }
+              ?>
+            </a>
+            <div class='item-tooltip'>
+              <p><?php echo $postData['username'] ?></p>
+            </div>
+          </div>
 
-            $network = "/post/d/$postData[idpost]";
-            $svg = "Delete";
-            $tooltip = 'Eliminar';
-            require("{$PATH->PROFILE}social.php");
-            echo "</div>";
-          }
-        ?>
+          <?php
+            if ($_SESSION['iduser'] == $postData['iduser']) {
+              $network = "/post/edit/$postData[idpost]";
+              $svg = "Edit";
+              $tooltip = 'Editar';
+              require("{$PATH->PROFILE}social.php");
 
+              $network = "/post/d/$postData[idpost]";
+              $svg = "Delete";
+              $tooltip = 'Eliminar';
+              require("{$PATH->PROFILE}social.php");
+            }
+          ?>
+
+          <div class="align-items-center d-flex flex-column justify-content-between post-likes">
+            <div class="heart"></div>
+            <span>10</span>
+          </div>
+        </div>
         <div class="align-items-center c-p-data d-flex flex-column justify-content-start">
           <div class="c-p-data-img">
             <img alt="Imagen post social gamer" loading="lazy" src="<?php echo $postData['postimage'] ?>">
@@ -70,8 +74,20 @@
 
           <div class="comments">
             <?php
+              $thereAreComments = false;
               while ($comment = $comments->fetch()) {
+                $thereAreComments = true;
                 require("{$PATH->COMPONENTS}comment/comment.php");
+              }
+              if (!$thereAreComments) {
+            ?>
+            <div class='flex-center flex-column no-comments'>
+              <?php
+                echo "<img loading='lazy' src='/{$PATH->ICONS}no-comments.svg' />";
+              ?> 
+              <h1>Aún no existen comentarios</h1>
+            </div>
+            <?php 
               }
             ?>
           </div>

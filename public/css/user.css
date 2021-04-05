@@ -15,6 +15,7 @@
 
 .c-u-profile .u-p-posts {
   padding-top: 15px;
+  overflow-y: auto;
   width: calc(100% - 400px);
 }
 

@@ -1,26 +1,28 @@
+@import './heart.css';
+
 .c-u-p {
   height: calc(100% - 70px);
 }
 
-.c-u-p .c-u-i {
-  height: 49px;
+.u-profile-link, .post-likes {
+  margin-bottom: 10px;
 }
 
-.c-u-p .c-u-i .u-profile-link {
-  height: 32px;
-  margin-left: 10%;
-  width: 180px;
+.post-likes {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.post-likes span {
+  color: var(--c-white);
+  font-family: 'Roboto-Black';
+  font-size: 14px;
 }
 
 .u-profile-link a {
   fill: var(--c-white);
-  margin-right: 15px;
   height: 32px;
   width: 32px;
-}
-
-.u-profile-link span {
-  color: var(--c-white);
 }
 
 .u-profile-link img {
@@ -28,11 +30,12 @@
 }
 
 .c-u-p .c-p {
-  height: calc(100% - 49px);
+  height: 100%;
+  padding-top: 30px;
 }
 
 .c-u-p .c-p .c-p-u-i {
-  width: 60px;
+  width: 50px;
 }
 
 .c-p-u-i .tooltip a svg {
@@ -77,6 +80,21 @@
 .c-p-comments .comments .c-comment {
   margin-top: 10px;
   width: 100%;
+}
+
+.comments .no-comments {
+  height: 100%;
+  width: 100%;
+}
+
+.comments .no-comments img {
+  height: 100px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.comments .no-comments h1 {
+  font-family: 'Roboto-Black';
 }
 
 .comments .c-comment .c-cmmt-photo {

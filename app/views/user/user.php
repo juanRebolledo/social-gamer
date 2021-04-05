@@ -56,7 +56,7 @@
           ?>
         </div>
       </div>
-      <div class="u-p-posts flex-center">
+      <div class="u-p-posts">
         <?php require_once("{$PATH->POSTS}postsScrolling.php"); ?>
       </div>
     </div>
