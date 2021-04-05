@@ -53,6 +53,10 @@
   max-height: 400px;
 }
 
+.c-u-p .c-p-data .c-p-data-data {
+  width: 100%;
+}
+
 .c-u-p .c-p-data .c-p-data-data h1 {
   font-family: "Roboto-Black";
   text-align: left;
