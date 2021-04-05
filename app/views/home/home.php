@@ -1,11 +1,6 @@
 <?php
-  $post = new Post();
+  $post = new post();
   $posts = $post->handlerGetAllPosts(" ");
-  $postsSports = $post->handlerGetAllPosts(" WHERE category = 'Deportes'");
-  $postsAdventure = $post->handlerGetAllPosts(" WHERE category = 'Aventura'");
-  $postsRPG = $post->handlerGetAllPosts(" WHERE category = 'RPG'");
-  $postsMOBA = $post->handlerGetAllPosts(" WHERE category = 'MOBA'");
-  $postsFPS = $post->handlerGetAllPosts(" WHERE category = 'FPS'");
 
   $sessionMapper = new SessionMapper();
 
