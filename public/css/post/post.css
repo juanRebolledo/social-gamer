@@ -45,7 +45,6 @@
 .c-u-p .c-p .c-p-data {
   color: var(--c-white);
   max-width: 768px;
-  overflow: auto;
   padding-bottom: 50px;
   width: 55%;
 }
@@ -56,6 +55,7 @@
 
 .c-u-p .c-p-data .c-p-data-data h1 {
   font-family: "Roboto-Black";
+  text-align: left;
   font-size: 2em;
 }
 
@@ -72,7 +72,7 @@
 .c-p-comments .comments {
   height: calc(100% - 40px);
   margin: auto;
-  padding-bottom: 10px;
+  padding: 20px 0;
   overflow: auto;
   width: 100%;
 }
@@ -129,22 +129,24 @@
   .c-u-p .c-p {
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 0;
   }
 
   .c-u-p .c-p .c-p-u-i {
     display: flex;
     justify-content: space-evenly;
-    height: 36px;
+    height: 70px;
     width: 100%;
   }
 
   .c-u-p .c-p .c-p-data {
     margin-bottom: 25px;
+    padding-bottom: 0;
     width: 100%;
   }
 
   .c-u-p .c-p .c-p-data .c-p-data-img {
-    height: 260px;
+    width: 90%;
   }
 
   .c-u-p .c-p .c-p-data .c-p-data-data {
@@ -152,14 +154,22 @@
   }
 
   .c-u-p .c-p .c-p-comments {
-    display: none;
-    margin-top: 10px;
-    height: 30%;
-    width: 100%;
+    margin-top: 20px;
+    height: min-content;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .c-p .c-p-comments .comments .c-comment {
-    width: 415px;
     margin: 10px auto;
+    width: 100%;
+  }
+
+  .post-likes {
+    flex-direction: row;
+  }
+
+  .post-likes .heart {
+    margin-right: 10px;
   }
 }
