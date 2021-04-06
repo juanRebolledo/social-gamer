@@ -15,7 +15,6 @@
 
 .c-u-profile .u-p-posts {
   padding-top: 15px;
-  overflow-y: auto;
   width: calc(100% - 400px);
 }
 
@@ -153,7 +152,7 @@ form .container-data-inputs .form-group {
     flex-direction: row;
     height: 50px;
     justify-content: space-evenly;
-    width: 100%;
+    width: 65%;
   }
 
   .c-u-profile .u-p-about,

@@ -1,7 +1,6 @@
-const likesDatabase = firebase.database();
 const currentPost = location.href.split('/p/')[1];
 const strLikesRefer = `likes/${currentPost}`;
-const likesRef = likesDatabase.ref(strLikesRefer);
+const likesRef = database.ref(strLikesRefer);
 
 const heartElement = document.getElementById('heart');
 const likesCountElement = document.getElementById('likes-count');

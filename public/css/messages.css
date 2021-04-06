@@ -5,7 +5,7 @@
 .app-messages .online-friends {
   height: 100%;
   padding: 10px 0;
-  overflow-y: auto;
+  overflow: auto;
   width: 110px;
 }
 

@@ -6,7 +6,15 @@ targetMessagesContainer.innerHTML = '<div class="lds-dual-ring"></div>';
 
 let data = [];
 
-ref.on("value", (snapshot) => {
+const chatRoom = location.href.split('/t/')[1];
+const chatRefer = `chat/messages/${chatRoom}`;
+const refMessages = database.ref(chatRefer);
+
+function addElementToFirebase(data) {
+  refMessages.push(data);
+}
+
+refMessages.on("value", (snapshot) => {
   if (snapshot.val()) {
     data = Object.values(snapshot.val());
     targetMessagesContainer.innerHTML = "";
