@@ -28,17 +28,17 @@
     <section class="c-s-landing flex-center">
       <div class="banner-landing">
         <?php
-          $src = str_replace('\\', '/', $PATH->IMG) . "landing-banner1.png";
-          $alt = "La mejor comunidad gamer del mundo! Gamer social";
+          $src = "https://i.imgur.com/Zdoy3pT.jpg";
+          $alt = "GamerSocial tiene la mejor comunidad gamer del mundo!";
           $title = "Unete a la mejor comunidad gamer";
           $subtitle = "Gamer social te permite conocer temas acerca del mundo del gaiming.";
           $registerText = "Unete aqui!";
           require("{$PATH->LANDING}slider.php");
-        ?>
+          ?>
 
         <?php
-          $src = str_replace('\\', '/', $PATH->IMG) . "landing-banner2.png";
-          $alt = "Gamer Social crear post";
+          $src = "https://i.imgur.com/bAAWaU1.jpg";
+          $alt = "En GamerSocial crear posts es simple, rapido y divertido!";
           $title = "Crea contenido para el mundo";
           $subtitle = "Habla sobre tus videojuegos favoritos";
           $registerText = "Registrate!";
@@ -46,8 +46,8 @@
         ?>
 
         <?php
-          $src = str_replace('\\', '/', $PATH->IMG) . "landing-banner3.png";
-          $alt = "HomePage Gamer social";
+          $src = "https://i.imgur.com/FP7tEP5.jpg";
+          $alt = "Explorar todos los post de GamerSocial";
           $title = "Explora todos los posts";
           $subtitle = "Registrate y comienza a leer!";
           $registerText = "Unete!";
