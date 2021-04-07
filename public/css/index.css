@@ -87,11 +87,11 @@ img, .form-group, .loading,
   opacity: 1;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
   color: var(--c-white);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder {
   color: var(--c-white);
 }
 
