@@ -103,8 +103,8 @@ if (!$sessionMapper->isActiveSession())
     </div>
   </div>
   <!-- modal for big image -->
-  <div class="modal--ini" id="bigModal" onclick="this.style.display='none'">
-      <div class="modal-content">
+  <div class="modal--ini animate-opacity" id="bigModal" onclick="this.style.display='none'">
+      <div class="modal--content">
         <div class="modal--image">
           <img src="<?php echo $postData['postimage'] ?>" alt="Imagen post social gamer">
         </div>
