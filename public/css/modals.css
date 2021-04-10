@@ -1,0 +1,36 @@
+.modal--ini {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.750);
+}
+.modal--content {
+    margin: 0 auto;
+    max-height: calc(100vh - 40px);
+    width: 700px;
+    position: relative;
+}
+.modal--image{
+    margin-top: auto 0;
+}
+@media (min-width: 769) and (max-width: 768px) { 
+    .modal-content{
+        max-width: 400px;
+        max-height: calc(100vh - 40px);
+    }
+}
+@media (max-width: 767px) {
+    .modal-content{
+        margin-top: 9rem;
+        max-width: 90%;
+        max-height: calc(100vh - 40px);
+    }
+    .modal--image{
+        margin-top: 0rem;
+    }
+}
