@@ -9,7 +9,7 @@
  */
 
 html {
-    line-height: 1.15; /* 1 */
+    line-height: 1.5;
     -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -40,6 +40,11 @@ html {
   
   h1 {
     font-size: 1em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
   }
   
   /* Grouping content
@@ -75,6 +80,8 @@ html {
   
   a {
     background-color: transparent;
+    color: var(--c-purple);
+    text-decoration: none;
   }
   
   /**
@@ -162,8 +169,6 @@ html {
   optgroup,
   select,
   textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
   }
