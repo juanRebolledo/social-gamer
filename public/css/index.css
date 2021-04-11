@@ -5,6 +5,7 @@
 @import './scrollbar.css';
 @import './tooltip.css';
 @import './flex/flex.css';
+@import './normalize.css';
 
 * {
   box-sizing: inherit;
