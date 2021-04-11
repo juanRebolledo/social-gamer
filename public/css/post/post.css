@@ -107,14 +107,27 @@
   width: 32px;
 }
 
+.comments .c-comment .c-cmmt-photo,
+.comments .c-comment .c-cmmt-data .c-cmmt-user {
+  cursor: pointer;
+}
+
 .c-cmmt-photo img {
   border-radius: 100%;
 }
 
 .comments .c-comment .c-cmmt-data {
   color: var(--c-white);
-
   width: calc(100% - 48px);
+}
+
+.comments .c-comment .c-cmmt-data .c-cmmt-user {
+  color: var(--c-white);
+  font-family: 'Roboto-Medium';
+}
+
+.comments .c-comment .c-cmmt-data .c-cmmt-comment {
+  font-family: 'Roboto';
 }
 
 .c-u-p,

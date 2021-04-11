@@ -1,0 +1,51 @@
+.modal--ini {
+    background: var(--m-black-opacity);
+    display: none;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.modal--content {
+    margin: 0 auto;
+    max-width: 45%;
+    position: relative;
+}
+.modal--image{
+    margin-top: 30px;
+}
+
+@media (max-width: 1024px) { 
+    .modal--content {
+        max-width: 60%;
+    }
+}
+@media (width: 768px) { 
+    .modal--content{
+        max-width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    .modal--content {
+        margin-top: 9rem;
+        max-height: calc(100vh - 40px);
+        max-width: 90%;
+    }
+    .modal--image {
+        margin-top: 0rem;
+    }
+}
+.animate-opacity {
+    animation: opac 0.8s;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}

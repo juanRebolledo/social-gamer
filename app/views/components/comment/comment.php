@@ -1,5 +1,5 @@
 <div class="c-comment d-flex justify-content-between">
-  <div class="c-cmmt-photo">
+  <a class="c-cmmt-photo" href="/user/u/<?php echo $comment->iduser ?>">
     <?php
       if ($comment->image !== 'NOT') {
     ?>
@@ -9,10 +9,10 @@
     ?> <img alt="Imagen de usuario no encontrada" loading="lazy" src="<?php echo "/{$PATH->IMG}notPhotoUser.svg"; ?>"> <?php
       }
     ?>
-  </div>
+  </a>
 
   <div class="c-cmmt-data">
-    <span class="c-cmmt-user"><?php echo $comment->nameuser ?></span>
+    <a class="c-cmmt-user" href="/user/u/<?php echo $comment->iduser ?>"><?php echo $comment->nameuser ?></a>
     <p class="c-cmmt-comment"><?php echo $comment->comment ?></p>
   </div>
 </div>

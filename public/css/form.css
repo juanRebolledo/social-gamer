@@ -57,9 +57,13 @@
 .form-control:not(:placeholder-shown) + .form-label {
   font-size: 0.8em;
   left: 0px;
-  top: -25px;
+  top: -18px;
 }
 
 .form-control::placeholder{
   color:transparent;
+}
+
+input, textarea, button, select, .form-label {
+  font-family: 'Roboto';
 }

@@ -2,7 +2,7 @@
   <div class="register-box">
     <div class="login-body">
       <div class="container-title">
-        <h1 class="has-text-centered">Gamer social</h1>
+        <h1 class="text-center">Gamer social</h1>
       </div>
 
       <form action='/register/createUser' method="post">
@@ -33,13 +33,13 @@
           <label class="form-label">Constraseña</label>
         </div>
 
-        <div class="has-text-centered">
-          <button class="button is-fullwidth">Registrarte</button>
+        <div>
+          <button class="button w-100">Registrarte</button>
         </div>
       </form>
 
       <div class="container-register pt-5">
-        <p class="has-text-centered">¿Ya tienes una cuenta? <a href="/login">Inicia sesion</a></p>
+        <p class="text-center">¿Ya tienes una cuenta? <a href="/login">Inicia sesion</a></p>
       </div>
     </div>
   </div>
