@@ -1,5 +1,4 @@
 <?php
-
   class PATH{
     public $HOST;
     public $DS;
@@ -21,6 +20,7 @@
         public $ASSETS;
           public $IMG;
         public $CSS;
+          public $CSS_POST;
         public $JS;
 
     public function __construct(){
@@ -43,10 +43,12 @@
         $this->PUBLIC = "{$this->SITE_ROOT}public{$this->DS}";
           $this->ASSETS = "{$this->PUBLIC}assets{$this->DS}";
             $this->IMG = "{$this->ASSETS}img{$this->DS}";
+              $this->ICONS = "{$this->IMG}icons{$this->DS}";
           $this->CSS = "{$this->PUBLIC}css{$this->DS}";
+            $this->CSS_POST = "{$this->CSS}post{$this->DS}";
           $this->JS = "{$this->PUBLIC}js{$this->DS}";
     }
-
-  }//end class PATH
-  
+  }
 ?>
+
+
