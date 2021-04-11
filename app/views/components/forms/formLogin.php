@@ -21,7 +21,7 @@
           <button class="button w-100">Iniciar sesion</button>
         </div>
 
-        <div class="container-register">
+        <div class="container-register pt-5">
           <p class="text-center">¿Aún sin cuenta? <a href="/register">Registrate</a></p>
         </div>
       </form>

@@ -67,10 +67,6 @@ button {
   z-index: 1;
 }
 
-.container-register {
- padding-top: 1.5rem; 
-}
-
 @media (max-width: 568px) {
   .login-box {
     border-radius: 0;
