@@ -1,0 +1,49 @@
+.tooltip {
+  font-family: 'Roboto-Mono';
+  position: relative;
+}
+
+.tooltip .item-tooltip {
+  animation-duration: 0.3s;
+  animation-name: increseSize;
+  display: none;
+}
+
+.tooltip a:hover + .item-tooltip {
+  background: var(--c-purple);
+  border-radius: 5px;
+  color: var(--c-white);
+  display: flex;
+  font-size: 15px;
+  position: absolute;
+  padding: 5px 10px;
+  z-index: 999;
+}
+
+.tooltip.bottom a:hover + .item-tooltip {
+  left: calc(-150% + 5px);
+  top: calc(100% + 10px);
+}
+
+.tooltip.left a:hover + .item-tooltip {
+  left: 100%;
+  bottom: calc(50% - 15px);
+}
+
+.tooltip.tooltip-fixed a:hover + .item-tooltip {
+  position: fixed;
+  margin-left: 60px;
+  margin-top: -44px;
+}
+
+.tooltip .item-tooltip p { margin: auto; }
+
+@keyframes increseSize {
+  from {
+    display: none;
+    padding: 5px 0;
+  }
+  to {
+    padding: 5px 10px;
+  }
+}

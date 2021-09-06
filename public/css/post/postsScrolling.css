@@ -1,0 +1,60 @@
+.posts .title-post {
+  color: var(--c-white);
+  font-size: 2em;
+  font-family: 'Roboto-Black';
+  margin-left: 15px;
+}
+
+.posts .container-posts {
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.posts .container-posts::-webkit-scrollbar {
+  display: initial;
+}
+
+.posts .container-posts .post {
+  background: var(--b-fourth);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 100px;
+  margin: 15px;
+}
+
+.posts .container-posts .post-s {
+  align-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+.posts,
+.posts .container-posts,
+.posts .container-posts .post {
+  width: 100%;
+}
+
+.posts .container-posts .b,
+.posts .container-posts .post-s {
+  height: 350px;
+  width: calc(50% - 30px);
+}
+
+.posts .container-posts .s {
+  margin: 0;
+  height: calc(50% - 10px);
+  width: calc(50% - 10px);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .posts .container-posts .b, 
+  .posts .container-posts .post-s {
+    width: 100% !important;
+  }
+}

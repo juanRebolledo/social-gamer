@@ -1,0 +1,192 @@
+@import './heart.css';
+
+.c-u-p {
+  height: calc(100% - 70px);
+}
+
+.u-profile-link, .post-likes {
+  margin-bottom: 10px;
+}
+
+.post-likes {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.post-likes span {
+  color: var(--c-white);
+  font-family: 'Roboto-Black';
+  font-size: 14px;
+}
+
+.u-profile-link a {
+  fill: var(--c-white);
+  height: 32px;
+  width: 32px;
+}
+
+.u-profile-link img {
+  border-radius: 100%;
+}
+
+.c-u-p .c-p {
+  height: 100%;
+  padding-top: 30px;
+}
+
+.c-u-p .c-p .c-p-u-i {
+  width: 50px;
+}
+
+.c-p-u-i .tooltip a svg {
+  width: 24px;
+}
+
+.c-u-p .c-p .c-p-data {
+  color: var(--c-white);
+  max-width: 768px;
+  padding-bottom: 50px;
+  width: 55%;
+}
+
+.c-p .c-p-data .c-p-data-img {
+  max-height: 400px;
+}
+
+.c-u-p .c-p-data .c-p-data-data {
+  width: 100%;
+}
+
+.c-u-p .c-p-data .c-p-data-data h1 {
+  font-family: "Roboto-Black";
+  text-align: left;
+  font-size: 2em;
+}
+
+.c-u-p .c-p-data .c-p-data-data p {
+  font-family: "Roboto-Mono";
+  text-align: justify;
+}
+
+.c-u-p .c-p .c-p-comments {
+  height: 100%;
+  width: 30%;
+}
+
+.c-p-comments .comments {
+  height: calc(100% - 40px);
+  margin: auto;
+  padding: 20px 0;
+  overflow: auto;
+  width: 100%;
+}
+
+.c-p-comments .comments .c-comment {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.comments .no-comments {
+  height: 100%;
+  width: 100%;
+}
+
+.comments .no-comments img {
+  height: 100px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.comments .no-comments h1 {
+  font-family: 'Roboto-Black';
+}
+
+.comments .c-comment .c-cmmt-photo {
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+}
+
+.comments .c-comment .c-cmmt-photo,
+.comments .c-comment .c-cmmt-data .c-cmmt-user {
+  cursor: pointer;
+}
+
+.c-cmmt-photo img {
+  border-radius: 100%;
+}
+
+.comments .c-comment .c-cmmt-data {
+  color: var(--c-white);
+  width: calc(100% - 48px);
+}
+
+.comments .c-comment .c-cmmt-data .c-cmmt-user {
+  color: var(--c-white);
+  font-family: 'Roboto-Medium';
+}
+
+.comments .c-comment .c-cmmt-data .c-cmmt-comment {
+  font-family: 'Roboto';
+}
+
+.c-u-p,
+.c-u-p .c-p,
+.c-u-p .c-u-i,
+.c-u-p .c-p .c-p-comments .i-btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .c-u-p .c-u-i {
+    height: 36px;
+    width: 90%;
+  }
+
+  .c-u-p .c-p {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .c-u-p .c-p .c-p-u-i {
+    display: flex;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 100%;
+  }
+
+  .c-u-p .c-p .c-p-data {
+    margin-bottom: 25px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .c-u-p .c-p .c-p-data .c-p-data-img {
+    width: 90%;
+  }
+
+  .c-u-p .c-p .c-p-data .c-p-data-data {
+    width: 90%;
+  }
+
+  .c-u-p .c-p .c-p-comments {
+    margin-top: 20px;
+    height: min-content;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .c-p .c-p-comments .comments .c-comment {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .post-likes {
+    flex-direction: row;
+  }
+
+  .post-likes .heart {
+    margin-right: 10px;
+  }
+}

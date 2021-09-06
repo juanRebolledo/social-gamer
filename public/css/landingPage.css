@@ -1,140 +1,154 @@
-.landing-body {
-  background: var(--c-white);
-}
-
-.landing-body .h-landing {
-  height: 100px;
-}
-
-.landing-body .c-s-landing {
-  height: calc(100% - 100px);
-}
-
-
-.landing-body .c-s-landing .banner-landing {
-  height: 70%;
-  position: relative;
-  width: 90%;
-}
-
-.landing-body .c-s-landing .banner-landing .slider {
-  display: flex;
-  height: calc(100% - 60px);
-  justify-content: space-evenly;
-  position: absolute;
-  opacity: 1;
-  transition: opacity 0.8s;
-  width: 100%;
-}
-
-.landing-body .c-s-landing .banner-landing .slider.fade {
-  opacity: 0;
-}
-
-.slider .s-img {
-  border-radius: 5px;
-  margin-top: 1em;
-  width: 50%;
-}
-
-.slider .s-img img { 
-  box-shadow: 0 0 1.25rem 0 #000;
-}
-
-.slider .s-info {
-  max-width: 370px;
-  width: 40%;
-}
-
-.slider .s-info h1 {
-  color: var(--b-primary);
-  font-family: 'Roboto';
-  font-size: 2.4em;
-  font-weight: 700;
-  line-height: 1em;
-}
-
-.slider .s-info h2 {
-  color: var(--b-fourth);
-  font-family: 'Roboto';
-  font-size: 1.2em;
-  margin: 10px 0 20px 0;
-  font-weight: 500;
-}
-
-.landing-body .c-s-landing .banner-landing .c-dots {
-  bottom: 0;
-  height: 20px;
-  justify-content: space-evenly;
-  left: calc(50% - 50px);
-  position: absolute;
-  width: 100px;
-}
-
-.c-dots .dot {
-  background: var(--c-white);
-  border: 1px solid var(--c-purple);
-  border-radius: 100%;
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-}
-
-.c-dots .active, .dot:hover {
-  background: var(--c-purple);
-}
-
-.h-landing nav {
-  height: 100%;
-  justify-content: space-between;
-  margin: auto;
-  width: 80%;
-}
-
-.landing-body .btn {
-  transition: all ease-in 0.2s;
-}
-
-.landing-body .btn-login .btn, .slider .s-info .register {
-  background: var(--c-purple);
-  border-radius: 5px;
-  padding: 8px 20px;
-}
-
-.landing-body .btn-login .btn:hover, .slider .s-info .register {
-  background: var(--c-white);
-  border: 1px solid var(--c-purple);
-  color: var(--c-purple);
-}
-
-.slider .s-info .register:hover {
-  background: var(--c-purple);
-  color: var(--c-white);
-}
-
-@media (max-width: 568px) {
-  .landing-body .c-s-landing .banner-landing {
-    height: 100%;
-    width: 100%;
-  }
-  .landing-body .c-s-landing .banner-landing .slider {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .slider .s-info {
-    width: 75%;
-  }
-
-  .slider .s-info h1 {
-    font-size: 2em;
-  }
-
-  .slider .s-info h2 {
-    font-size: 1em;
-  }
-
-  .slider .s-img {
-    width: 90%;
-  }
-}
+.landing-body {
+  background: var(--c-white);
+}
+
+.landing-body .h-landing {
+  height: 100px;
+}
+
+.landing-body .c-s-landing {
+  height: calc(100% - 100px);
+}
+
+.landing-body .c-s-landing h1, h2 {
+  color: var(--b-primary);
+  font-family: 'Roboto-Black';
+  text-align: center;
+}
+
+.landing-body .c-s-landing h1 {
+  font-family: 'Roboto-Medium';
+}
+
+.c-buttons {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.landing-body .c-s-landing .banner-landing {
+  height: 70%;
+  position: relative;
+  width: 90%;
+}
+
+.landing-body .c-s-landing .banner-landing .slider {
+  height: calc(100% - 60px);
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.8s;
+  width: 100%;
+}
+
+.landing-body .c-s-landing .banner-landing .slider.fade {
+  opacity: 0;
+}
+
+.slider .s-img {
+  border-radius: 5px;
+  margin-top: 1em;
+  width: 50%;
+}
+
+.slider .s-img img {
+  box-shadow: 0 0 1.25rem 0 #000;
+}
+
+.slider .s-info {
+  max-width: 370px;
+  width: 40%;
+}
+
+.slider .s-info h1 {
+  color: var(--b-primary);
+  font-family: "Roboto-Black";
+  font-size: 2.4em;
+  line-height: 1em;
+}
+
+.slider .s-info h2 {
+  color: var(--b-fourth);
+  font-family: "Roboto-Medium";
+  font-size: 1.2em;
+  margin: 10px 0 20px 0;
+}
+
+.landing-body .c-s-landing .banner-landing .c-dots {
+  bottom: 0;
+  height: 20px;
+  justify-content: space-evenly;
+  left: calc(50% - 50px);
+  position: absolute;
+  width: 100px;
+}
+
+.c-dots .dot {
+  background: var(--c-white);
+  border: 1px solid var(--c-purple);
+  border-radius: 100%;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+
+.c-dots .active,
+.dot:hover {
+  background: var(--c-purple);
+}
+
+.h-landing nav {
+  height: 100%;
+  justify-content: space-between;
+  margin: auto;
+  width: 80%;
+}
+
+.landing-body .btn {
+  transition: all ease-in 0.2s;
+}
+
+.landing-body .btn-login .btn,
+.slider .s-info .register {
+  background: var(--c-purple);
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.landing-body .btn-login .btn:hover,
+.slider .s-info .register {
+  background: var(--c-white);
+  border: 1px solid var(--c-purple);
+  color: var(--c-purple);
+}
+
+.slider .s-info .register:hover {
+  background: var(--c-purple);
+  color: var(--c-white);
+}
+
+@media (max-width: 768px) {
+  .landing-body .c-s-landing .banner-landing {
+    height: 75%;
+    width: 100%;
+  }
+
+  .landing-body .c-s-landing .banner-landing .slider {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .slider .s-info {
+    width: 75%;
+  }
+
+  .slider .s-info h1 {
+    font-size: 2em;
+  }
+
+  .slider .s-info h2 {
+    font-size: 1em;
+  }
+
+  .slider .s-img {
+    width: 90%;
+  }
+}

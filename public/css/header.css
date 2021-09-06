@@ -1,55 +1,67 @@
-header {
-  align-items: center;
-  background: var(--b-primary);
-  display: flex;
-  font-family: 'Roboto Mono';
-  justify-content: space-around;
-  height: 70px;
-  position: sticky;
-  top: 0;
-}
-
-header nav, header.app-logo {
-  width: 20%;
-}
-
-.app-logo img {
-  width: 50px;
-}
-
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-  width: 120px;
-}
-
-header nav .item-header-container {
-  height: 20px;
-  position: relative;
-  width: 20px;
-}
-
-header nav .item-header-container a svg {
-  fill: var(--c-white);
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-}
-
-header nav .item-header-container a svg:hover { fill: var(--c-purple); }
-header nav .plus a svg { stroke: var(--c-white); }
-header nav .plus a svg:hover { stroke: var(--c-purple); }
-
-@media (max-width: 560px) {
-  header .app-logo{
-    display: none;
-  }
-  header .i-btn { 
-    width: 60%;
-  }
-  header nav {
-    justify-content: space-evenly;
-  }
+header {
+  background: var(--b-primary);
+  font-family: "Roboto-Mono";
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav,
+header.app-logo {
+  width: 20%;
+}
+
+.app-logo img {
+  width: 50px;
+}
+
+header nav {
+  height: 40px;
+  width: 120px;
+}
+
+header nav .item-header-container {
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+header nav .item-header-container a svg {
+  fill: var(--c-white);
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+header nav .item-header-container a svg:hover {
+  fill: var(--c-purple);
+}
+
+header nav .plus a svg {
+  stroke: var(--c-white);
+}
+
+header nav .plus a svg:hover {
+  stroke: var(--c-purple);
+}
+
+@media (max-width: 560px) {
+  header {
+    justify-content: space-between !important;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
+  header .app-logo {
+    width: 50px;
+  }
+  
+  header .i-btn {
+    display: none;
+  }
+
+  header nav {
+    justify-content: space-evenly;
+  }
 }
